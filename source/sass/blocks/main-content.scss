@@ -1,0 +1,14 @@
+.main-content {
+  background-color: $dark-blue-color;
+  background-image: url("../img/presentation-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 550px; //temporary
+}
+
+.main-content__container {
+  display: flex;
+  max-width: 1410px;
+  padding: 100px 0;
+  margin: 0 auto;
+}

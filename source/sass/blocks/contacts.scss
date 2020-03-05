@@ -1,0 +1,89 @@
+.contacts {
+  @include list-clear;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 420px;
+  margin-right: 20px;
+}
+
+.contacts li {
+  color: $white-color;
+  position: relative;
+  font-size: 16px;
+  font-family: ("PT Mono", "Arial", monospace);
+  line-height: 18px;
+  margin-right: 120px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.contacts__email::before {
+  content: "";
+  position: absolute;
+  background: url("../img/envelope.svg");
+  width: 19px;
+  height: 14px;
+  left: -40px;
+  top: 0;
+}
+
+.contacts__phone::before {
+  content: "";
+  position: absolute;
+  background: url("../img/phone-call.svg");
+  width: 18px;
+  height: 18px;
+  left: -30px;
+  top: 0;
+}
+
+.contacts a {
+  @include a-clear;
+
+  &:hover,
+  &:focus {
+    color: $light-blue-color;
+  }
+
+  &:active {
+    color: $light-blue-color;
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .contacts {
+    width: 80px;
+    padding-top: 25px;
+  }
+
+  .contacts__email::before {
+    width: 25px;
+    height: 19px;
+    left: 0;
+  }
+
+  .contacts__phone::before {
+    width: 24px;
+    height: 24px;
+    left: 40px;
+    top: -20px;
+  }
+
+  .contacts li {
+    margin-right: 40px;
+  }
+
+  .contacts a {
+    display: block;
+    width: 18px;
+    height: 18px;
+  }
+
+  .contacts span {
+    display: none;
+  }
+}

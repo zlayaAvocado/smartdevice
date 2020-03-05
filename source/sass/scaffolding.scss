@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "PT Mono";
+  font-display: swap;
+  src:
+    url("../fonts/ptmono-latincyrillic.woff2") format("woff2"),
+    url("../fonts/ptmono-latincyrillic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src:
+    url("../fonts/robotocondensed-latincyrillic-700.woff2") format("woff2"),
+    url("../fonts/robotocondensed-latincyrillic-700.woff") format("woff"),
+    url("../fonts/robotocondensed-latincyrillic.woff2") format("woff2"),
+    url("../fonts/robotocondensed-latincyrillic.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden,
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
