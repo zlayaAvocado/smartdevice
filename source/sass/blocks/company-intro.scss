@@ -78,8 +78,41 @@
   }
 }
 
+.company-intro__consult-button a,
+.company-introl__scroll-to-bottom a {
+  @include a-clear;
+}
+
 .company-intro__consult-button--mobile {
   display: none;
+  //add transition later
+}
+
+.company-intro__consult-button--desk {
+  //add transition later
+}
+
+.company-introl__scroll-to-bottom {
+  color: $white-color;
+  display: block;
+  position: absolute;
+  font-family: ("PT Mono", "Arial", monospace);
+  font-size: 14px;
+  line-height: 16px;
+  transform: rotate(-90deg);
+  opacity: 0.5;
+  bottom: -150px;
+  left: -40px;
+  //add transition later
+  &:hover,
+  &:focus {
+    color: $light-blue-color;
+  }
+
+  &:active {
+    color: $light-blue-color;
+    opacity: 0.7;
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -112,6 +145,10 @@
     padding: 3% 4% 3%;
     width: 85%;
     margin-left: 10%;
+  }
+
+  .company-introl__scroll-to-bottom {
+    display: none;
   }
 
   .company-intro__board-image {
