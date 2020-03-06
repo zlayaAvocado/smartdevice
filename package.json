@@ -16,7 +16,8 @@
     "gulp-webp": "^4.0.1",
     "postcss": "^7.0.27",
     "sass": "^1.26.2",
-    "server": "^1.0.27"
+    "server": "^1.0.27",
+    "svgxuse": "^1.2.6"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",

@@ -1,0 +1,10 @@
+@mixin list-clear() {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin a-clear() {
+  text-decoration: none;
+  color: inherit;
+}
