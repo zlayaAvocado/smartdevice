@@ -1,0 +1,26 @@
+.main-footer {
+  background-color: $footer-background-color;
+}
+
+.main-footer__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1410px;
+  margin: 0 auto;
+  padding: 65px 250px 15px;
+}
+
+.main-footer__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1410px;
+  margin-bottom: 70px;
+}
+
+.main-footer__logo-link {
+  color: rgb(32, 60, 66);
+  margin-bottom: 50px;
+  display: inline-block;
+  vertical-align: middle;
+}

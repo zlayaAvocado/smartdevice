@@ -1,0 +1,21 @@
+.office-contacts-list {
+  @include list-clear;
+  background-color: $footer-background-color;
+  color: $dark-blue-color;
+}
+
+.office-contacts-list h3 {
+  @include footer-h3;
+}
+
+.office-contacts-list__item {
+  font-family: ("PT Mono", "Arial", monospace);
+  font-size: 15px;
+  line-height: 26px;
+  opacity: 0.5;
+  color: $dark-blue-color;
+}
+
+.office-contacts-list a {
+  @include a-clear;
+}

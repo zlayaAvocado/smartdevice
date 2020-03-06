@@ -25,6 +25,7 @@
 
 .main-header__logo-link {
   @include a-clear;
+  color: $white-color;
   margin-right: 590px;
   cursor: pointer;
 

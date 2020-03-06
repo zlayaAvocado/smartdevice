@@ -1,0 +1,23 @@
+.copyright-list {
+  @include list-clear;
+  background-color: $footer-background-color;
+  color: $dark-blue-color;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1410px;
+}
+
+.copyright-list a {
+  @include a-clear;
+}
+
+.copyright-list__item {
+  font-family: ("PT Mono", "Arial", monospace);
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
