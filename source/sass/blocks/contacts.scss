@@ -77,13 +77,14 @@
   }
 
   .contacts li {
-    margin-right: 40%;
+    margin-right: 35%;
   }
 
   .contacts a {
     display: block;
     width: 25px;
     height: 25px;
+    cursor: pointer;
   }
 
   .contacts span {
@@ -93,8 +94,8 @@
 
 @media (max-width: $max-mobile-width) {
   .contacts {
-    width: 30%;
-    justify-content: space-between;
+    width: 35%;
+    justify-content: space-around;
   }
 
   .contacts li {

@@ -3,12 +3,33 @@
   background-image: url("../img/presentation-background.png");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 550px; //temporary
+  min-height: 870px; //temporary
 }
 
 .main-content__container {
   display: flex;
   max-width: 1410px;
-  padding: 100px 0;
+  padding-top: 310px;
+  padding-left: 250px;
+  padding-right: 250px;
   margin: 0 auto;
+}
+
+@media (max-width: $tablet-width) {
+  .main-content__container {
+    max-width: $tablet-width;
+    padding-top: 25%;
+    padding-left: 11%;
+    padding-right: 11%;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .main-content__container {
+    max-width: $tablet-width;
+    padding-top: 280px;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
 }
