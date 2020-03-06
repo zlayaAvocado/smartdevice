@@ -33,9 +33,25 @@
       </header>
       <main class="main-content">
         <div class="main-content__container">
-          <section class="main-content__presentation">
+          <section class="main-content__company-intro company-intro">
+            <h2>
+              <span class="company-intro__offer">Печатные платы</span>
+              </br>
+              <span class="company-intro__dash"></span>
+              <span class="company-intro__description">производство и монтаж, поставка комплектующих, блоков и модулей</span>
+            </h2>
             <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/boards-desktop@1x.webp 1x, img/boards-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/boards-mobile@1x.webp 1x, img/boards-mobile@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/boards-mobile@1x.png 1x, img/boards-mobile@2x.png 2x">
+                    <source media="(max-width: 1023px)" srcset="img/boards-tablet@1x.png 1x, img/boards-tablet@2x.png 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/boards-tablet@1x.webp 1x, img/boards-tablet@2x.webp 2x">
+                    <img class="company-intro__board-image" src="img/boards-desktop@1x.png" srcset="img/boards-desktop@2x.png 2x" width="820" height="704" alt="Печатные платы">
             </picture>
+            <button class="company-intro__consult-button" type="button">
+              <span class="company-intro__consult-button--desk">Получить бесплатную консультацию</span>
+              <span class="company-intro__consult-button--mobile">Бесплатная консультация</span>
+            </button>
           </section>
         </div>
       </main>
