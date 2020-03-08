@@ -1,22 +1,26 @@
+.main-header {
+  width: 1920px;
+}
+
 .main-header__container {
   display: flex;
   max-width: 1410px;
   margin: 0 auto;
-  padding: 0 250px;
+  padding: 0 7.5%;
 }
 
 .main-header__header-section {
-  display: flex;
-  flex-direction: row;
+  @include flex-row;
+  width: 83%;
   position: absolute;
   align-items: center;
   min-height: 50px;
-  padding-top: 30px;
+  padding-top: 1.5%;
 }
 
 .main-header .main-header__contacts {
   padding-top: 0;
-  margin-right: 40px;
+  margin-right: 2.5%;
 }
 
 .main-header__logo--mobile {
@@ -26,7 +30,7 @@
 .main-header__logo-link {
   @include a-clear;
   color: $white-color;
-  margin-right: 590px;
+  margin-right: 38%;
   cursor: pointer;
 
   &:hover,
@@ -50,7 +54,7 @@
   font-family: ("Roboto Condensed", "Courier", sans-serif);
   line-height: 16px;
   cursor: pointer;
-  padding: 13px 30px;
+  padding: 0.9% 1.9%;
 
   &:hover,
   &:focus {
@@ -67,6 +71,10 @@
 }
 
 @media (max-width: $tablet-width) {
+  .main-header {
+    width: 770px;
+  }
+
   .main-header__container {
     max-width: $tablet-width;
     padding: 0 3%;

@@ -3,16 +3,14 @@
 }
 
 .main-footer__container {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   max-width: 1410px;
   margin: 0 auto;
   padding: 65px 250px 15px;
 }
 
 .main-footer__top {
-  display: flex;
-  flex-direction: row;
+  @include flex-row;
   justify-content: space-between;
   width: 1410px;
   margin-bottom: 70px;

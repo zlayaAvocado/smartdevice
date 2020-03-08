@@ -1,9 +1,8 @@
 .contacts {
   @include list-clear;
-  display: flex;
-  flex-direction: row;
+  @include flex-row;
   flex-wrap: wrap;
-  width: 400px;
+  width: 27%;
 }
 
 .contacts li {
@@ -12,7 +11,7 @@
   font-size: 16px;
   font-family: ("PT Mono", "Arial", monospace);
   line-height: 18px;
-  margin-right: 120px;
+  margin-right: 30%;
 
   &:last-of-type {
     margin-right: 0;
@@ -25,7 +24,7 @@
   background-image: url("../img/envelope.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 19px;
+  width: 20px;
   height: 14px;
   left: -40px;
   top: 0;

@@ -1,21 +1,30 @@
 .main-content {
+  width: 1920px;
+}
+.main-content__container {
+  display: flex;
+  max-width: 1410px;
+  margin: 0 auto;
+  padding: 0 7.5%;
+}
+
+.main-content__company-intro-wrapper {
   background-color: $dark-blue-color;
   background-image: url("../img/presentation-background.png");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 870px; //temporary
+  min-height: 870px;
 }
 
-.main-content__container {
-  display: flex;
-  max-width: 1410px;
-  padding-top: 310px;
-  padding-left: 250px;
-  padding-right: 250px;
-  margin: 0 auto;
+.main-content__company-advantages-wrapper {
+  background-color: $white-color;
 }
 
 @media (max-width: $tablet-width) {
+  .main-content {
+    width: 100%;
+  }
+
   .main-content__container {
     max-width: $tablet-width;
     padding-top: 25%;
@@ -23,9 +32,18 @@
     padding-right: 11%;
     overflow: hidden;
   }
+
+  .main-content__company-intro-wrapper {
+    min-height: 690px;
+
+  }
 }
 
 @media (max-width: $max-mobile-width) {
+  .main-content {
+    width: 100%;
+  }
+
   .main-content__container {
     max-width: $tablet-width;
     padding-top: 280px;

@@ -1,11 +1,12 @@
 .company-intro {
-  width: 720px;
+  width: 51%;
   position: relative;
+  padding-top: 22%;
 }
 
 .company-intro h2 {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 7%;
 }
 
 .company-intro__offer {
@@ -17,7 +18,7 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: $white-color;
-  margin-bottom: 25px;
+  margin-bottom: 3.5%;
   vertical-align: middle;
 }
 
@@ -27,24 +28,24 @@
   font-size: 22px;
   line-height: 34px;
   color: $white-color;
-  width: 620px;
+  width: 87%;
   vertical-align: middle;
 }
 
 .company-intro__dash {
   display: inline-block;
   position: relative;
-  width: 66px;
+  width: 9.3%;
   height: 2px;
   background-color: $white-color;
-  margin-right: 25px;
+  margin-right: 2%;
   bottom: 30px;
   vertical-align: sub;
 }
 
 .company-intro__board-image {
   position: absolute;
-  top: -190px;
+  top: 100px;
   left: 780px;
 }
 
@@ -60,9 +61,9 @@
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 18px 40px 15px;
+  padding: 2.5% 5.6% 2.1%;
   cursor: pointer;
-  margin-left: 100px;
+  margin-left: 14%;
 
   &:hover,
   &:focus {
@@ -79,7 +80,7 @@
 }
 
 .company-intro__consult-button a,
-.company-introl__scroll-to-bottom a {
+.company-intro__scroll-to-bottom a {
   @include a-clear;
 }
 
@@ -92,7 +93,7 @@
   //add transition later
 }
 
-.company-introl__scroll-to-bottom {
+.company-intro__scroll-to-bottom {
   color: $white-color;
   display: block;
   position: absolute;
@@ -118,6 +119,7 @@
 @media (max-width: $tablet-width) {
   .company-intro {
     width: 75%;
+    padding-top: 0;
   }
 
   .company-intro h2 {
@@ -128,6 +130,7 @@
     font-size: 60px;
     line-height: 70px;
     width: 50%;
+    margin-bottom: 6%;
   }
 
   .company-intro__description {

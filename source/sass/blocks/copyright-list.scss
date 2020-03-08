@@ -1,9 +1,8 @@
 .copyright-list {
   @include list-clear;
+  @include flex-row;
   background-color: $footer-background-color;
   color: $dark-blue-color;
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 1410px;

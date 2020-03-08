@@ -19,8 +19,7 @@
 }
 
 .site-map-list__wrapper {
-  display: flex;
-  flex-direction: row;
+  @include flex-row;
   flex-wrap: wrap;
 }
 

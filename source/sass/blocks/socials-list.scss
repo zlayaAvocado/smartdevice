@@ -1,9 +1,8 @@
 .socials-list {
   @include list-clear;
+  @include flex-row;
   background-color: $footer-background-color;
   color: $dark-blue-color;
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -18,21 +17,27 @@
 }
 
 .socials-list__facebook::before {
-  @include footer-social-items;
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
   background-image: url("../img/facebook.svg");
   width: 27px;
   height: 27px;
 }
 
 .socials-list__ok::before {
-  @include footer-social-items;
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
   background-image: url("../img/ok.svg");
   width: 27px;
   height: 26px;
 }
 
 .socials-list__vk::before {
-  @include footer-social-items;
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
   background-image: url("../img/vk.svg");
   width: 27px;
   height: 26px;
