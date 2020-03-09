@@ -25,6 +25,14 @@
   background-color: $white-color;
 }
 
+.main-content__company-services-wrapper {
+  background-color: $dark-blue-color;
+}
+
+.main-content__company-request-wrapper {
+  background-color: $light-blue-color;
+}
+
 @media (max-width: $tablet-width) {
   .main-content {
     width: 100%;
@@ -43,6 +51,10 @@
   }
 
   .main-content__about-company-container {
+    padding: 0;
+  }
+
+  .main-content__company-services-container {
     padding: 0;
   }
 
@@ -76,6 +88,10 @@
   }
 
   .main-content__company-about-wrapper .main-content__container {
+    padding-top: 20px;
+  }
+
+  .main-content__company-services-wrapper .main-content__container {
     padding-top: 20px;
   }
 }

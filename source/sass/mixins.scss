@@ -30,11 +30,45 @@
   flex-direction: column;
 }
 
-@mixin pseudo-polygon {
+@mixin pseudo-polygon() {
   content: "";
   position: absolute;
   background-repeat: no-repeat;
   background-image: url("../img/polygon.svg");
   width: 298px;
   height: 298px;
+}
+
+@mixin services-background() {
+  content: "";
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 100%;
+  height: 620px;
+  opacity: 0.2;
+}
+
+@mixin light-blue-square() {
+  content: "";
+  position: absolute;
+  width: 63px;
+  height: 63px;
+  background-color: $light-blue-color;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin white-arrow() {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border: 1px solid $white-color;
+  border-bottom: 0;
+  border-right: 0;
+  transform: rotate(135deg);
+  right: 7%;
+  bottom: 4%;
 }

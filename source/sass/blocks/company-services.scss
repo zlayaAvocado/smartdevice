@@ -1,0 +1,39 @@
+.company-services {
+  width: 100%;
+  padding: 6% 8%;
+  color: $white-color;
+  background-color: $dark-blue-color;
+}
+
+.company-services p {
+  font-family: ("Roboto Condensed", "Courier", sans-serif);
+  margin: 0;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  margin-bottom: 5%;
+}
+
+@media (max-width: $tablet-width) {
+  .company-services {
+    padding: 6% 3%;
+  }
+
+  .company-services p {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 7%;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .company-services p {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 14%;
+  }
+
+  .company-services {
+    padding: 10% 2%;
+  }
+}
