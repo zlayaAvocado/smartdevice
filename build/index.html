@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="format-detection" content="telephone=no">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Smart Device умные технологии</title>
+      <title>Smart Device - умные технологии</title>
       <link rel="stylesheet" type="text/css" href="css/style.min.css">
     </head>
     <body>
@@ -37,7 +37,7 @@
             <section class="main-content__company-intro company-intro">
               <h2>
                 <span class="company-intro__offer">Печатные платы</span>
-                </br>
+                <br>
                 <span class="company-intro__dash"></span>
                 <span class="company-intro__description">производство и монтаж, поставка комплектующих, блоков и модулей</span>
               </h2>
@@ -49,38 +49,61 @@
                       <source type="image/webp" media="(max-width: 1023px)" srcset="img/boards-tablet@1x.webp 1x, img/boards-tablet@2x.webp 2x">
                       <img class="company-intro__board-image" src="img/boards-desktop@1x.png" srcset="img/boards-desktop@2x.png 2x" width="820" height="704" alt="Печатные платы">
               </picture>
-              <a href="#contact-form">
-                <button class="company-intro__consult-button" type="button">
+                <a class="company-intro__consult-button" href="#contact-form">
                   <span class="company-intro__consult-button--desk">Получить бесплатную консультацию</span>
                   <span class="company-intro__consult-button--mobile">Бесплатная консультация</span>
-                </button>
-              </a>
+                </a>
               <a href="#advantages"><span class="company-intro__scroll-to-bottom">Скролл вниз</span></a>
             </section>
           </div>
         </div>
         <div class="main-content__company-advantages-wrapper">
-          <div class="main-content__container">
+          <div class="main-content__container main-content__advantages-container">
             <section class="main-content__advantages" id="advantages">
               <h2 class="visually-hidden">Преимущества компании</h2>
               <ul class="main-content__advantages-list advantages-list">
                 <li class="advantages-list__item">
+                  <svg aria-hidden="true" role="img" width="29px" height="35px">
+                    <use xlink:href="img/sprite.svg#stopwatch"></use>
+                  </svg>
                   <p class="advantages-list__item-title">Оперативные сроки</p>
                   <p class="advantages-list__item-desc">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
                 </li>
                 <li class="advantages-list__item">
+                  <svg aria-hidden="true" role="img" width="35px" height="35px">
+                    <use xlink:href="img/sprite.svg#hired"></use>
+                  </svg>
                   <p class="advantages-list__item-title">Крупные поставщики</p>
                   <p class="advantages-list__item-desc">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
                 </li>
                 <li class="advantages-list__item">
+                  <svg aria-hidden="true" role="img" width="36px" height="31px">
+                    <use xlink:href="img/sprite.svg#detective"></use>
+                  </svg>
                   <p class="advantages-list__item-title">Полная конфиденциальность</p>
                   <p class="advantages-list__item-desc">По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
                 </li>
                 <li class="advantages-list__item">
+                  <svg aria-hidden="true" role="img" width="36px" height="31px">
+                    <use xlink:href="img/sprite.svg#tag"></use>
+                  </svg>
                   <p class="advantages-list__item-title">Персонализация стоимости</p>
-                  <p class="advantages-list__item-desc">Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+                  <p class="advantages-list__item-desc">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
                 </li>
               </ul>
+            </section>
+          </div>
+        </div>
+        <div class="main-content__company-about-wrapper">
+          <div class="main-content__container main-content__about-company-container">
+            <section class="main-content__about-company about-company">
+              <span class="about-company__year-found">2005</span>
+              <div class="about-company__inner-wrapper">
+                <h2>О компании</h2>
+                <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+                <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+                <a class="about-company__about-button" href="about.html">Подробнее</a>
+              </div>
             </section>
           </div>
         </div>
@@ -94,7 +117,7 @@
                   <title id="logo-footer-tablet-desktop">Логотип Smart Device</title>
                   <use xlink:href="img/sprite.svg#logo-tablet-desktop"></use>
                 </svg>
-              <a>
+              </a>
               <ul class="main-footer__socials socials-list">
                 <li class="socials-list__item"><a class="socials-list__facebook" href="#"><span class="visually-hidden">Facebook</span></a></li>
                 <li class="socials-list__item"><a class="socials-list__ok" href="#"><span class="visually-hidden">Одноклассники</span></a></li>

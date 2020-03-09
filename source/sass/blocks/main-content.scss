@@ -1,6 +1,11 @@
 .main-content {
-  width: 1920px;
+  background-color: $dark-blue-color;
+  background-image: url("../img/presentation-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
+
 .main-content__container {
   display: flex;
   max-width: 1410px;
@@ -9,14 +14,14 @@
 }
 
 .main-content__company-intro-wrapper {
-  background-color: $dark-blue-color;
-  background-image: url("../img/presentation-background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   min-height: 870px;
 }
 
 .main-content__company-advantages-wrapper {
+  background-color: $white-color;
+}
+
+.main-content__company-about-wrapper {
   background-color: $white-color;
 }
 
@@ -33,9 +38,20 @@
     overflow: hidden;
   }
 
+  .main-content__advantages-container {
+    padding: 0;
+  }
+
+  .main-content__about-company-container {
+    padding: 0;
+  }
+
   .main-content__company-intro-wrapper {
     min-height: 690px;
+  }
 
+  .main-content__company-about-wrapper {
+    margin-top: -140px;
   }
 }
 
@@ -49,5 +65,17 @@
     padding-top: 280px;
     padding-left: 3%;
     padding-right: 3%;
+  }
+
+  .main-content__company-intro-wrapper {
+    min-height: 640px;
+  }
+
+  .main-content__company-advantages-wrapper .main-content__container {
+    padding-top: 20px;
+  }
+
+  .main-content__company-about-wrapper .main-content__container {
+    padding-top: 20px;
   }
 }

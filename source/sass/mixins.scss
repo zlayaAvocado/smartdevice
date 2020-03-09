@@ -29,3 +29,12 @@
   display: flex;
   flex-direction: column;
 }
+
+@mixin pseudo-polygon {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-image: url("../img/polygon.svg");
+  width: 298px;
+  height: 298px;
+}

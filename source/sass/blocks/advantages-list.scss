@@ -3,41 +3,38 @@
   @include flex-row;
   background-color: $white-color;
   color: $light-blue-color;
-  width: 1170px;
+  width: 83%;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 115px;
-  padding-bottom: 100px
+  padding: 8% 9% 0;
+  position: relative;
 }
 
 .advantages-list::before {
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
-  background-image: url("../img/polygon.svg");
-  width: 298px;
-  height: 298px;
+  @include pseudo-polygon;
+  top: 50px;
+  left: -50px;
 }
 
 .advantages-list::after {
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
-  background-image: url("../img/polygon.svg");
-  width: 298px;
-  height: 298px;
+  @include pseudo-polygon;
+  transform: rotate(180deg);
+  bottom: 60px;
+  right: -215px;
 }
 
 .advantages-list__item {
-  width: 450px;
+  width: 41%;
   min-height: 200px;
   border: 1px solid $light-grey-color;
   border-left: 2px solid $light-blue-color;
+  color: $light-blue-color;
   cursor: pointer;
-  margin-bottom: 20px;
-  padding: 20px;
+  margin-bottom: 3%;
+  padding-top: 8%;
+  padding-left: 3%;
+  padding-right: 4%;
+  position: relative;
 
   &:hover,
   &:focus {
@@ -60,9 +57,75 @@
   line-height: 34px;
 }
 
+.advantages-list__item .advantages-list__item-title {
+  margin-bottom: 4%;
+}
+
+.advantages-list__item svg {
+  position: absolute;
+  top: 41px;
+}
+
 .advantages-list__item-desc {
   font-family: ("PT Mono", "Arial", monospace);
   font-size: 16px;
   line-height: 22px;
   color: $dark-grey-color;
+}
+
+@media (max-width: $tablet-width) {
+  .advantages-list {
+    width: 94%;
+    padding: 7% 3%;
+  }
+
+  .advantages-list::after {
+    transform: rotate(180deg) scale(2.5);
+    bottom: 105px;
+    right: -60px;
+  }
+
+  .advantages-list__item {
+    width: 43%;
+    padding-top: 9%;
+    padding-right: 1%;
+    min-height: 240px;
+    margin-bottom: 4%;
+  }
+
+  .advantages-list__item svg {
+    top: 25px;
+  }
+
+  .advantages-list::before {
+    display: none;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .advantages-list {
+    flex-direction: column;
+    width: 100%;
+    padding: 7% 0%;
+  }
+
+  .advantages-list::after {
+    bottom: 190px;
+  }
+
+  .advantages-list__item {
+    width: 88%;
+    padding-top: 25%;
+    padding-left: 7%;
+  }
+
+  .advantages-list__item-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .advantages-list__item-desc {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }

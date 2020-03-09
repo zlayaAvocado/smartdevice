@@ -1,21 +1,25 @@
 .main-header {
-  width: 1920px;
+  max-width: 1920px;
+  display: flex;
+  margin: 0 auto;
 }
 
 .main-header__container {
   display: flex;
-  max-width: 1410px;
+  position: relative;
+  width: 1410px;
   margin: 0 auto;
   padding: 0 7.5%;
 }
 
 .main-header__header-section {
   @include flex-row;
-  width: 83%;
+  width: 89%;
   position: absolute;
   align-items: center;
   min-height: 50px;
   padding-top: 1.5%;
+  z-index: 1;
 }
 
 .main-header .main-header__contacts {
@@ -35,10 +39,11 @@
 
   &:hover,
   &:focus {
-    opacity: 0.7;
+    color: $light-blue-color;
   }
 
   &:active {
+    color: $light-blue-color;
     opacity: 0.7;
   }
 }
@@ -71,10 +76,6 @@
 }
 
 @media (max-width: $tablet-width) {
-  .main-header {
-    width: 770px;
-  }
-
   .main-header__container {
     max-width: $tablet-width;
     padding: 0 3%;
@@ -102,9 +103,18 @@
 }
 
 @media (max-width: $max-mobile-width) {
+  .main-header {
+    max-width: $max-mobile-width;
+  }
+
   .main-header__container {
     max-width: $max-mobile-width;
     min-width: $min-mobile-width;
+  }
+
+  .main-header__header-section {
+    width: 90%;
+    padding-top: 4%;
   }
 
   .main-header__logo--mobile {
@@ -113,9 +123,5 @@
 
   .main-header__logo--tablet-desktop {
     display: none;
-  }
-
-  .main-header__logo-link {
-    margin-right: 54%;
   }
 }
