@@ -13,20 +13,23 @@
   font-size: 20px;
   line-height: 30px;
   width: 32%;
-  height: 620px;
+  height: 616px;
 }
 
 .services-list a {
   @include a-clear;
   display: block;
   position: relative;
+  border: 2px solid transparent;
 
   &:hover,
   &:focus {
+    border: 2px solid $light-blue-color;
     opacity: 0.8;
   }
 
   &:active {
+    border: 2px solid $light-blue-color;
     opacity: 0.8;
   }
 }

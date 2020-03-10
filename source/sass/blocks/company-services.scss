@@ -1,6 +1,6 @@
 .company-services {
   width: 100%;
-  padding: 6% 8%;
+  padding: 6% 8% 9% 8%;
   color: $white-color;
   background-color: $dark-blue-color;
 }
@@ -11,12 +11,12 @@
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
-  margin-bottom: 5%;
+  margin-bottom: 4%;
 }
 
 @media (max-width: $tablet-width) {
   .company-services {
-    padding: 6% 3%;
+    padding: 6% 3% 5%;
   }
 
   .company-services p {
@@ -34,6 +34,6 @@
   }
 
   .company-services {
-    padding: 10% 2%;
+    padding: 10% 2% 14%;
   }
 }

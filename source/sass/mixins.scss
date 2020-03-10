@@ -72,3 +72,22 @@
   right: 7%;
   bottom: 4%;
 }
+
+@mixin input-formatting() {
+  background: rgba($white-color, 0.1);
+  color: $white-color;
+  font-size: 16px;
+  line-height: 22px;
+  resize: none;
+  border: 2px solid transparent;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $white-color;
+  }
+
+  &:active {
+    border: 2px solid $white-color;
+  }
+}

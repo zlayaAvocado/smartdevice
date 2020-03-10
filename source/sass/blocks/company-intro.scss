@@ -49,8 +49,12 @@
   left: 780px;
 }
 
-.company-intro__consult-button {
+.company-intro__consult-button,
+.company-intro__scroll-to-bottom {
   @include a-clear;
+}
+
+.company-intro__consult-button {
   background-color: $light-blue-color;
   color: $white-color;
   border: 1px solid $white-color;
@@ -81,18 +85,8 @@
   }
 }
 
-.company-intro__consult-button a,
-.company-intro__scroll-to-bottom a {
-  @include a-clear;
-}
-
 .company-intro__consult-button--mobile {
   display: none;
-  //add transition later
-}
-
-.company-intro__consult-button--desk {
-  //add transition later
 }
 
 .company-intro__scroll-to-bottom {
@@ -106,7 +100,7 @@
   opacity: 0.5;
   bottom: -150px;
   left: -40px;
-  //add transition later
+
   &:hover,
   &:focus {
     color: $light-blue-color;

@@ -49,11 +49,11 @@
                       <source type="image/webp" media="(max-width: 1023px)" srcset="img/boards-tablet@1x.webp 1x, img/boards-tablet@2x.webp 2x">
                       <img class="company-intro__board-image" src="img/boards-desktop@1x.png" srcset="img/boards-desktop@2x.png 2x" width="820" height="704" alt="Печатные платы">
               </picture>
-                <a class="company-intro__consult-button" href="#contact-form">
+                <a href="#request" class="company-intro__consult-button">
                   <span class="company-intro__consult-button--desk">Получить бесплатную консультацию</span>
                   <span class="company-intro__consult-button--mobile">Бесплатная консультация</span>
                 </a>
-              <a href="#advantages"><span class="company-intro__scroll-to-bottom">Скролл вниз</span></a>
+              <a href="#advantages" class="company-intro__scroll-to-bottom"><span>Скролл вниз</span></a>
             </section>
           </div>
         </div>
@@ -114,11 +114,13 @@
               <p>Service Device предлагает следующие товары и услуги</p>
               <ul class="main-content__services-list services-list">
                 <li class="services-list__item services-list__produce">
-                  <a href="boards-produce.html"><span>Производство  печатных плат</span></a>
+                  <a href="boards-produce.html"><span>Производство печатных плат</span></a>
                 </li>
                 <li class="services-list__item services-list__assemble">
-                  <a href="boards-assemble.html"><span>Монтаж печатных  плат</span></a></li>
-                <li class="services-list__item services-list__components"><a href="components.html"><span>Комплектующие для светотехники</span></a>
+                  <a href="boards-assemble.html"><span>Монтаж печатных плат</span></a>
+                </li>
+                <li class="services-list__item services-list__components">
+                  <a href="components.html"><span>Комплектующие для светотехники</span></a>
                 </li>
               </ul>
             </section>
@@ -126,33 +128,35 @@
         </div>
         <div class="main-content__company-request-wrapper">
           <div class="main-content__container main-content__company-request-container">
-            <section class="main-content__company-request company-request">
+            <section class="main-content__company-request company-request" id="request">
               <h2 class="visually-hidden">Задать вопрос компании</h2>
               <p class="company-request__question">Остались вопросы? Задайте их нам!</p>
               <p class="company-request__free-consultation">Мы проконсультируем вас бесплатно</p>
-              <form action="" method="post">
+              <form method="post">
                 <div class="company-request__personal-data-wrapper">
-                  <p>
-                    <label class="visually-hidden" for="first_name">Имя:</label>
+                  <p class="company-request__first-name">
+                    <label class="visually-hidden" for="first_name">Имя</label>
                     <input id="first_name" type="text" name="first_name" placeholder="Имя" required>
                   </p>
-                  <p>
+                  <p class="company-request__tel">
                     <label class="visually-hidden" for="tel">Номер телефона</label>
-                    <input class="" id="tel" type="tel" name="tel" placeholder="Телефон">
+                    <input class="company-request__tel-input" id="tel" type="tel" name="tel" placeholder="Телефон" maxlength="10" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
                   </p>
                 </div>
-                <p>
-                  <legend>
-                    <label class="visually-hidden" for="question">Опишите свои эмоции</label>
-                  </legend>
-                  <textarea id="question" rows="7">Ваш вопрос</textarea>
+                <p class="company-request__question">
+                  <label class="visually-hidden" for="question">Опишите ваш вопрос</label>
+                  <textarea id="question" rows="5" required>Ваш вопрос</textarea>
                 </p>
-                <button class="" type="submit" aria-label="Отправить форму">Задать вопрос</button>
-                <p>
-                  <input id="personal-data" type="checkbox" name="personalData" checked>
-                  <span class=""></span>
-                  <label class="" for="spersonal-data">Я согласен на обработку персональных данных</label>
-                </p>
+                <div class="company-request__submit-data-wrapper">
+                  <button class="company-request__submit-button" type="submit" aria-label="Отправить форму">Задать вопрос</button>
+                  <div class="company-request__personal-data">
+                    <p class="company-request__checkbox-wrapper">
+                      <input id="personal-data" type="checkbox" name="personalData" checked>
+                      <span class="company-request__checkbox"></span>
+                    </p>
+                    <label for="personal-data">Я согласен на обработку персональных данных</label>
+                  </div>
+                </div>
               </form>
             </section>
           </div>

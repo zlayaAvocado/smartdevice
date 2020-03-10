@@ -2,7 +2,7 @@
   background-color: $dark-blue-color;
   background-image: url("../img/presentation-background.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   overflow: hidden;
 }
 
@@ -58,6 +58,10 @@
     padding: 0;
   }
 
+  .main-content__company-request-container {
+    padding: 0;
+  }
+
   .main-content__company-intro-wrapper {
     min-height: 690px;
   }
@@ -92,6 +96,10 @@
   }
 
   .main-content__company-services-wrapper .main-content__container {
+    padding-top: 20px;
+  }
+
+  .main-content__company-request-wrapper .main-content__container {
     padding-top: 20px;
   }
 }

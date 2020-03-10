@@ -1,16 +1,293 @@
 .company-request {
-  font-family: ("Roboto Condensed", "Courier", sans-serif);
-  background-color: $light-blue-color;
+  @include flex-column;
+  position: relative;
+  font-family: ("PT Mono", "Arial", monospace);
+  color: $white-color;
+  width: 100%;
+  padding: 7% 8% 18% 8%;
+  align-items: flex-end;
+}
+
+.company-request::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-image: url("../img/paper-plane.png");
+  width: 686px;
+  height: 645px;
+  top: -67%;
+  left: 30%;
+  margin-left: -500px;
+  margin-top: 500px;
+}
+
+.company-request form {
+  width: 48%;
+}
+
+.company-request form::before {
+  @include pseudo-polygon;
+  right: -250px;
+  top: 70px;
+  transform: scale(0.8);
+  opacity: 0.2;
+}
+
+.company-request form::after {
+  @include pseudo-polygon;
+  transform: rotate(180deg) scale(1.2);
+  right: -310px;
+  top: 280px;
+  opacity: 0.2;
+}
+
+.company-request p {
+  position: relative;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
   color: $white-color;
 }
 
-.company-request__question {
-  font-size: 36px;
-  line-height: 51px;
+.company-request__personal-data-wrapper {
+  @include flex-row;
+  justify-content: space-between;
+  margin-bottom: 6%;
 }
 
-.company-request__free-consultation {
-  font-family: ("PT Mono", "Arial", monospace);
+.company-request__submit-data-wrapper {
+  @include flex-row;
+  justify-content: space-between;
+  position: relative;
+  margin: 0;
   font-size: 16px;
   line-height: 22px;
+  color: $white-color;
+}
+
+.company-request .company-request__question {
+  font-family: ("Roboto Condensed", "Courier", sans-serif);
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: normal;
+  margin-bottom: 0.8%;
+  padding-right: 2%;
+}
+
+.company-request .company-request__free-consultation {
+  margin-bottom: 4%;
+  margin-right: 19.5%;
+  padding-right: 2%;
+}
+
+.company-request__first-name {
+  width: 47%;
+}
+
+.company-request__tel {
+  width: 47%;
+}
+
+.company-request__first-name input {
+  @include input-formatting;
+  width: 92%;
+  padding-top: 5%;
+  padding-left: 6%;
+  padding-bottom: 5%;
+}
+
+.company-request__first-name input::placeholder {
+  color: $white-color;
+}
+
+.company-request__tel input {
+  @include input-formatting;
+  width: 92%;
+  padding-top: 5%;
+  padding-left: 6%;
+  padding-bottom: 5%;
+}
+
+.company-request__tel input::placeholder {
+  color: $white-color;
+}
+
+.company-request__question textarea {
+  @include input-formatting;
+  font-family: ("PT Mono", "Arial", monospace);
+  padding-top: 3%;
+  padding-left: 3%;
+  padding-bottom: 4%;
+  width: 97.5%;
+  margin-bottom: 6%;
+}
+
+.company-request__submit-button {
+  color: $white-color;
+  border: 1px solid $white-color;
+  border-radius: 5px;
+  background: transparent;
+  font-family: ("Roboto Condensed", "Courier", sans-serif);
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 47%;
+  padding: 2% 0;
+
+  &:hover,
+  &:focus {
+    color: $light-blue-color;
+    background-color: $white-color;
+  }
+
+  &:active {
+    color: $light-blue-color;
+    background-color: $white-color;
+    opacity: 0.7;
+  }
+}
+
+.company-request__personal-data {
+  @include flex-row;
+  justify-content: space-between;
+  color: $white-color;
+  font-family: ("PT Mono", "Arial", monospace);
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0.8;
+  width: 47%;
+  align-self: flex-end;
+}
+
+.company-request__checkbox-wrapper {
+  position: relative;
+  margin-right: 4%;
+}
+
+.company-request__personal-data input[type="checkbox"] {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.company-request__checkbox {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $white-color;
+  background: $light-blue-color;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked ~ .company-request__checkbox {
+  background-image: url("../img/checkbox-yes.svg");
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  background-position: center;
+  border: 1px solid $white-color;
+}
+
+.company-request__personal-data label {
+  width: 85%;
+  display: inline-block;
+}
+
+@media (max-width: $tablet-width) {
+  .company-request {
+    padding: 10% 11% 14%;
+    align-items: flex-start;
+  }
+
+  .company-request form {
+    width: 100%;
+  }
+
+  .company-request .company-request__question {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 3%;
+  }
+
+  .company-request .company-request__free-consultation {
+    margin-bottom: 9%;
+  }
+
+  .company-request__first-name input,
+  .company-request__tel input {
+    padding-top: 4%;
+  }
+
+  .company-request__question textarea {
+    padding-top: 2%;
+    padding-bottom: 7%;
+    margin-bottom: 2%;
+  }
+
+  .company-request::before {
+    display: none;
+  }
+
+  .company-request form::before {
+    display: none;
+  }
+
+  .company-request form::after {
+    display: none;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .company-request {
+    padding: 3% 2% 15%;
+  }
+
+  .company-request .company-request__question {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .company-request__personal-data-wrapper,
+  .company-request__submit-data-wrapper {
+    flex-direction: column;
+  }
+
+  .company-request .company-request__first-name,
+  .company-request .company-request__tel {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+
+  .company-request .company-request__tel {
+    margin-bottom: 6%;
+  }
+
+  .company-request__first-name input,
+  .company-request__tel input {
+    padding-left: 5%;
+  }
+
+  .company-request__submit-button {
+    width: 100%;
+    padding: 5% 0;
+    margin-bottom: 10%;
+  }
+
+  .company-request__question textarea {
+    height: 5em;
+  }
+
+  .company-request__personal-data {
+    width: 100%;
+  }
 }
