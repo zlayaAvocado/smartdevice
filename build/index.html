@@ -50,7 +50,7 @@
                       <img class="company-intro__board-image" src="img/boards-desktop@1x.png" srcset="img/boards-desktop@2x.png 2x" width="820" height="704" alt="Печатные платы">
               </picture>
                 <a href="#request" class="company-intro__consult-button">
-                  <span class="company-intro__consult-button--desk">Получить бесплатную консультацию</span>
+                  <span>Получить бесплатную консультацию</span>
                   <span class="company-intro__consult-button--mobile">Бесплатная консультация</span>
                 </a>
               <a href="#advantages" class="company-intro__scroll-to-bottom"><span>Скролл вниз</span></a>
@@ -148,7 +148,7 @@
                   <textarea id="question" rows="5" required>Ваш вопрос</textarea>
                 </p>
                 <div class="company-request__submit-data-wrapper">
-                  <button class="company-request__submit-button" type="submit" aria-label="Отправить форму">Задать вопрос</button>
+                  <button class="company-request__submit-button button" type="submit">Задать вопрос</button>
                   <div class="company-request__personal-data">
                     <p class="company-request__checkbox-wrapper">
                       <input id="personal-data" type="checkbox" name="personalData" checked>
@@ -210,6 +210,37 @@
           </div>
         </div>
       </footer>
+      <div class="callback-modal">
+        <div class="callback-modal__overlay overlay"></div>
+        <section class="callback-modal__wrapper">
+          <form method="post">
+            <h3 class="visually-hidden">Заказать звонок</h3>
+            <button type="button" class="callback-modal__close-button" aria-label="Закрыть окно">X</button>
+            <p class="callback-modal__request">Закажите звонок</p>
+            <p class="callback-modal__contact-free">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+            <p class="callback-modal__first-name">
+              <label class="visually-hidden" for="modal_first_name">Имя</label>
+              <input id="modal_first_name" type="text" name="first_name" placeholder="Имя" required>
+            </p>
+            <p class="callback-modal__tel">
+              <label class="visually-hidden" for="modal_tel">Номер телефона</label>
+              <input class="callback-modal__tel-input" id="modal_tel" type="tel" name="tel" placeholder="Телефон" maxlength="10" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
+            </p>
+            <p class="callback-modal__question">
+              <label class="visually-hidden" for="modal_question">Опишите ваш вопрос</label>
+              <textarea id="modal_question" rows="5" required>Ваш вопрос</textarea>
+            </p>
+            <button class="callback-modal__submit-button button" type="submit">Отправить</button>
+            <div class="callback-modal__personal-data">
+              <p class="callback-modal__checkbox-wrapper">
+                <input id="modal_personal_data" type="checkbox" name="personalData" checked>
+                <span class="callback-modal__checkbox"></span>
+              </p>
+              <label for="modal_personal_data">Я согласен на обработку персональных данных</label>
+            </div>
+          </form>
+        </section>
+      </div>
       <script src="js/main.js"></script>
       <script src="js/svgxuse.js" defer></script>
     </body>

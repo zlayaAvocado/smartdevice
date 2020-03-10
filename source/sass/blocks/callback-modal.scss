@@ -1,0 +1,180 @@
+.callback-modal {
+  display: none;
+}
+
+.callback-modal form {
+  @include flex-column;
+}
+
+.callback-modal__wrapper {
+  @include flex-column;
+  font-family: ("PT Mono", "Arial", monospace);
+  background-color: $light-blue-color;
+  color: $white-color;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 22.5%;
+  height: 510px;
+  padding: 1% 1% 4% 2%;
+  font-size: 16px;
+  line-height: 22px;
+  z-index: 1;
+  margin-left: -12%;
+  margin-top: -255px;
+}
+
+.callback-modal__open {
+  display: block;
+}
+
+.callback-modal p {
+  margin: 0;
+  margin-bottom: 6%;
+}
+
+.callback-modal__close-button {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  font-size: 0;
+  background-color: $light-blue-color;
+  border: 0;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.callback-modal__close-button::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 2px;
+  transform: rotate(45deg);
+  background-color: $white-color;
+}
+
+.callback-modal__close-button::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 2px;
+  transform: rotate(-45deg);
+  background-color: $white-color;
+}
+
+.callback-modal .callback-modal__request {
+  margin-bottom: 3%;
+}
+
+.callback-modal__request {
+  font-family: ("Roboto Condensed", "Courier", sans-serif);
+  font-size: 28px;
+  line-height: 39px;
+  font-weight: normal;
+}
+
+.callback-modal .callback-modal__contact-free {
+  margin-bottom: 7%;
+}
+
+.callback-modal__first-name input {
+  @include input-formatting;
+  width: 88%;
+  padding-top: 3%;
+  padding-left: 6%;
+  padding-bottom: 4%;
+}
+
+.callback-modal__first-name input::placeholder {
+  color: $white-color;
+}
+
+.callback-modal__tel input {
+  @include input-formatting;
+  width: 88%;
+  padding-top: 3%;
+  padding-left: 6%;
+  padding-bottom: 4%;
+}
+
+.callback-modal__tel input::placeholder {
+  color: $white-color;
+}
+
+.callback-modal__question textarea {
+  @include input-formatting;
+  font-family: ("PT Mono", "Arial", monospace);
+  padding-top: 3%;
+  padding-left: 3%;
+  padding-bottom: 4%;
+  width: 91%;
+  margin-bottom: 0;
+  height: 4em;
+}
+
+.callback-modal__personal-data {
+  @include flex-row;
+  justify-content: space-between;
+  color: $white-color;
+  font-family: ("PT Mono", "Arial", monospace);
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0.8;
+  width: 90%;
+  align-self: flex-start;
+}
+
+.callback-modal__checkbox-wrapper {
+  position: relative;
+  margin-right: 4%;
+}
+
+.callback-modal__personal-data input[type="checkbox"] {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.callback-modal__checkbox {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $white-color;
+  background: $light-blue-color;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked ~ .callback-modal__checkbox {
+  background-image: url("../img/checkbox-yes.svg");
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  background-position: center;
+  border: 1px solid $white-color;
+}
+
+.callback-modal__personal-data label {
+  width: 90%;
+  display: inline-block;
+}
+
+.callback-modal__submit-button {
+  width: 94%;
+  padding: 3% 0;
+  margin-bottom: 9%;
+}
+
+@media (max-width: $tablet-width) {
+  .callback-modal__wrapper {
+    display: none;
+  }
+}
