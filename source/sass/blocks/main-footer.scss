@@ -1,24 +1,79 @@
 .main-footer {
+  position: relative;
   background-color: $footer-background-color;
+}
+
+.main-footer::after {
+  content: "";
+  position: absolute;
+  background: $dark-grey-color;
+  height: 1px;
+  width: 100%;
+  bottom: 20%;
 }
 
 .main-footer__container {
   @include flex-column;
   max-width: 1410px;
   margin: 0 auto;
-  padding: 65px 250px 15px;
+  padding: 0 7.5%;
 }
 
 .main-footer__top {
   @include flex-row;
   justify-content: space-between;
-  width: 1410px;
-  margin-bottom: 70px;
+  margin-bottom: 3%;
+  padding-top: 5%;
+}
+
+.main-footer__bottom {
+  padding: 2% 0;
 }
 
 .main-footer__logo-link {
-  color: rgb(32, 60, 66);
-  margin-bottom: 50px;
+  @include a-clear;
+  color: $footer-logo-color;
+  margin-bottom: 10%;
   display: inline-block;
   vertical-align: middle;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $light-blue-color;
+  }
+
+  &:active {
+    color: $light-blue-color;
+    opacity: 0.7;
+  }
+}
+
+.main-footer__site-map-wrapper h3,
+.main-footer__office-contacts-wrapper h3 {
+  @include footer-h3;
+}
+
+.main-footer__wrapper {
+  width: 25%;
+}
+
+.main-footer__site-map-wrapper {
+  width: 40%;
+}
+
+.main-footer__office-contacts-wrapper {
+  width: 25%;
+}
+
+@media (max-width: $tablet-width) {
+  .main-footer__top {
+    flex-direction: column;
+  }
+
+  .main-footer__wrapper {
+    @include flex-row;
+    width: 100%;
+    justify-content: space-between;
+  }
 }

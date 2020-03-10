@@ -1,6 +1,6 @@
 'use strict'
 
-const smoothScroll= (button) => {
+const smoothScroll = (button) => {
     button.scrollIntoView({
     behavior: 'smooth'
   });
@@ -19,10 +19,14 @@ consultButton.addEventListener('click', function (evt) {
 });
 
 const telInput = document.querySelector('.company-request__tel-input');
-telInput.addEventListener('focus', function (evt) {
+telInput.addEventListener('focus', function () {
   telInput.value = '+7('
-  const currentInputValue = evt.target.value;
-  if (currentInputValue !== '+7(') {
-    telInput.value = currentInputValue + ')'
-  }
 });
+
+const addParantheses = (evt) => {
+  const currentInputValue = evt.target.value;
+  telInput.value = currentInputValue + ')';
+  telInput.removeEventListener('input', addParantheses)
+}
+
+telInput.addEventListener('input', addParantheses);

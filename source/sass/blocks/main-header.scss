@@ -5,7 +5,7 @@
 }
 
 .main-header__container {
-  display: flex;
+  @include flex-row;
   position: relative;
   width: 1410px;
   margin: 0 auto;

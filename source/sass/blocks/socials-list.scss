@@ -4,6 +4,8 @@
   background-color: $footer-background-color;
   color: $dark-blue-color;
   flex-wrap: wrap;
+  min-height: 40px;
+  width: 50%;
 }
 
 .socials-list a {
@@ -13,7 +15,7 @@
 }
 
 .socials-list__item {
-  margin-right: 50px;
+  margin-right: 24%;
 }
 
 .socials-list__facebook::before {
@@ -41,4 +43,10 @@
   background-image: url("../img/vk.svg");
   width: 27px;
   height: 26px;
+}
+
+@media (max-width: $tablet-width) {
+  .socials-list {
+    justify-content: flex-end;
+  }
 }

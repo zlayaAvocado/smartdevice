@@ -1,26 +1,18 @@
 .site-map-list {
   @include list-clear;
+  @include flex-row;
   background-color: $footer-background-color;
   color: $dark-blue-color;
-  width: 560px;
-}
-
-.site-map-list h3 {
-  @include footer-h3;
+  flex-wrap: wrap;
 }
 
 .site-map-list li {
-  width: 250px;
-  margin-right: 60px;
+  width: 45%;
+  margin-right: 8%;
 }
 
 .site-map-list li:nth-of-type(2n) {
   margin-right: 0;
-}
-
-.site-map-list__wrapper {
-  @include flex-row;
-  flex-wrap: wrap;
 }
 
 .site-map-list__item {
