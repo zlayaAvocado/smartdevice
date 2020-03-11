@@ -12,6 +12,15 @@
   @include a-clear;
   display: inline-block;
   vertical-align: middle;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }
 
 .socials-list__item {
@@ -48,5 +57,6 @@
 @media (max-width: $tablet-width) {
   .socials-list {
     justify-content: flex-end;
+    width: 23%;
   }
 }

@@ -26,3 +26,29 @@
 .site-map-list a {
   @include a-clear;
 }
+
+@media (max-width: $tablet-width) {
+  .site-map-list {
+    flex-direction: column;
+  }
+
+  .site-map-list li {
+    width: 100%;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .site-map-list__item:nth-of-type(1) {
+    order: -1;
+  }
+  .site-map-list__item:nth-of-type(3) {
+    order: -1;
+  }
+
+  .site-map-list__item:nth-of-type(5) {
+    order: -1;
+  }
+  .site-map-list__item:nth-of-type(7) {
+    order: -1;
+  }
+}

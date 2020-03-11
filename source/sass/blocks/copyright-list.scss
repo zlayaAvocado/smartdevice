@@ -30,3 +30,20 @@
 .copyright-list__item:nth-of-type(3) {
   margin-right: 28%;
 }
+
+@media (max-width: $tablet-width) {
+  .copyright-list {
+    justify-content: space-between;
+  }
+
+  .copyright-list__item:nth-of-type(1) {
+    display: none;
+  }
+
+  .copyright-list__item:nth-of-type(2) {
+    position: absolute;
+    top: 8%;
+    left: 42%;
+    width: 40%;
+  }
+}
