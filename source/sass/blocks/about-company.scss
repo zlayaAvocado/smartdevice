@@ -4,14 +4,10 @@
   background-repeat: no-repeat;
   background-image: url("../img/year-found-background-small.png");
   background-size: 220px 317px;
-  background-position: 20% 40%;
+  background-position: 24% 44%;
   color: $dark-grey-color;
   position: relative;
   font-family: ("Roboto Condensed", "Courier", sans-serif);
-}
-
-.about-company__inner-wrapper {
-  @include flex-column;
 }
 
 .about-company h2 {

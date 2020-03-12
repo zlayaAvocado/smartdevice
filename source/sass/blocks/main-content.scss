@@ -19,9 +19,9 @@
 
 .main-content__advantages {
   background: url("../img/polygon.svg") no-repeat 14% 25%,
-  url("../img/polygon-180deg.svg") no-repeat 100% 86%;
+    url("../img/polygon-180deg.svg") no-repeat 100% 86%;
   background-color: $white-color;
-  padding-top: 6%;
+  padding-top: 110px;
 }
 
 .main-content__advantages-container {
@@ -29,21 +29,18 @@
 }
 
 .main-content__about-company {
-  background: url("../img/polygon.svg") no-repeat 14% 25%;
-  background-size: 800px 800px;
+  background-color: $white-color;
+  padding-top: 70px;
+  padding-bottom: 110px;
 }
 
 .main-content__about-company-container {
   @include flex-column;
   padding: 0;
   justify-content: center;
-  width: 45%;
-  padding-left: 15%;
-  padding-right: 5%;
-}
-
-.main-content__about-company {
-  background-color: $white-color;
+  max-width: 1000px;
+  width: 100%;
+  padding-left: 9%;
 }
 
 .main-content__company-services-wrapper {

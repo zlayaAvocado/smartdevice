@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /*!
  * @copyright Copyright (c) 2017 IcoMoon.io
  * @license   Licensed under MIT license
@@ -6,6 +8,7 @@
  */
 /*jslint browser: true */
 /*global XDomainRequest, MutationObserver, window */
+
 (function () {
     "use strict";
     if (typeof window !== "undefined" && window.addEventListener) {
