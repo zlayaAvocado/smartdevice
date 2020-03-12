@@ -1,39 +1,17 @@
 .about-company {
   @include flex-row;
   background-color: $white-color;
+  background-repeat: no-repeat;
+  background-image: url("../img/year-found-background-small.png");
+  background-size: 220px 317px;
+  background-position: 20% 40%;
   color: $dark-grey-color;
   position: relative;
   font-family: ("Roboto Condensed", "Courier", sans-serif);
-  width: 70%;
-  margin-left: 13%;
-  padding: 5% 8% 8%;
 }
 
 .about-company__inner-wrapper {
   @include flex-column;
-}
-
-.about-company::before {
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
-  background-image: url("../img/year-found-background-small.png");
-  width: 220px;
-  height: 317px;
-  top: 71px;
-  left: -90px;
-  z-index: 1;
-}
-
-.about-company__year-found {
-  position: absolute;
-  font-size: 156px;
-  font-weight: bold;
-  line-height: 220px;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  transform: rotate(-90deg);
-  left: -155px;
-  top: 120px;
 }
 
 .about-company h2 {

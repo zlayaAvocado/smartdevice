@@ -17,11 +17,32 @@
   min-height: 870px;
 }
 
-.main-content__company-advantages-wrapper {
+.main-content__advantages {
+  background: url("../img/polygon.svg") no-repeat 14% 25%,
+  url("../img/polygon-180deg.svg") no-repeat 100% 86%;
   background-color: $white-color;
+  padding-top: 6%;
 }
 
-.main-content__company-about-wrapper {
+.main-content__advantages-container {
+  justify-content: center;
+}
+
+.main-content__about-company {
+  background: url("../img/polygon.svg") no-repeat 14% 25%;
+  background-size: 800px 800px;
+}
+
+.main-content__about-company-container {
+  @include flex-column;
+  padding: 0;
+  justify-content: center;
+  width: 45%;
+  padding-left: 15%;
+  padding-right: 5%;
+}
+
+.main-content__about-company {
   background-color: $white-color;
 }
 
@@ -66,7 +87,7 @@
     min-height: 690px;
   }
 
-  .main-content__company-about-wrapper {
+  .main-content__about-company {
     margin-top: -140px;
   }
 }
@@ -87,11 +108,11 @@
     min-height: 640px;
   }
 
-  .main-content__company-advantages-wrapper .main-content__container {
+  .main-content__company-advantages .main-content__container {
     padding-top: 20px;
   }
 
-  .main-content__company-about-wrapper .main-content__container {
+  .main-content__about-company .main-content__container {
     padding-top: 20px;
   }
 

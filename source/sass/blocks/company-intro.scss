@@ -6,10 +6,7 @@
 
 .company-intro h2 {
   margin: 0;
-  margin-bottom: 7%;
-}
 
-.company-intro__offer {
   display: inline-block;
   font-family: ("Roboto Condensed", "Courier", sans-serif);
   font-weight: bold;
@@ -24,17 +21,20 @@
 
 .company-intro__description {
   display: inline-block;
+  margin: 0;
   font-family: ("PT Mono", "Arial", monospace);
   font-size: 22px;
   line-height: 34px;
   color: $white-color;
   width: 87%;
   vertical-align: middle;
+  margin-bottom: 7%;
 }
 
 .company-intro__dash {
   display: inline-block;
   position: relative;
+  margin: 0;
   width: 9.3%;
   height: 2px;
   background-color: $white-color;

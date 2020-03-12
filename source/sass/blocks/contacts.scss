@@ -2,7 +2,8 @@
   @include list-clear;
   @include flex-row;
   flex-wrap: wrap;
-  width: 28%;
+  width: 30%;
+  padding-left: 3%;
 }
 
 .contacts li {
@@ -11,14 +12,22 @@
   font-size: 16px;
   font-family: ("PT Mono", "Arial", monospace);
   line-height: 18px;
-  margin-right: 30%;
+  margin-right: 20%;
 
   &:last-of-type {
     margin-right: 0;
   }
 }
 
-.contacts__email::before {
+.contacts__email {
+  width: 30%;
+}
+
+.contacts__phone {
+  width: 50%;
+}
+
+.contacts__email a::before {
   content: "";
   position: absolute;
   background-image: url("../img/envelope.svg");
@@ -26,11 +35,11 @@
   background-repeat: no-repeat;
   width: 20px;
   height: 14px;
-  left: -40px;
+  left: 0;
   top: 0;
 }
 
-.contacts__phone::before {
+.contacts__phone a::before {
   content: "";
   position: absolute;
   background-image: url("../img/phone-call.svg");
@@ -38,12 +47,16 @@
   background-repeat: no-repeat;
   width: 18px;
   height: 18px;
-  left: -30px;
+  left: 0;
   top: 0;
 }
 
 .contacts a {
   @include a-clear;
+  display: inline-block;
+  vertical-align: middle;
+  width: 80%;
+  padding-left: 15%;
 
   &:hover,
   &:focus {
@@ -54,6 +67,10 @@
     color: $light-blue-color;
     opacity: 0.7;
   }
+}
+
+.contacts__email a {
+  padding-left: 30%;
 }
 
 @media (max-width: $tablet-width) {
