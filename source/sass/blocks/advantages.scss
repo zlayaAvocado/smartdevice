@@ -1,15 +1,11 @@
-.advantages-list {
-  @include list-clear;
+.advantages {
   @include flex-row;
   background-color: $white-color;
   color: $light-blue-color;
-  width: 83%;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  position: relative;
+  max-width: 1920px;
 }
 
-.advantages-list__item {
+.advantages__item {
   width: 41%;
   min-height: 180px;
   border: 1px solid $light-grey-color;
@@ -30,31 +26,31 @@
   }
 }
 
-.advantages-list__item p,
-.advantages-list__item h3 {
+.advantages__item p,
+.advantages__item h3 {
   margin: 0;
 }
 
-.advantages-list__item:hover .advantages-list__item-desc {
+.advantages__item:hover .advantages__item-desc {
   color: $white-color;
 }
 
-.advantages-list__item-title {
+.advantages__item-title {
   font-family: ("Roboto Condensed", "Courier", sans-serif);
   font-size: 24px;
   line-height: 34px;
 }
 
-.advantages-list__item .advantages-list__item-title {
+.advantages__item .advantages__item-title {
   margin-bottom: 4%;
 }
 
-.advantages-list__item svg {
+.advantages__item svg {
   position: relative;
   top: -20px;
 }
 
-.advantages-list__item-desc {
+.advantages__item-desc {
   font-family: ("PT Mono", "Arial", monospace);
   font-size: 16px;
   line-height: 22px;
@@ -62,18 +58,18 @@
 }
 
 @media (max-width: $tablet-width) {
-  .advantages-list {
+  .advantages {
     width: 94%;
     padding: 7% 3%;
   }
 
-  .advantages-list::after {
+  .advantages::after {
     transform: rotate(180deg) scale(2.5);
     bottom: 105px;
     right: -60px;
   }
 
-  .advantages-list__item {
+  .advantages__item {
     width: 43%;
     padding-top: 9%;
     padding-right: 1%;
@@ -81,38 +77,38 @@
     margin-bottom: 4%;
   }
 
-  .advantages-list__item svg {
+  .advantages__item svg {
     top: 25px;
   }
 
-  .advantages-list::before {
+  .advantages::before {
     display: none;
   }
 }
 
 @media (max-width: $max-mobile-width) {
-  .advantages-list {
+  .advantages {
     flex-direction: column;
     width: 100%;
     padding: 7% 0%;
   }
 
-  .advantages-list::after {
+  .advantages::after {
     bottom: 190px;
   }
 
-  .advantages-list__item {
+  .advantages__item {
     width: 88%;
     padding-top: 25%;
     padding-left: 7%;
   }
 
-  .advantages-list__item-title {
+  .advantages__item-title {
     font-size: 20px;
     line-height: 28px;
   }
 
-  .advantages-list__item-desc {
+  .advantages__item-desc {
     font-size: 16px;
     line-height: 22px;
   }

@@ -1,7 +1,6 @@
 .company-intro {
-  width: 51%;
-  position: relative;
-  padding-top: 22%;
+  @include flex-column;
+  min-height: 300px;
 }
 
 .company-intro h2 {
@@ -15,32 +14,30 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: $white-color;
-  margin-bottom: 3.5%;
+  margin-bottom: 25px;
   vertical-align: middle;
 }
 
 .company-intro__description {
-  display: inline-block;
+  position: relative;
   margin: 0;
   font-family: ("PT Mono", "Arial", monospace);
   font-size: 22px;
   line-height: 34px;
   color: $white-color;
-  width: 87%;
-  vertical-align: middle;
-  margin-bottom: 7%;
+  width: 70%;
+  margin-bottom: 5%;
+  padding-left: 10%;
 }
 
-.company-intro__dash {
-  display: inline-block;
-  position: relative;
-  margin: 0;
-  width: 9.3%;
-  height: 2px;
+.company-intro__description::before {
+  content: "";
   background-color: $white-color;
-  margin-right: 2%;
-  bottom: 30px;
-  vertical-align: sub;
+  position: absolute;
+  width: 9%;
+  height: 2px;
+  left: 0;
+  top: 20px;
 }
 
 .company-intro__board-image {
@@ -66,11 +63,12 @@
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 2.5% 5.6% 2.1%;
+  padding: 2% 5% 2%;
   cursor: pointer;
-  margin-left: 14%;
+  margin-left: 11%;
   display: inline-block;
   vertical-align: middle;
+  align-self: flex-start;
 
   &:hover,
   &:focus {
@@ -92,14 +90,15 @@
 .company-intro__scroll-to-bottom {
   color: $white-color;
   display: block;
-  position: absolute;
+  position: relative;
+  align-self: flex-start;
   font-family: ("PT Mono", "Arial", monospace);
   font-size: 14px;
   line-height: 16px;
   transform: rotate(-90deg);
   opacity: 0.5;
-  bottom: -150px;
-  left: -40px;
+  bottom: -130px;
+  left: -30px;
 
   &:hover,
   &:focus {

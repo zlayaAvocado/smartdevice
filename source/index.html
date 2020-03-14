@@ -9,9 +9,9 @@
       <link rel="stylesheet" type="text/css" href="css/style.min.css">
     </head>
     <body>
-      <header class="main-header">
-        <div class="main-header__container">
-          <section class="main-header__header-section">
+      <div class="main-header-wrapper">
+        <header class="main-header">
+          <section class="main-header__header">
             <h1 class="visually-hidden">Smart Device - поставка печатных плат, производство электронных комплектующих и предоставление мировых технологий с 1997 года</h1>
             <a href="#" class="main-header__logo-link">
               <svg class="main-header__logo main-header__logo--tablet-desktop" aria-labelledby="logo-header-tablet-desktop" width="202px" height="52px">
@@ -23,70 +23,55 @@
                 <use xlink:href="img/sprite.svg#logo-mobile"></use>
               </svg>
             </a>
-            <ul class="main-header__contacts contacts">
-              <li class="contacts__email"><a href="mailto:name@email.com"><span>info@sd.ru</span></a></li>
-              <li class="contacts__phone"><a href="tel:+74950005252"><span>+7 (495) 000 52 52</span></a></li>
-            </ul>
+            <a class="main-header__email" href="mailto:name@email.com"><span>info@sd.ru</span></a>
+            <a class="main-header__phone" href="tel:+74950005252"><span>+7 (495) 000 52 52</span></a>
             <button class="main-header__callback-button" type="button">Заказать звонок</button>
           </section>
-      </div>
-      </header>
-      <main class="main-content">
-        <div class="main-content__company-intro-wrapper">
-          <div class="main-content__container">
-            <section class="main-content__company-intro company-intro">
+          <div class="main-header__company-intro-wrapper">
+            <section class="main-header__company-intro company-intro">
               <h2 class="company-intro__offer">Печатные платы</h2>
-                <p class="company-intro__dash"></p>
-                <p class="company-intro__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-              <picture>
-                <source type="image/webp" media="(min-width: 1024px)" srcset="img/boards-desktop@1x.webp 1x, img/boards-desktop@2x.webp 2x">
-                      <source type="image/webp" media="(max-width: 767px)" srcset="img/boards-mobile@1x.webp 1x, img/boards-mobile@2x.webp 2x">
-                      <source media="(max-width: 767px)" srcset="img/boards-mobile@1x.png 1x, img/boards-mobile@2x.png 2x">
-                      <source media="(max-width: 1023px)" srcset="img/boards-tablet@1x.png 1x, img/boards-tablet@2x.png 2x">
-                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/boards-tablet@1x.webp 1x, img/boards-tablet@2x.webp 2x">
-                      <img class="company-intro__board-image" src="img/boards-desktop@1x.png" srcset="img/boards-desktop@2x.png 2x" width="820" height="704" alt="Печатные платы">
-              </picture>
-                <a href="#request" class="company-intro__consult-button">
-                  <span>Получить бесплатную консультацию</span>
-                  <span>Бесплатная консультация</span>
-                </a>
+              <p class="company-intro__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+              <a href="#request" class="company-intro__consult-button">
+                <span>Получить бесплатную консультацию</span>
+                <span>Бесплатная консультация</span>
+              </a>
               <a href="#advantages" class="company-intro__scroll-to-bottom"><span>Скролл вниз</span></a>
             </section>
           </div>
-        </div>
-        <section class="main-content__advantages" id="advantages">
+        </header>
+      </div>
+      <main class="main-content">
+        <section class="main-content__advantages advantages" id="advantages">
           <div class="main-content__container main-content__advantages-container">
             <h2 class="visually-hidden">Преимущества компании</h2>
-            <ul class="main-content__advantages-list advantages-list">
-              <li class="advantages-list__item">
-                <svg aria-hidden="true" role="img" width="29px" height="35px">
-                  <use xlink:href="img/sprite.svg#stopwatch"></use>
-                </svg>
-                <h3 class="advantages-list__item-title">Оперативные сроки</h3>
-                <p class="advantages-list__item-desc">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
-              </li>
-              <li class="advantages-list__item">
-                <svg aria-hidden="true" role="img" width="35px" height="35px">
-                  <use xlink:href="img/sprite.svg#hired"></use>
-                </svg>
-                <h3 class="advantages-list__item-title">Крупные поставщики</h3>
-                <p class="advantages-list__item-desc">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
-              </li>
-              <li class="advantages-list__item">
-                <svg aria-hidden="true" role="img" width="36px" height="31px">
-                  <use xlink:href="img/sprite.svg#detective"></use>
-                </svg>
-                <h3 class="advantages-list__item-title">Полная конфиденциальность</h3>
-                <p class="advantages-list__item-desc">По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
-              </li>
-              <li class="advantages-list__item">
-                <svg aria-hidden="true" role="img" width="36px" height="31px">
-                  <use xlink:href="img/sprite.svg#tag"></use>
-                </svg>
-                <h3 class="advantages-list__item-title">Персонализация стоимости</h3>
-                <p class="advantages-list__item-desc">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
-              </li>
-            </ul>
+            <div class="advantages__item">
+              <svg aria-hidden="true" role="img" width="29px" height="35px">
+                <use xlink:href="img/sprite.svg#stopwatch"></use>
+              </svg>
+              <h3 class="advantages__item-title">Оперативные сроки</h3>
+              <p class="advantages__item-desc">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+            </div>
+            <div class="advantages__item">
+              <svg aria-hidden="true" role="img" width="35px" height="35px">
+                <use xlink:href="img/sprite.svg#hired"></use>
+              </svg>
+              <h3 class="advantages__item-title">Крупные поставщики</h3>
+              <p class="advantages__item-desc">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+            </div>
+            <div class="advantages__item">
+              <svg aria-hidden="true" role="img" width="36px" height="31px">
+                <use xlink:href="img/sprite.svg#detective"></use>
+              </svg>
+              <h3 class="advantages__item-title">Полная конфиденциальность</h3>
+              <p class="advantages__item-desc">По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
+            </div>
+            <div class="advantages__item">
+              <svg aria-hidden="true" role="img" width="36px" height="31px">
+                <use xlink:href="img/sprite.svg#tag"></use>
+              </svg>
+              <h3 class="advantages__item-title">Персонализация стоимости</h3>
+              <p class="advantages__item-desc">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+            </div>
           </div>
         </section>
         <section class="main-content__about-company about-company">

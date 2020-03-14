@@ -1,30 +1,19 @@
 .main-header {
+  @include flex-column;
+  align-items: center;
   max-width: 1920px;
-  display: flex;
   margin: 0 auto;
 }
 
-.main-header__container {
+.main-header__header {
   @include flex-row;
-  position: relative;
-  width: 1410px;
-  margin: 0 auto;
-  padding: 0 7.5%;
-}
-
-.main-header__header-section {
-  @include flex-row;
-  width: 89%;
-  position: absolute;
   align-items: center;
   min-height: 50px;
-  padding-top: 1.5%;
-  z-index: 1;
-}
-
-.main-header .main-header__contacts {
-  padding-top: 0;
-  margin-right: 2%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 78%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .main-header__logo--mobile {
@@ -34,7 +23,7 @@
 .main-header__logo-link {
   @include a-clear;
   color: $white-color;
-  margin-right: 33%;
+  margin-right: 39%;
   cursor: pointer;
 
   &:hover,
@@ -74,13 +63,85 @@
   }
 }
 
+.main-header__email,
+.main-header__phone {
+  @include a-clear;
+  color: $white-color;
+  position: relative;
+  font-size: 16px;
+  font-family: ("PT Mono", "Arial", monospace);
+  line-height: 18px;
+  margin-right: 1%;
+  display: inline-block;
+  vertical-align: middle;
+
+  &:hover,
+  &:focus {
+    color: $light-blue-color;
+  }
+
+  &:active {
+    color: $light-blue-color;
+    opacity: 0.7;
+  }
+}
+
+.main-header__email {
+  width: 10%;
+  padding-left: 3%;
+}
+
+.main-header__phone {
+  width: 15%;
+  padding-left: 3%;
+}
+
+.main-header__email::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/envelope.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 14px;
+  left: 0;
+  top: 0;
+}
+
+.main-header__phone::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/phone-call.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  left: 0;
+  top: 0;
+}
+
+.main-header__company-intro-wrapper {
+  @include flex-row;
+  margin: 0 auto;
+  justify-content: flex-start;
+  width: 75%;
+  padding-top: 190px;
+  padding-bottom: 250px;
+  padding-right: 7.5%;
+  padding-left: 4.5%;
+  background: url("../img/boards.png") no-repeat 97%,
+    url("../img/big-polygon-ellipse.svg") no-repeat 93% -10px,
+    url("../img/small-polygon-ellipse.svg") no-repeat 70% 250px;
+  background-size: 705px 515px, 636px 640px, 373px 377px;
+}
+
 @media (max-width: $tablet-width) {
   .main-header__container {
     max-width: $tablet-width;
     padding: 0 3%;
   }
 
-  .main-header__header-section {
+  .main-header__header {
     width: 95%;
     padding-top: 3%;
     align-items: flex-start;
@@ -111,7 +172,7 @@
     min-width: $min-mobile-width;
   }
 
-  .main-header__header-section {
+  .main-header__header {
     width: 90%;
     padding-top: 4%;
   }
