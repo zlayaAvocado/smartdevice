@@ -1,20 +1,24 @@
 "use strict";
 
-var smoothScroll = function smoothScroll(button) {
-  button.scrollIntoView({
+var smoothScroll = function smoothScroll(element) {
+  var elementPosition = element.getBoundingClientRect().top;
+  window.scrollTo({
+    top: elementPosition,
     behavior: "smooth"
   });
 };
 
 var scrollButton = document.querySelector(".company-intro__scroll-to-bottom");
+var nextSection = document.querySelector(".advantages");
 scrollButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  smoothScroll(scrollButton);
+  smoothScroll(nextSection);
 });
 var consultButton = document.querySelector(".company-intro__consult-button");
+var companyRequestForm = document.querySelector(".company-request");
 consultButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  smoothScroll(consultButton);
+  smoothScroll(companyRequestForm);
 });
 var telInput = document.querySelector(".company-request__tel-input");
 telInput.addEventListener("focus", function () {

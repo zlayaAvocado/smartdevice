@@ -1,41 +1,51 @@
+.main-content {
+  background-image: url("../img/big-polygon.svg");
+  background-repeat: no-repeat;
+  background-position: -50px 450px;
+  background-size: 576px 874px;
+}
+
 .main-content__container {
   @include flex-column;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 7.5%;
 }
 
 .main-content__advantages {
-  background: url("../img/polygon.svg") no-repeat 14% 25%,
-    url("../img/polygon-180deg.svg") no-repeat 100% 86%;
   background-color: $white-color;
-  padding-top: 110px;
 }
 
 .main-content__advantages-container {
   @include flex-row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  width: 70%;
 }
 
 .main-content__about-company {
   background-color: $white-color;
-  padding-top: 70px;
-  padding-bottom: 110px;
 }
 
 .main-content__about-company-container {
   @include flex-column;
   padding: 0;
-  justify-content: center;
-  max-width: 1000px;
-  width: 100%;
-  padding-left: 9%;
+  justify-content: flex-start;
+  width: 62%;
+  padding-left: 12%;
+  padding-bottom: 1%;
+  background-image: url("../img/year-found-background-small.png");
+  background-size: 220px 317px;
+  background-position: -15px 8px;
+  background-repeat: no-repeat;
 }
 
-.main-content__company-services-wrapper {
-  background-color: $dark-blue-color;
+.main-content__company-services-container {
+  @include flex-row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
 }
+
 
 .main-content__company-request-wrapper {
   background-color: $light-blue-color;
@@ -92,10 +102,6 @@
   }
 
   .main-content__about-company .main-content__container {
-    padding-top: 20px;
-  }
-
-  .main-content__company-services-wrapper .main-content__container {
     padding-top: 20px;
   }
 

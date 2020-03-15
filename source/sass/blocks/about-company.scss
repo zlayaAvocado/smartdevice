@@ -1,13 +1,16 @@
 .about-company {
   @include flex-row;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 35px;
+  padding-bottom: 90px;
   background-color: $white-color;
-  background-repeat: no-repeat;
-  background-image: url("../img/year-found-background-small.png");
-  background-size: 220px 317px;
-  background-position: 24% 44%;
   color: $dark-grey-color;
   position: relative;
   font-family: ("Roboto Condensed", "Courier", sans-serif);
+  z-index: -1;
 }
 
 .about-company h2 {

@@ -1,8 +1,17 @@
 .advantages {
   @include flex-row;
+  background: url("../img/polygon.svg") no-repeat 13% 40px,
+    url("../img/polygon-180deg.svg") no-repeat 100% 400px;
   background-color: $white-color;
   color: $light-blue-color;
   max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 110px;
+  padding-bottom: 35px;
+  align-self: flex-end;
+  justify-content: center;
 }
 
 .advantages__item {
@@ -11,6 +20,7 @@
   border: 1px solid $light-grey-color;
   border-left: 2px solid $light-blue-color;
   color: $light-blue-color;
+  background-color: $white-color;
   cursor: pointer;
   margin-bottom: 3%;
   padding-top: 5%;

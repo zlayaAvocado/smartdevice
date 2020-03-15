@@ -1,17 +1,84 @@
 .company-services {
-  width: 100%;
-  padding: 6% 8% 9% 8%;
   color: $white-color;
   background-color: $dark-blue-color;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 90px;
+  padding-bottom: 35px;
 }
 
 .company-services p {
   font-family: ("Roboto Condensed", "Courier", sans-serif);
+  display: block;
+  width: 100%;
   margin: 0;
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
   margin-bottom: 4%;
+}
+
+.company-services__item {
+  position: relative;
+  font-family: ("Roboto Condensed", "Courier", sans-serif);
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  width: 32%;
+  height: 616px;
+}
+
+.company-services a {
+  @include a-clear;
+  display: block;
+  position: relative;
+  border: 2px solid transparent;
+  width: 30%;
+  color: rgba(255, 255, 255, 1);
+  word-wrap: break-word;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $light-blue-color;
+    opacity: 0.8;
+  }
+
+  &:active {
+    border: 2px solid $light-blue-color;
+    opacity: 0.8;
+  }
+}
+
+.company-services__produce::before {
+  @include services-background;
+  background-image: url("../img/boards-produce-background.png");
+}
+
+.company-services__assemble::before {
+  @include services-background;
+  background-image: url("../img/boards-assemble-background.png");
+}
+
+.company-services__components::before {
+  @include services-background;
+  background-image: url("../img/boards-components-background.png");
+}
+
+.company-services__produce::after {
+  @include white-arrow;
+  @include light-blue-square;
+}
+
+.company-services__assemble::after {
+  @include white-arrow;
+  @include light-blue-square;
+}
+
+.company-services__components::after {
+  @include white-arrow;
+  @include light-blue-square;
 }
 
 @media (max-width: $tablet-width) {
@@ -24,6 +91,36 @@
     line-height: 45px;
     margin-bottom: 7%;
   }
+
+  .company-services__item {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 7%;
+  }
+
+  .company-services a::before {
+    height: 250px;
+    background-position: center;
+  }
+
+  .company-services a {
+    width: 25%;
+  }
+
+  .company-services__produce::after {
+    right: 4%;
+    bottom: 10%;
+  }
+
+  .company-services__assemble::after {
+    right: 4%;
+    bottom: 10%;
+  }
+
+  .company-services__components::after {
+    right: 4%;
+    bottom: 10%;
+  }
 }
 
 @media (max-width: $max-mobile-width) {
@@ -35,5 +132,32 @@
 
   .company-services {
     padding: 10% 2% 14%;
+  }
+
+  .company-services__item {
+    height: 260px;
+    margin-bottom: 9%;
+  }
+
+  .company-services a {
+    width: 55%;
+    top: 25px;
+    left: 25px;
+  }
+
+  .company-services a::before {
+    height: 260px;
+  }
+
+  .company-services__produce::after {
+    right: 10%;
+  }
+
+  .company-services__assemble::after {
+    right: 10%;
+  }
+
+  .company-services__components::after {
+    right: 10%;
   }
 }

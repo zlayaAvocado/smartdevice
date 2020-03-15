@@ -1,19 +1,23 @@
-const smoothScroll = (button) => {
-  button.scrollIntoView({
+const smoothScroll = (element) => {
+  const elementPosition = element.getBoundingClientRect().top;
+  window.scrollTo({
+    top: elementPosition,
     behavior: `smooth`
   });
 };
 
 const scrollButton = document.querySelector(`.company-intro__scroll-to-bottom`);
+const nextSection = document.querySelector(`.advantages`);
 scrollButton.addEventListener(`click`, function (evt) {
   evt.preventDefault();
-  smoothScroll(scrollButton);
+  smoothScroll(nextSection);
 });
 
 const consultButton = document.querySelector(`.company-intro__consult-button`);
+const companyRequestForm = document.querySelector(`.company-request`);
 consultButton.addEventListener(`click`, function (evt) {
   evt.preventDefault();
-  smoothScroll(consultButton);
+  smoothScroll(companyRequestForm);
 });
 
 const telInput = document.querySelector(`.company-request__tel-input`);

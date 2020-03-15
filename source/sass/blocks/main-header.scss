@@ -152,9 +152,30 @@
     margin-right: 54%;
   }
 
-  .main-header .main-header__contacts {
-    padding-top: 2.5%;
-    margin-right: 0;
+  .main-header__email::before {
+    width: 27px;
+    height: 21px;
+    left: 0;
+  }
+
+  .main-header__phone::before {
+    width: 25px;
+    height: 25px;
+    left: 0;
+    top: -3px;
+  }
+
+  .main-header__phone,
+  .main-header__email {
+    display: block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  .main-header__phone span,
+  .main-header__email {
+    display: none;
   }
 
   .main-header__callback-button {
