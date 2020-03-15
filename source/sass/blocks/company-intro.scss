@@ -113,39 +113,39 @@
 
 @media (max-width: $tablet-width) {
   .company-intro {
-    width: 75%;
+    width: 100%;
     padding-top: 0;
   }
 
   .company-intro h2 {
-    margin-bottom: 60px;
+    font-size: 60px;
+    line-height: 70px;
+    margin-bottom: 30px;
   }
 
   .company-intro__offer {
-    font-size: 60px;
-    line-height: 70px;
     width: 50%;
-    margin-bottom: 6%;
   }
 
   .company-intro__description {
-    width: 80%;
+    width: 60%;
     font-size: 18px;
     line-height: 28px;
+    padding-left: 9%;
+    margin-bottom: 9%;
   }
 
-  .company-intro__dash {
+  .company-intro__description::before {
     width: 7%;
-    vertical-align: bottom;
   }
 
   .company-intro__consult-button {
-    padding: 3% 4% 3%;
-    width: 77%;
-    margin-left: 10%;
+    padding: 2.5% 2% 3%;
+    width: 60%;
+    margin-left: 9%;
   }
 
-  .company-introl__scroll-to-bottom {
+  .company-intro__scroll-to-bottom {
     display: none;
   }
 
@@ -162,29 +162,28 @@
   }
 
   .company-intro h2 {
-    margin-bottom: 40px;
+    font-size: 40px;
+    line-height: 47px;
   }
 
   .company-intro__offer {
-    font-size: 40px;
-    line-height: 47px;
     margin-bottom: 30px;
   }
 
   .company-intro__description {
     width: 80%;
+    padding-left: 15%;
     font-size: 16px;
     line-height: 25px;
+    margin-bottom: 12%;
   }
 
-  .company-intro__dash {
-    width: 11%;
-    margin-right: 1%;
-    vertical-align: sub;
+  .company-intro__description::before {
+    width: 12%
   }
 
   .company-intro__consult-button {
-    width: 88%;
+    width: 87%;
     margin: 0 2%;
     padding: 5% 4%;
   }

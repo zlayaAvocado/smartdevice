@@ -64,36 +64,31 @@
 
 @media (max-width: $tablet-width) {
   .about-company {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-left: 27%;
+    width: 94%;
+    padding-top: 2%;
+    padding-left: 3%;
+    padding-right:3%;
+    padding-bottom: 3%;
     margin-left: 0;
   }
 
-  .about-company::before {
-    background-image: url("../img/year-found-background-big.png");
-    width: 251px;
-    height: 361px;
-    top: 40px;
-    left: 0;
-  }
-
-  .about-company__inner-wrapper p:last-of-type {
+  .about-company p:last-of-type {
     display: block;
     overflow: hidden;
     position: relative;
     text-align: start;
     max-height: 22%;
+    margin-bottom: 6%;
   }
 
-  .about-company__inner-wrapper p:last-of-type::before {
-    content: "...";
+  .about-company p:last-of-type::before {
+    content: "..";
     position: absolute;
     right: 0;
     bottom: 0;
   }
 
-  .about-company__inner-wrapper p:last-of-type::after {
+  .about-company p:last-of-type::after {
     content: "";
     position: absolute;
     right: 0;
@@ -129,8 +124,8 @@
   .about-company {
     padding-left: 0;
     padding-right: 0;
-    padding-top: 20%;
-    width: 98%;
+    padding-top: 2%;
+    width: 100%;
     margin-bottom: -80px;
   }
 
@@ -141,6 +136,7 @@
   .about-company h2 {
     font-size: 28px;
     line-height: 39px;
+    margin-bottom: 8%;
   }
 
   .about-company p {
@@ -151,9 +147,9 @@
     }
   }
 
-  .about-company__inner-wrapper p:last-of-type {
+  .about-company p:last-of-type {
     max-height: 29%;
-    margin-bottom: 10%;
+    margin-bottom: 7%;
   }
 
   .about-company__year-found {

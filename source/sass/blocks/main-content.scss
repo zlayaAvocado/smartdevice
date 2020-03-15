@@ -54,6 +54,8 @@
 @media (max-width: $tablet-width) {
   .main-content {
     width: 100%;
+    background: url(../img/polygon-180deg.svg) no-repeat 260px 120px;
+    background-size: 690px 690px;
   }
 
   .main-content__container {
@@ -65,18 +67,28 @@
   }
 
   .main-content__advantages-container {
+    width: 100%;
     padding: 0;
   }
 
   .main-content__about-company-container {
-    padding: 0;
+    background-image: url("../img/year-found-background-big.png");
+    background-size: 251px 361px;
+    background-position: -30px 0;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 26%;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .main-content__company-services-container {
+    width: 96%;
     padding: 0;
   }
 
   .main-content__company-request-container {
+    width: 96%;
     padding: 0;
   }
 
@@ -96,6 +108,15 @@
     padding-left: 3%;
     padding-right: 3%;
   }
+
+  .main-content__advantages-container {
+    padding-top: 20px;
+  }
+
+  .main-content__about-company-container {
+    background-size: 0;
+  }
+
 
   .main-content__company-advantages .main-content__container {
     padding-top: 20px;

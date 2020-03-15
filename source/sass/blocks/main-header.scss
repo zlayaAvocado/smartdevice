@@ -136,20 +136,27 @@
 }
 
 @media (max-width: $tablet-width) {
-  .main-header__container {
-    max-width: $tablet-width;
-    padding: 0 3%;
-  }
-
   .main-header__header {
-    width: 95%;
+    width: 94%;
     padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
     align-items: flex-start;
     justify-content: space-between;
   }
 
+  .main-header__company-intro-wrapper {
+    width: 78%;
+    padding-top: 70px;
+    padding-left: 11%;
+    padding-right: 11%;
+    padding-bottom: 165px;
+    background-size: 465px 340px, 501px 501px, 294px 294px;
+    background-position: 170% 0,170% -120px,100% 85px;
+  }
+
   .main-header__logo-link {
-    margin-right: 54%;
+    margin-right: 58%;
   }
 
   .main-header__email::before {
@@ -168,13 +175,23 @@
   .main-header__phone,
   .main-header__email {
     display: block;
+    cursor: pointer;
+    align-self: center;
+    padding: 0;
+  }
+
+  .main-header__phone {
     width: 25px;
     height: 25px;
-    cursor: pointer;
+  }
+
+  .main-header__email {
+    width: 27px;
+    height: 21px;
   }
 
   .main-header__phone span,
-  .main-header__email {
+  .main-header__email span {
     display: none;
   }
 
@@ -188,15 +205,25 @@
     max-width: $max-mobile-width;
   }
 
-  .main-header__container {
-    max-width: $max-mobile-width;
-    min-width: $min-mobile-width;
+  .main-header__header {
+    width: 94%;
+    padding-top: 4%;
+    padding-bottom: 4%;
   }
 
-  .main-header__header {
-    width: 90%;
-    padding-top: 4%;
+  .main-header__company-intro-wrapper {
+    width: 94%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 205px;
+    padding-bottom: 60px;
+    background-size: 301px 220px, 479px 479px, 281px 281px;
+    background-position: 106% 0, 100% -120px, 60% 85px;
   }
+
+.main-header__logo-link {
+  margin-right: 49%;
+}
 
   .main-header__logo--mobile {
     display: block;
