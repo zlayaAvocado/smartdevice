@@ -92,3 +92,24 @@
     border: 2px solid $white-color;
   }
 }
+
+@mixin toggle-button() {
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  font-size: 0;
+  background-color: $footer-background-color;
+  border: 0;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+@mixin toggle-button-pseudo() {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 16px;
+  height: 2px;
+  background-color: $dark-grey-color;
+}

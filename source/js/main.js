@@ -44,20 +44,20 @@ const callbackButton = document.querySelector(`.main-header__callback-button`);
 
 const onEscKey = (evt) => {
   if (evt.key === `esc` || evt.key === `Escape`) {
-    toggleClass(callbackModal, `callback-modal__open`);
-    toggleClass(overlay, `callback-modal__open`);
+    toggleClass(callbackModal, `callback-modal--open`);
+    toggleClass(overlay, `callback-modal--open`);
     document.removeEventListener(`keydown`, onEscKey);
   }
 };
 
 const openModal = () => {
-  toggleClass(callbackModal, `callback-modal__open`);
-  toggleClass(overlay, `callback-modal__open`);
+  toggleClass(callbackModal, `callback-modal--open`);
+  toggleClass(overlay, `callback-modal--open`);
 };
 
 const closeModal = () => {
-  toggleClass(callbackModal, `callback-modal__open`);
-  toggleClass(overlay, `callback-modal__open`);
+  toggleClass(callbackModal, `callback-modal--open`);
+  toggleClass(overlay, `callback-modal--open`);
   document.removeEventListener(`keydown`, onEscKey);
 };
 
@@ -88,4 +88,27 @@ callbackButton.addEventListener(`click`, function () {
     callbackTelInput.value = `+7(`;
   });
   callbackTelInput.addEventListener(`input`, addParantheses);
+});
+
+const toggleSiteMapButton = document.querySelector(`.main-footer__toggle-button-map`);
+const toggleContactsButton = document.querySelector(`.main-footer__toggle-button-contacts`);
+const siteMapList = document.querySelector(`.site-map-list`);
+const contactsList = document.querySelector(`.office-contacts`);
+
+const toggleAttribute = (attribute, oldAtt, newAtt) => {
+  if (toggleSiteMapButton.getAttribute(attribute) === oldAtt) {
+     toggleSiteMapButton.setAttribute(attribute, newAtt);
+   } else {
+     toggleSiteMapButton.setAttribute(attribute, oldAtt);
+   }
+};
+
+toggleSiteMapButton.addEventListener(`click`, function () {
+  toggleClass(siteMapList, `site-map-list--closed`);
+  toggleAttribute(`aria-label`, `Открыть разделы сайта`, `Закрыть разделы сайта`);
+});
+
+toggleContactsButton.addEventListener(`click`, function () {
+  toggleClass(contactsList, `office-contacts__wrapper--closed`);
+  toggleAttribute(`aria-label`, `Открыть список контактов`, `Закрыть список контактов`);
 });

@@ -44,20 +44,20 @@ var callbackButton = document.querySelector(".main-header__callback-button");
 
 var onEscKey = function onEscKey(evt) {
   if (evt.key === "esc" || evt.key === "Escape") {
-    toggleClass(callbackModal, "callback-modal__open");
-    toggleClass(overlay, "callback-modal__open");
+    toggleClass(callbackModal, "callback-modal--open");
+    toggleClass(overlay, "callback-modal--open");
     document.removeEventListener("keydown", onEscKey);
   }
 };
 
 var openModal = function openModal() {
-  toggleClass(callbackModal, "callback-modal__open");
-  toggleClass(overlay, "callback-modal__open");
+  toggleClass(callbackModal, "callback-modal--open");
+  toggleClass(overlay, "callback-modal--open");
 };
 
 var closeModal = function closeModal() {
-  toggleClass(callbackModal, "callback-modal__open");
-  toggleClass(overlay, "callback-modal__open");
+  toggleClass(callbackModal, "callback-modal--open");
+  toggleClass(overlay, "callback-modal--open");
   document.removeEventListener("keydown", onEscKey);
 };
 
@@ -84,4 +84,25 @@ callbackButton.addEventListener("click", function () {
     callbackTelInput.value = "+7(";
   });
   callbackTelInput.addEventListener("input", addParantheses);
+});
+var toggleSiteMapButton = document.querySelector(".main-footer__toggle-button-map");
+var toggleContactsButton = document.querySelector(".main-footer__toggle-button-contacts");
+var siteMapList = document.querySelector(".site-map-list");
+var contactsList = document.querySelector(".office-contacts");
+
+var toggleAttribute = function toggleAttribute(attribute, oldAtt, newAtt) {
+  if (toggleSiteMapButton.getAttribute(attribute) === oldAtt) {
+    toggleSiteMapButton.setAttribute(attribute, newAtt);
+  } else {
+    toggleSiteMapButton.setAttribute(attribute, oldAtt);
+  }
+};
+
+toggleSiteMapButton.addEventListener("click", function () {
+  toggleClass(siteMapList, "site-map-list--closed");
+  toggleAttribute("aria-label", "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0440\u0430\u0437\u0434\u0435\u043B\u044B \u0441\u0430\u0439\u0442\u0430", "\u0417\u0430\u043A\u0440\u044B\u0442\u044C \u0440\u0430\u0437\u0434\u0435\u043B\u044B \u0441\u0430\u0439\u0442\u0430");
+});
+toggleContactsButton.addEventListener("click", function () {
+  toggleClass(contactsList, "office-contacts--closed");
+  toggleAttribute("aria-label", "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u043E\u0432", "\u0417\u0430\u043A\u0440\u044B\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u043E\u0432");
 });

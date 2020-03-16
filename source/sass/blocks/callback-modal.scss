@@ -15,7 +15,7 @@
   top: 50%;
   left: 50%;
   width: 22.5%;
-  height: 510px;
+  min-height: 510px;
   padding: 1% 1% 4% 2%;
   font-size: 16px;
   line-height: 22px;
@@ -24,7 +24,7 @@
   margin-top: -255px;
 }
 
-.callback-modal__open {
+.callback-modal--open {
   display: block;
 }
 

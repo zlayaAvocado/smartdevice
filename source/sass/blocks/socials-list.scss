@@ -5,7 +5,7 @@
   color: $dark-blue-color;
   flex-wrap: wrap;
   min-height: 40px;
-  width: 50%;
+  width: 70%;
 }
 
 .socials-list a {
@@ -24,7 +24,13 @@
 }
 
 .socials-list__item {
+  width: 27px;
+  height: 27px;
   margin-right: 10%;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 }
 
 .socials-list__facebook {
@@ -72,6 +78,13 @@
 @media (max-width: $tablet-width) {
   .socials-list {
     justify-content: flex-end;
+    align-items: center;
     width: 23%;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .socials-list {
+    width: 40%;
   }
 }

@@ -1,0 +1,48 @@
+.office-contacts {
+  background-color: $footer-background-color;
+  color: $dark-blue-color;
+  width: 30%;
+}
+
+.office-contacts__wrapper {
+  @include flex-column;
+}
+
+.office-contacts h3 {
+  @include footer-h3;
+  margin-bottom: 7%;
+}
+
+.office-contacts__item {
+  font-family: ("PT Mono", "Arial", monospace);
+  font-size: 15px;
+  font-style: normal;
+  line-height: 26px;
+  opacity: 0.5;
+  color: $dark-blue-color;
+}
+
+.office-contacts a {
+  @include a-clear;
+}
+
+@media (max-width: $tablet-width) {
+  .office-contacts {
+    @include flex-column;
+    width: 44%;
+  }
+
+  .office-contacts h3 {
+    margin-bottom: 8%;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .office-contacts {
+    width: 94%;
+  }
+
+  .office-contacts__wrapper--closed {
+    display: none;
+  }
+}

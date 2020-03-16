@@ -41,8 +41,8 @@
         </header>
       </div>
       <main class="main-content">
-        <section class="main-content__advantages advantages" id="advantages" role="list">
-          <div class="main-content__container main-content__advantages-container">
+        <section class="main-content__advantages advantages" id="advantages">
+          <div class="main-content__container main-content__advantages-container" role="list">
             <h2 class="visually-hidden">Преимущества компании</h2>
             <div class="advantages__item" role="listitem" aria-labelledby="item-title-1" aria-describedby="item-desc-1">
               <svg aria-hidden="true" role="img" width="29px" height="35px">
@@ -82,13 +82,13 @@
             <a href="about.html" class="about-company__about-button">Подробнее</a>
           </div>
         </section>
-        <section class="main-content__company-services company-services" role="list">
-          <div class="main-content__container main-content__company-services-container">
+        <section class="main-content__company-services company-services">
+          <div class="main-content__container main-content__company-services-container" role="list">
             <h2 class="visually-hidden">Услуги компании</h2>
             <p>Service Device предлагает следующие товары и услуги</p>
-            <a class="company-services__item company-services__produce" href="boards-produce.html" role="listitem">Производство печатных плат</a>
-            <a class="company-services__item company-services__assemble" href="boards-assemble.html" role="listitem">Монтаж печатных плат</a>
-            <a class="company-services__item company-services__components" href="components.html" role="listitem">Комплектующие для светотехники</a>
+            <a class="company-services__item company-services__produce" href="boards-produce.html">Производство печатных плат</a>
+            <a class="company-services__item company-services__assemble" href="boards-assemble.html">Монтаж печатных плат</a>
+            <a class="company-services__item company-services__components" href="components.html">Комплектующие для светотехники</a>
           </div>
         </section>
         <div class="main-content__company-request-wrapper">
@@ -129,52 +129,48 @@
       </main>
       <footer class="main-footer">
         <div class="main-footer__container">
-          <div class="main-footer__top">
-            <div class="main-footer__wrapper">
-              <a href="#" class="main-footer__logo-link">
-                <svg class="main-footer__logo" aria-labelledby="logo-footer" width="216px" height="52px">
-                  <title id="logo-footer">Логотип Smart Device</title>
-                  <use xlink:href="img/sprite.svg#logo-footer"></use>
-                </svg>
-              </a>
-              <ul class="main-footer__socials socials-list">
-                <li class="socials-list__item"><a class="socials-list__facebook" href="#" aria-label="Facebook"></a></li>
-                <li class="socials-list__item"><a class="socials-list__ok" href="#" aria-label="Одноклассники"></a></li>
-                <li class="socials-list__item"><a class="socials-list__vk" href="#" aria-label="Вконтакте"></a></li>
-              </ul>
-            </div>
-            <div class="main-footer__middle">
-              <div class="main-footer__site-map-wrapper">
-                <h3>Разделы сайта</h3>
-                <ul class="main-footer__site-map site-map-list">
-                  <li class="site-map-list__item"><a href="about.html">О компании</a></li>
-                  <li class="site-map-list__item"><a href="components.html">Комплектующие</a></li>
-                  <li class="site-map-list__item"><a href="products.html">Продукты</a></li>
-                  <li class="site-map-list__item"><a href="delivery.html">Доставка</a></li>
-                  <li class="site-map-list__item"><a href="boards-produce.html">Производство печатных плит</a></li>
-                  <li class="site-map-list__item"><a href="contacts.html">Контакты</a></li>
-                  <li class="site-map-list__item"><a href="boards-assemble.html">Монтаж печатных плат</a></li>
-                </ul>
-              </div>
-              <div class="main-footer__office-contacts-wrapper">
-                <h3>Наш офис</h3>
-                <ul class="main-footer__office-сontacts office-contacts-list">
-                  <li class="office-contacts-list__item">г. Мытищи, Олимпийский проспект, д.10</li>
-                  <li class="office-contacts-list__item"><a href="tel:+74955894050">+7 (495) 589-40-50</a></li>
-                  <li class="office-contacts-list__item"><a href="tel:+79250038767">+7 (925) 003-87-67</a></li>
-                  <li class="office-contacts-list__item"><a href="tel:+792692608079">+7 (926) 926-080-79</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="main-footer__bottom">
-            <ul class="main-footer__copyright-list copyright-list">
-              <li class="copyright-list__item">Все права защищены</li>
-              <li class="copyright-list__item">1999-2018 SD Service Devices</li>
-              <li class="copyright-list__item"><a href="termsofuse.html">Условия конфиденциальности</a></li>
-              <li class="copyright-list__item">Developed by wow studio</li>
+          <div class="main-footer__wrapper">
+            <a href="#" class="main-footer__logo-link">
+              <svg class="main-footer__logo" aria-labelledby="logo-footer" width="216px" height="52px">
+                <title id="logo-footer">Логотип Smart Device</title>
+                <use xlink:href="img/sprite.svg#logo-footer"></use>
+              </svg>
+            </a>
+            <ul class="main-footer__socials socials-list">
+              <li class="socials-list__item"><a class="socials-list__facebook" href="#" aria-label="Facebook"></a></li>
+              <li class="socials-list__item"><a class="socials-list__ok" href="#" aria-label="Одноклассники"></a></li>
+              <li class="socials-list__item"><a class="socials-list__vk" href="#" aria-label="Вконтакте"></a></li>
             </ul>
           </div>
+          <div class="main-footer__site-map-wrapper">
+            <h3>Разделы сайта</h3>
+            <button type="button" class="main-footer__toggle-button-map" aria-label="Открыть разделы сайта"></button>
+            <ul class="main-footer__site-map site-map-list site-map-list--closed">
+              <li class="site-map-list__item"><a href="about.html">О компании</a></li>
+              <li class="site-map-list__item"><a href="components.html">Комплектующие</a></li>
+              <li class="site-map-list__item"><a href="products.html">Продукты</a></li>
+              <li class="site-map-list__item"><a href="delivery.html">Доставка</a></li>
+              <li class="site-map-list__item"><a href="boards-produce.html">Производство печатных плит</a></li>
+              <li class="site-map-list__item"><a href="contacts.html">Контакты</a></li>
+              <li class="site-map-list__item"><a href="boards-assemble.html">Монтаж печатных плат</a></li>
+            </ul>
+          </div>
+          <div class="main-footer__office-contacts office-contacts">
+            <h3>Наш офис</h3>
+            <button type="button" class="main-footer__toggle-button-contacts" aria-label="Открыть список контактов"></button>
+            <div class="office-contacts__wrapper office-contacts__wrapper--closed" role="list">
+              <address class="office-contacts__item">г. Мытищи, Олимпийский проспект, д.10</address>
+              <a class="office-contacts__item" href="tel:+74955894050">+7 (495) 589-40-50</a>
+              <a class="office-contacts__item" href="tel:+79250038767">+7 (925) 003-87-67</a>
+              <a class="office-contacts__item" href="tel:+792692608079">+7 (926) 926-080-79</a>
+            </div>
+          </div>
+        </div>
+        <div class="main-footer__container copyright">
+          <p class="copyright__item">Все права защищены</p>
+          <p class="copyright__item">1999-2018 SD Service Devices</p>
+          <p class="copyright__item"><a href="termsofuse.html">Условия конфиденциальности</a></p>
+          <p class="copyright__item">Developed by wow studio</p>
         </div>
       </footer>
       <div class="callback-modal">
