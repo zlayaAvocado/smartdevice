@@ -20,7 +20,7 @@ consultButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   smoothScroll(companyRequestForm);
 });
-var telInput = document.querySelector(".company-request__tel-input");
+var telInput = document.querySelector(".company-request__tel");
 telInput.addEventListener("focus", function () {
   telInput.value = "+7(";
 });
@@ -87,22 +87,28 @@ callbackButton.addEventListener("click", function () {
 });
 var toggleSiteMapButton = document.querySelector(".main-footer__toggle-button-map");
 var toggleContactsButton = document.querySelector(".main-footer__toggle-button-contacts");
+var toggleSideMapPseudo = document.querySelector(".main-footer__toggle-button-map::after");
+var toggleContactsPseudo = document.querySelector(".main-footer__toggle-button-contacts::after");
 var siteMapList = document.querySelector(".site-map-list");
-var contactsList = document.querySelector(".office-contacts");
+var contactsList = document.querySelector(".office-contacts__wrapper");
+var siteMapWrapper = document.querySelector(".main-footer__site-map-wrapper");
+var contactsWrapper = document.querySelector(".main-footer__office-contacts");
 
-var toggleAttribute = function toggleAttribute(attribute, oldAtt, newAtt) {
-  if (toggleSiteMapButton.getAttribute(attribute) === oldAtt) {
-    toggleSiteMapButton.setAttribute(attribute, newAtt);
+var toggleAttribute = function toggleAttribute(element, attribute, newAtt, oldAtt) {
+  if (element.getAttribute(attribute) === oldAtt) {
+    element.setAttribute(attribute, newAtt);
   } else {
-    toggleSiteMapButton.setAttribute(attribute, oldAtt);
+    element.setAttribute(attribute, oldAtt);
   }
 };
 
 toggleSiteMapButton.addEventListener("click", function () {
   toggleClass(siteMapList, "site-map-list--closed");
-  toggleAttribute("aria-label", "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0440\u0430\u0437\u0434\u0435\u043B\u044B \u0441\u0430\u0439\u0442\u0430", "\u0417\u0430\u043A\u0440\u044B\u0442\u044C \u0440\u0430\u0437\u0434\u0435\u043B\u044B \u0441\u0430\u0439\u0442\u0430");
+  toggleClass(siteMapWrapper, "main-footer__site-map-wrapper--open");
+  toggleAttribute(toggleSiteMapButton, "aria-label", "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0440\u0430\u0437\u0434\u0435\u043B\u044B \u0441\u0430\u0439\u0442\u0430", "\u0417\u0430\u043A\u0440\u044B\u0442\u044C \u0440\u0430\u0437\u0434\u0435\u043B\u044B \u0441\u0430\u0439\u0442\u0430");
 });
 toggleContactsButton.addEventListener("click", function () {
-  toggleClass(contactsList, "office-contacts--closed");
-  toggleAttribute("aria-label", "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u043E\u0432", "\u0417\u0430\u043A\u0440\u044B\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u043E\u0432");
+  toggleClass(contactsList, "office-contacts__wrapper--closed");
+  toggleClass(contactsWrapper, "main-footer__office-contacts--open");
+  toggleAttribute(toggleContactsButton, "aria-label", "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u043E\u0432", "\u0417\u0430\u043A\u0440\u044B\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u043E\u0432");
 });

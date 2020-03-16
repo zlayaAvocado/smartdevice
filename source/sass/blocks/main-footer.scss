@@ -5,7 +5,7 @@
 
 .main-footer__container {
   @include flex-row;
-  max-width: 1920px;
+  max-width: 1420px;
   margin: 0 auto;
   padding: 3.5% 11% 2.8%;
   border-bottom: 1px solid $dark-grey-color;
@@ -50,7 +50,6 @@
 }
 
 @media (max-width: $tablet-width) {
-
   .main-footer {
     @include flex-column;
   }
@@ -96,13 +95,15 @@
   }
 
   .main-footer__container {
+    width: 100%;
     flex-direction: column;
   }
 
   .main-footer__wrapper {
     flex-direction: column;
-    width: 94%;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 48px 0 47px;
   }
 
   .main-footer__site-map-wrapper,
@@ -110,10 +111,43 @@
     width: 94%;
   }
 
+  .main-footer__site-map-wrapper {
+    @include flex-row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid $dark-grey-color;
+    padding-bottom: 25px;
+    padding-top: 30px;
+  }
+
+  .main-footer__office-contacts {
+    padding-top: 30px;
+    padding-bottom: 5px;
+  }
+
+  .main-footer__office-contacts h3,
+  .main-footer__site-map-wrapper h3 {
+    margin: 0;
+  }
+
+  .main-footer__logo-link {
+    margin-bottom: 70px;
+    padding-left: 45px;
+  }
+
   .main-footer__toggle-button-map,
   .main-footer__toggle-button-contacts {
     @include toggle-button;
     display: block;
+    margin-right: 13px;
+  }
+
+  .main-footer__office-contacts--open .main-footer__toggle-button-contacts::after {
+    display: none;
+  }
+
+  .main-footer__site-map-wrapper--open .main-footer__toggle-button-map::after {
+    display: none;
   }
 
   .main-footer__toggle-button-map::before {

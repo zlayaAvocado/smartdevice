@@ -20,7 +20,7 @@ consultButton.addEventListener(`click`, function (evt) {
   smoothScroll(companyRequestForm);
 });
 
-const telInput = document.querySelector(`.company-request__tel-input`);
+const telInput = document.querySelector(`.company-request__tel`);
 telInput.addEventListener(`focus`, function () {
   telInput.value = `+7(`;
 });
@@ -92,23 +92,29 @@ callbackButton.addEventListener(`click`, function () {
 
 const toggleSiteMapButton = document.querySelector(`.main-footer__toggle-button-map`);
 const toggleContactsButton = document.querySelector(`.main-footer__toggle-button-contacts`);
+const toggleSideMapPseudo = document.querySelector(`.main-footer__toggle-button-map::after`);
+const toggleContactsPseudo = document.querySelector(`.main-footer__toggle-button-contacts::after`);
 const siteMapList = document.querySelector(`.site-map-list`);
-const contactsList = document.querySelector(`.office-contacts`);
+const contactsList = document.querySelector(`.office-contacts__wrapper`);
+const siteMapWrapper = document.querySelector(`.main-footer__site-map-wrapper`);
+const contactsWrapper = document.querySelector(`.main-footer__office-contacts`);
 
-const toggleAttribute = (attribute, oldAtt, newAtt) => {
-  if (toggleSiteMapButton.getAttribute(attribute) === oldAtt) {
-     toggleSiteMapButton.setAttribute(attribute, newAtt);
-   } else {
-     toggleSiteMapButton.setAttribute(attribute, oldAtt);
-   }
+const toggleAttribute = (element, attribute, newAtt, oldAtt) => {
+  if (element.getAttribute(attribute) === oldAtt) {
+    element.setAttribute(attribute, newAtt);
+  } else {
+    element.setAttribute(attribute, oldAtt);
+  }
 };
 
 toggleSiteMapButton.addEventListener(`click`, function () {
   toggleClass(siteMapList, `site-map-list--closed`);
-  toggleAttribute(`aria-label`, `Открыть разделы сайта`, `Закрыть разделы сайта`);
+  toggleClass(siteMapWrapper, `main-footer__site-map-wrapper--open`);
+  toggleAttribute(toggleSiteMapButton, `aria-label`, `Открыть разделы сайта`, `Закрыть разделы сайта`);
 });
 
 toggleContactsButton.addEventListener(`click`, function () {
   toggleClass(contactsList, `office-contacts__wrapper--closed`);
-  toggleAttribute(`aria-label`, `Открыть список контактов`, `Закрыть список контактов`);
+  toggleClass(contactsWrapper, `main-footer__office-contacts--open`);
+  toggleAttribute(toggleContactsButton, `aria-label`, `Открыть список контактов`, `Закрыть список контактов`);
 });

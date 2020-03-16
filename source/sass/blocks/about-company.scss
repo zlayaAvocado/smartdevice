@@ -67,7 +67,7 @@
     width: 94%;
     padding-top: 2%;
     padding-left: 3%;
-    padding-right:3%;
+    padding-right: 3%;
     padding-bottom: 3%;
     margin-left: 0;
   }
@@ -143,13 +143,9 @@
     margin-bottom: 15%;
 
     &:last-of-type {
-      margin-bottom: 11%;
+      margin-bottom: 7%;
+      max-height: 29%;
     }
-  }
-
-  .about-company p:last-of-type {
-    max-height: 29%;
-    margin-bottom: 7%;
   }
 
   .about-company__year-found {

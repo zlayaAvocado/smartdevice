@@ -11,34 +11,32 @@
     <body>
       <div class="main-header-wrapper">
         <header class="main-header">
-          <section class="main-header__header">
-            <h1 class="visually-hidden">Smart Device - поставка печатных плат, производство электронных комплектующих и предоставление мировых технологий с 1997 года</h1>
-            <a href="#" class="main-header__logo-link">
-              <svg class="main-header__logo main-header__logo--tablet-desktop" aria-labelledby="logo-header-tablet-desktop" width="202px" height="52px">
-                <title id="logo-header-tablet-desktop">Логотип Smart Device</title>
-                <use xlink:href="img/sprite.svg#logo-tablet-desktop"></use>
-              </svg>
-              <svg class="main-header__logo main-header__logo--mobile" aria-labelledby="logo-header-mobile" width="38px" height="38px">
-                <title id="logo-header-mobile">Логотип Smart Device</title>
-                <use xlink:href="img/sprite.svg#logo-mobile"></use>
-              </svg>
-            </a>
-            <a class="main-header__email" href="mailto:name@email.com"><span>info@sd.ru</span></a>
-            <a class="main-header__phone" href="tel:+74950005252"><span>+7 (495) 000 52 52</span></a>
-            <button class="main-header__callback-button" type="button">Заказать звонок</button>
-          </section>
-          <div class="main-header__company-intro-wrapper">
-            <section class="main-header__company-intro company-intro">
-              <h2 class="company-intro__offer">Печатные платы</h2>
-              <p class="company-intro__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-              <a href="#request" class="company-intro__consult-button">
-                <span>Получить бесплатную консультацию</span>
-                <span>Бесплатная консультация</span>
-              </a>
-              <a href="#advantages" class="company-intro__scroll-to-bottom"><span>Скролл вниз</span></a>
-            </section>
-          </div>
+          <h1 class="visually-hidden">Smart Device - поставка печатных плат, производство электронных комплектующих и предоставление мировых технологий с 1997 года</h1>
+          <a href="#" class="main-header__logo-link">
+            <svg class="main-header__logo main-header__logo--tablet-desktop" aria-labelledby="logo-header-tablet-desktop" width="202px" height="52px">
+              <title id="logo-header-tablet-desktop">Логотип Smart Device</title>
+              <use xlink:href="img/sprite.svg#logo-tablet-desktop"></use>
+            </svg>
+            <svg class="main-header__logo main-header__logo--mobile" aria-labelledby="logo-header-mobile" width="38px" height="38px">
+              <title id="logo-header-mobile">Логотип Smart Device</title>
+              <use xlink:href="img/sprite.svg#logo-mobile"></use>
+            </svg>
+          </a>
+          <a class="main-header__email" href="mailto:name@email.com"><span>info@sd.ru</span></a>
+          <a class="main-header__phone" href="tel:+74950005252"><span>+7 (495) 000 52 52</span></a>
+          <button class="main-header__callback-button" type="button">Заказать звонок</button>
         </header>
+        <div class="main-header__company-intro-wrapper">
+          <section class="main-header__company-intro company-intro">
+            <h2 class="company-intro__offer">Печатные платы</h2>
+            <p class="company-intro__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+            <a href="#request" class="company-intro__consult-button">
+              <span>Получить бесплатную консультацию</span>
+              <span>Бесплатная консультация</span>
+            </a>
+            <a href="#advantages" class="company-intro__scroll-to-bottom"><span>Скролл вниз</span></a>
+          </section>
+        </div>
       </div>
       <main class="main-content">
         <section class="main-content__advantages advantages" id="advantages">
@@ -86,46 +84,33 @@
           <div class="main-content__container main-content__company-services-container" role="list">
             <h2 class="visually-hidden">Услуги компании</h2>
             <p>Service Device предлагает следующие товары и услуги</p>
-            <a class="company-services__item company-services__produce" href="boards-produce.html">Производство печатных плат</a>
-            <a class="company-services__item company-services__assemble" href="boards-assemble.html">Монтаж печатных плат</a>
-            <a class="company-services__item company-services__components" href="components.html">Комплектующие для светотехники</a>
+            <a class="company-services__item company-services__produce" href="boards-produce.html"><span>Производство печатных плат</span></a>
+            <a class="company-services__item company-services__assemble" href="boards-assemble.html"><span>Монтаж печатных плат</span></a>
+            <a class="company-services__item company-services__components" href="components.html"><span>Комплектующие для светотехники
+          </span></a></div>
+        </section>
+        <section id="request" class="main-content__company-request company-request">
+          <div class="main-content__container main-content__company-request-container">
+            <h2 class="visually-hidden">Задать вопрос компании</h2>
+            <p class="company-request__question">Остались вопросы? Задайте их нам!</p>
+            <p class="company-request__free-consultation">Мы проконсультируем вас бесплатно</p>
+            <form method="post">
+              <label class="visually-hidden" for="first_name">Имя</label>
+              <input class="company-request__first-name" id="first_name" type="text" name="first_name" placeholder="Имя" required="">
+              <label class="visually-hidden" for="tel">Номер телефона</label>
+              <input class="company-request__tel" id="tel" type="tel" name="tel" placeholder="Телефон" maxlength="10" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
+              <label class="visually-hidden" for="question">Опишите ваш вопрос</label>
+              <textarea class="company-request__textarea" id="question" rows="5" required="">Ваш вопрос</textarea>
+              <button class="company-request__submit-button button" type="submit">Задать вопрос</button>
+              <!-- это не убрать иначе декоративный чекбокс не будет совмещен с инпутом на разных разрешениях -->
+              <p class="company-request__checkbox-wrapper">
+                <input id="personal-data" type="checkbox" name="personalData" checked="">
+                <span class="company-request__checkbox"></span>
+              </p>
+              <label class="company-request__personal-data" for="personal-data">Я согласен на обработку персональных данных</label>
+            </form>
           </div>
         </section>
-        <div class="main-content__company-request-wrapper">
-          <div class="main-content__container main-content__company-request-container">
-            <section id="request" class="main-content__company-request company-request">
-              <h2 class="visually-hidden">Задать вопрос компании</h2>
-              <p class="company-request__question">Остались вопросы? Задайте их нам!</p>
-              <p class="company-request__free-consultation">Мы проконсультируем вас бесплатно</p>
-              <form method="post">
-                <div class="company-request__personal-data-wrapper">
-                  <p class="company-request__first-name">
-                    <label class="visually-hidden" for="first_name">Имя</label>
-                    <input id="first_name" type="text" name="first_name" placeholder="Имя" required="">
-                  </p>
-                  <p class="company-request__tel">
-                    <label class="visually-hidden" for="tel">Номер телефона</label>
-                    <input class="company-request__tel-input" id="tel" type="tel" name="tel" placeholder="Телефон" maxlength="10" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
-                  </p>
-                </div>
-                <p class="company-request__question">
-                  <label class="visually-hidden" for="question">Опишите ваш вопрос</label>
-                  <textarea id="question" rows="5" required="">Ваш вопрос</textarea>
-                </p>
-                <div class="company-request__submit-data-wrapper">
-                  <button class="company-request__submit-button button" type="submit">Задать вопрос</button>
-                  <div class="company-request__personal-data">
-                    <p class="company-request__checkbox-wrapper">
-                      <input id="personal-data" type="checkbox" name="personalData" checked="">
-                      <span class="company-request__checkbox"></span>
-                    </p>
-                    <label for="personal-data">Я согласен на обработку персональных данных</label>
-                  </div>
-                </div>
-              </form>
-            </section>
-          </div>
-        </div>
       </main>
       <footer class="main-footer">
         <div class="main-footer__container">

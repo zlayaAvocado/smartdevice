@@ -39,7 +39,10 @@
 
 @media (max-width: $max-mobile-width) {
   .office-contacts {
+    @include flex-row;
     width: 94%;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .office-contacts__wrapper--closed {
