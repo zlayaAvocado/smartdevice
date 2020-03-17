@@ -26,8 +26,8 @@
           <a class="main-header__phone" href="tel:+74950005252"><span>+7 (495) 000 52 52</span></a>
           <button class="main-header__callback-button" type="button">Заказать звонок</button>
         </header>
-        <div class="main-header__company-intro-wrapper">
-          <section class="main-header__company-intro company-intro">
+        <div class="main-header-wrapper__company-intro-wrapper">
+          <section class="main-header-wrapper__company-intro company-intro">
             <h2 class="company-intro__offer">Печатные платы</h2>
             <p class="company-intro__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
             <a href="#request" class="company-intro__consult-button">
@@ -86,7 +86,7 @@
             <p>Service Device предлагает следующие товары и услуги</p>
             <a class="company-services__item company-services__produce" href="boards-produce.html"><span>Производство печатных плат</span></a>
             <a class="company-services__item company-services__assemble" href="boards-assemble.html"><span>Монтаж печатных плат</span></a>
-            <a class="company-services__item company-services__components" href="components.html"><span>Комплектующие для светотехники</span</a>
+            <a class="company-services__item company-services__components" href="components.html"><span>Комплектующие для светотехники</span></a>
           </div>
         </section>
         <section id="request" class="main-content__company-request company-request">
@@ -98,13 +98,13 @@
               <label class="visually-hidden" for="first_name">Имя</label>
               <input class="company-request__first-name" id="first_name" type="text" name="first_name" placeholder="Имя" required>
               <label class="visually-hidden" for="tel">Номер телефона</label>
-              <input class="company-request__tel" id="tel" type="tel" name="tel" placeholder="Телефон" maxlength="10" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
+              <input class="company-request__tel" id="tel" type="tel" name="tel" placeholder="Телефон" maxlength="13" required>
               <label class="visually-hidden" for="question">Опишите ваш вопрос</label>
-              <textarea class="company-request__textarea" id="question" rows="5" required>Ваш вопрос</textarea>
+              <textarea class="company-request__textarea" id="question" name="question" placeholder="Ваш вопрос" rows="5" required></textarea>
               <button class="company-request__submit-button button" type="submit">Задать вопрос</button>
               <!-- это не убрать иначе декоративный чекбокс не будет совмещен с инпутом на разных разрешениях -->
               <p class="company-request__checkbox-wrapper">
-                <input id="personal-data" type="checkbox" name="personalData" checked>
+                <input id="personal-data" type="checkbox" name="personalData" checked required>
                 <span class="company-request__checkbox"></span>
               </p>
               <label class="company-request__personal-data" for="personal-data">Я согласен на обработку персональных данных</label>
@@ -155,7 +155,7 @@
           <p class="copyright__item">Все права защищены</p>
           <p class="copyright__item">1999-2018 SD Service Devices</p>
           <p class="copyright__item"><a href="termsofuse.html">Условия конфиденциальности</a></p>
-          <p class="copyright__item">Developed by wow studio</p>
+          <p class="copyright__item"><a href="wowstudio.com">Developed by wow studio</a></p>
         </div>
       </footer>
       <div class="callback-modal">
@@ -172,16 +172,16 @@
             </p>
             <p class="callback-modal__tel">
               <label class="visually-hidden" for="modal_tel">Номер телефона</label>
-              <input class="callback-modal__tel-input" id="modal_tel" type="tel" name="tel" placeholder="Телефон" maxlength="10" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
+              <input class="callback-modal__tel-input" id="modal_tel" type="tel" name="tel" placeholder="Телефон" maxlength="13" required>
             </p>
             <p class="callback-modal__question">
               <label class="visually-hidden" for="modal_question">Опишите ваш вопрос</label>
-              <textarea id="modal_question" rows="5" required>Ваш вопрос</textarea>
+              <textarea id="modal_question" rows="5" name="question" placeholder="Ваш вопрос" required></textarea>
             </p>
             <button class="callback-modal__submit-button button" type="submit">Отправить</button>
             <div class="callback-modal__personal-data">
               <p class="callback-modal__checkbox-wrapper">
-                <input id="modal_personal_data" type="checkbox" name="personalData" checked>
+                <input id="modal_personal_data" type="checkbox" name="personalData" checked required>
                 <span class="callback-modal__checkbox"></span>
               </p>
               <label for="modal_personal_data">Я согласен на обработку персональных данных</label>
@@ -189,6 +189,7 @@
           </form>
         </section>
       </div>
+      <script src="https://unpkg.com/imask"></script>
       <script src="js/main.js"></script>
       <script src="js/svgxuse.js" defer></script>
     </body>

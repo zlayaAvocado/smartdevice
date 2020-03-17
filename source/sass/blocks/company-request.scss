@@ -73,6 +73,10 @@
   margin-bottom: 55px;
 }
 
+.company-request__textarea::placeholder {
+  color: $white-color;
+}
+
 .company-request__checkbox-wrapper {
   @include flex-row;
   position: relative;

@@ -20,18 +20,14 @@ consultButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   smoothScroll(companyRequestForm);
 });
+var maskOptions = {
+  mask: '{+7(}000)0000000'
+};
 var telInput = document.querySelector(".company-request__tel");
+var telInputMask = IMask(telInput, maskOptions);
 telInput.addEventListener("focus", function () {
   telInput.value = "+7(";
 });
-
-var addParantheses = function addParantheses(evt) {
-  var currentInputValue = evt.target.value;
-  evt.target.value = currentInputValue + ")";
-  evt.target.removeEventListener("input", addParantheses);
-};
-
-telInput.addEventListener("input", addParantheses);
 
 var toggleClass = function toggleClass(element, myclass) {
   element.classList.toggle(myclass);
@@ -80,10 +76,10 @@ callbackButton.addEventListener("click", function () {
   overlay.addEventListener("click", closeModal);
   closeButton.addEventListener("click", closeModal);
   var callbackTelInput = document.querySelector(".callback-modal .callback-modal__tel-input");
+  var callbackInputMask = IMask(callbackTelInput, maskOptions);
   callbackTelInput.addEventListener("focus", function () {
     callbackTelInput.value = "+7(";
   });
-  callbackTelInput.addEventListener("input", addParantheses);
 });
 var toggleSiteMapButton = document.querySelector(".main-footer__toggle-button-map");
 var toggleContactsButton = document.querySelector(".main-footer__toggle-button-contacts");

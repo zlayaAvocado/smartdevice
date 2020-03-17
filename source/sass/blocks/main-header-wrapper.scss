@@ -5,3 +5,42 @@
   background-size: cover;
   overflow: hidden;
 }
+
+.main-header-wrapper__company-intro-wrapper {
+  @include flex-row;
+  margin: 0 auto;
+  justify-content: flex-start;
+  width: 80%;
+  max-width: 1440px;
+  padding: 190px 5% 250px;
+  background: url("../img/boards.png") no-repeat 97%,
+    url("../img/big-polygon-ellipse.svg") no-repeat 93% -10px,
+    url("../img/small-polygon-ellipse.svg") no-repeat 70% 250px;
+  background-size: 705px 515px, 636px 640px, 373px 377px;
+}
+
+
+@media (max-width: $tablet-width) {
+  .main-header-wrapper__company-intro-wrapper {
+    width: 78%;
+    padding-top: 70px;
+    padding-left: 11%;
+    padding-right: 11%;
+    padding-bottom: 165px;
+    background-size: 465px 340px, 501px 501px, 294px 294px;
+    background-position: 170% 0, 170% -120px, 100% 85px;
+  }
+}
+
+
+@media (max-width: $max-mobile-width) {
+  .main-header-wrapper__company-intro-wrapper {
+    width: 94%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 180px;
+    padding-bottom: 60px;
+    background-size: 301px 220px, 479px 479px, 281px 281px;
+    background-position: 106% 0, -110% -110px, 365% 80px;
+  }
+}

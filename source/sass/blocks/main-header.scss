@@ -120,19 +120,6 @@
   top: 0;
 }
 
-.main-header__company-intro-wrapper {
-  @include flex-row;
-  margin: 0 auto;
-  justify-content: flex-start;
-  width: 80%;
-  max-width: 1440px;
-  padding: 190px 5% 250px;
-  background: url("../img/boards.png") no-repeat 97%,
-    url("../img/big-polygon-ellipse.svg") no-repeat 93% -10px,
-    url("../img/small-polygon-ellipse.svg") no-repeat 70% 250px;
-  background-size: 705px 515px, 636px 640px, 373px 377px;
-}
-
 @media (max-width: $tablet-width) {
   .main-header {
     width: 94%;
@@ -141,16 +128,6 @@
     padding-right: 3%;
     align-items: flex-start;
     justify-content: space-between;
-  }
-
-  .main-header__company-intro-wrapper {
-    width: 78%;
-    padding-top: 70px;
-    padding-left: 11%;
-    padding-right: 11%;
-    padding-bottom: 165px;
-    background-size: 465px 340px, 501px 501px, 294px 294px;
-    background-position: 170% 0, 170% -120px, 100% 85px;
   }
 
   .main-header__logo-link {
@@ -207,16 +184,6 @@
     width: 94%;
     padding-top: 4%;
     padding-bottom: 4%;
-  }
-
-  .main-header__company-intro-wrapper {
-    width: 94%;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 180px;
-    padding-bottom: 60px;
-    background-size: 301px 220px, 479px 479px, 281px 281px;
-    background-position: 106% 0, -110% -110px, 365% 80px;
   }
 
   .main-header__logo-link {

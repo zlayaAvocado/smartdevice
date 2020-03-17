@@ -20,18 +20,15 @@ consultButton.addEventListener(`click`, function (evt) {
   smoothScroll(companyRequestForm);
 });
 
-const telInput = document.querySelector(`.company-request__tel`);
-telInput.addEventListener(`focus`, function () {
-  telInput.value = `+7(`;
-});
-
-const addParantheses = (evt) => {
-  const currentInputValue = evt.target.value;
-  evt.target.value = currentInputValue + `)`;
-  evt.target.removeEventListener(`input`, addParantheses);
+const maskOptions = {
+  mask: '{+7(}000)0000000'
 };
 
-telInput.addEventListener(`input`, addParantheses);
+const telInput = document.querySelector(`.company-request__tel`);
+const telInputMask = IMask(telInput, maskOptions);
+telInput.addEventListener("focus", function () {
+  telInput.value = "+7(";
+});
 
 const toggleClass = (element, myclass) => {
   element.classList.toggle(myclass);
@@ -84,10 +81,10 @@ callbackButton.addEventListener(`click`, function () {
   closeButton.addEventListener(`click`, closeModal);
 
   const callbackTelInput = document.querySelector(`.callback-modal .callback-modal__tel-input`);
+  const callbackInputMask = IMask(callbackTelInput, maskOptions);
   callbackTelInput.addEventListener(`focus`, function () {
     callbackTelInput.value = `+7(`;
   });
-  callbackTelInput.addEventListener(`input`, addParantheses);
 });
 
 const toggleSiteMapButton = document.querySelector(`.main-footer__toggle-button-map`);

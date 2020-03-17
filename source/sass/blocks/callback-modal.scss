@@ -114,6 +114,10 @@
   height: 4em;
 }
 
+.callback-modal__question textarea::placeholder {
+  color: $white-color;
+}
+
 .callback-modal__personal-data {
   @include flex-row;
   justify-content: space-between;
