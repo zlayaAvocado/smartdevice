@@ -1,5 +1,7 @@
 "use strict";
 
+var IMask = require(["../js/imask"], function () {});
+
 var smoothScroll = function smoothScroll(element) {
   var elementPosition = element.getBoundingClientRect().top;
   window.scrollTo({
@@ -21,11 +23,12 @@ consultButton.addEventListener("click", function (evt) {
   smoothScroll(companyRequestForm);
 });
 var maskOptions = {
-  mask: '{+7(}000)0000000'
+  mask: "{+7(}000)0000000"
 };
 var telInput = document.querySelector(".company-request__tel");
-var telInputMask = IMask(telInput, maskOptions);
 telInput.addEventListener("focus", function () {
+  var telMask = new IMask(telInput, maskOptions);
+  telMask.cursorPos = 3;
   telInput.value = "+7(";
 });
 
@@ -76,15 +79,14 @@ callbackButton.addEventListener("click", function () {
   overlay.addEventListener("click", closeModal);
   closeButton.addEventListener("click", closeModal);
   var callbackTelInput = document.querySelector(".callback-modal .callback-modal__tel-input");
-  var callbackInputMask = IMask(callbackTelInput, maskOptions);
   callbackTelInput.addEventListener("focus", function () {
+    var callbackTelMask = new IMask(callbackTelInput, maskOptions);
+    callbackTelMask.cursorPos = 3;
     callbackTelInput.value = "+7(";
   });
 });
 var toggleSiteMapButton = document.querySelector(".main-footer__toggle-button-map");
 var toggleContactsButton = document.querySelector(".main-footer__toggle-button-contacts");
-var toggleSideMapPseudo = document.querySelector(".main-footer__toggle-button-map::after");
-var toggleContactsPseudo = document.querySelector(".main-footer__toggle-button-contacts::after");
 var siteMapList = document.querySelector(".site-map-list");
 var contactsList = document.querySelector(".office-contacts__wrapper");
 var siteMapWrapper = document.querySelector(".main-footer__site-map-wrapper");

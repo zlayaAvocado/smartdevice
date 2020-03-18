@@ -40,6 +40,7 @@
 .main-header__callback-button {
   color: $white-color;
   border: 1px solid $white-color;
+  white-space: nowrap;
   border-radius: 5px;
   background-color: transparent;
   text-transform: uppercase;
@@ -74,6 +75,7 @@
   margin-right: 1%;
   display: inline-block;
   vertical-align: middle;
+  white-space: nowrap;
 
   &:hover,
   &:focus {

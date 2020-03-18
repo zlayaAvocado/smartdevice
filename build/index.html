@@ -77,16 +77,16 @@
             <h2>О компании</h2>
             <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
             <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
-            <a href="about.html" class="about-company__about-button">Подробнее</a>
+            <a href="#" class="about-company__about-button">Подробнее</a>
           </div>
         </section>
         <section class="main-content__company-services company-services">
           <div class="main-content__container main-content__company-services-container" role="list">
             <h2 class="visually-hidden">Услуги компании</h2>
             <p>Service Device предлагает следующие товары и услуги</p>
-            <a class="company-services__item company-services__produce" href="boards-produce.html"><span>Производство печатных плат</span></a>
-            <a class="company-services__item company-services__assemble" href="boards-assemble.html"><span>Монтаж печатных плат</span></a>
-            <a class="company-services__item company-services__components" href="components.html"><span>Комплектующие для светотехники</span></a>
+            <a class="company-services__item company-services__produce" href="#"><span>Производство печатных плат</span></a>
+            <a class="company-services__item company-services__assemble" href="#"><span>Монтаж печатных плат</span></a>
+            <a class="company-services__item company-services__components" href="#"><span>Комплектующие для светотехники</span></a>
           </div>
         </section>
         <section id="request" class="main-content__company-request company-request">
@@ -95,19 +95,21 @@
             <p class="company-request__question">Остались вопросы? Задайте их нам!</p>
             <p class="company-request__free-consultation">Мы проконсультируем вас бесплатно</p>
             <form method="post">
-              <label class="visually-hidden" for="first_name">Имя</label>
-              <input class="company-request__first-name" id="first_name" type="text" name="first_name" placeholder="Имя" required="">
-              <label class="visually-hidden" for="tel">Номер телефона</label>
-              <input class="company-request__tel" id="tel" type="tel" name="tel" placeholder="Телефон" maxlength="13" required="">
-              <label class="visually-hidden" for="question">Опишите ваш вопрос</label>
-              <textarea class="company-request__textarea" id="question" name="question" placeholder="Ваш вопрос" rows="5" required=""></textarea>
+              <label aria-label="Имя">
+                <input class="company-request__first-name" type="text" name="first_name" placeholder="Имя" required="">
+              </label>
+              <label aria-label="Номер телефона">
+                <input class="company-request__tel" type="tel" name="tel" placeholder="Телефон" maxlength="13" required="">
+              </label>
+              <label aria-label="Опишите ваш вопрос">
+                <textarea class="company-request__textarea" name="question" placeholder="Ваш вопрос" rows="5" required=""></textarea>
+              </label>
               <button class="company-request__submit-button button" type="submit">Задать вопрос</button>
-              <!-- это не убрать иначе декоративный чекбокс не будет совмещен с инпутом на разных разрешениях -->
-              <p class="company-request__checkbox-wrapper">
-                <input id="personal-data" type="checkbox" name="personalData" checked="" required="">
+              <label class="company-request__checkbox-wrapper">
+                <input type="checkbox" name="personalData" checked="" required="">
                 <span class="company-request__checkbox"></span>
-              </p>
-              <label class="company-request__personal-data" for="personal-data">Я согласен на обработку персональных данных</label>
+                Я согласен на обработку персональных данных
+              </label>
             </form>
           </div>
         </section>
@@ -131,13 +133,13 @@
             <h3>Разделы сайта</h3>
             <button type="button" class="main-footer__toggle-button-map" aria-label="Открыть разделы сайта"></button>
             <ul class="main-footer__site-map site-map-list site-map-list--closed">
-              <li class="site-map-list__item"><a href="about.html">О компании</a></li>
-              <li class="site-map-list__item"><a href="components.html">Комплектующие</a></li>
-              <li class="site-map-list__item"><a href="products.html">Продукты</a></li>
-              <li class="site-map-list__item"><a href="delivery.html">Доставка</a></li>
-              <li class="site-map-list__item"><a href="boards-produce.html">Производство печатных плит</a></li>
-              <li class="site-map-list__item"><a href="contacts.html">Контакты</a></li>
-              <li class="site-map-list__item"><a href="boards-assemble.html">Монтаж печатных плат</a></li>
+              <li class="site-map-list__item"><a href="#">О компании</a></li>
+              <li class="site-map-list__item"><a href="#">Комплектующие</a></li>
+              <li class="site-map-list__item"><a href="#">Продукты</a></li>
+              <li class="site-map-list__item"><a href="#">Доставка</a></li>
+              <li class="site-map-list__item"><a href="#">Производство печатных плит</a></li>
+              <li class="site-map-list__item"><a href="#">Контакты</a></li>
+              <li class="site-map-list__item"><a href="#">Монтаж печатных плат</a></li>
             </ul>
           </div>
           <div class="main-footer__office-contacts office-contacts">
@@ -154,8 +156,8 @@
         <div class="main-footer__container copyright">
           <p class="copyright__item">Все права защищены</p>
           <p class="copyright__item">1999-2018 SD Service Devices</p>
-          <p class="copyright__item"><a href="termsofuse.html">Условия конфиденциальности</a></p>
-          <p class="copyright__item"><a href="wowstudio.com">Developed by wow studio</a></p>
+          <p class="copyright__item"><a href="#">Условия конфиденциальности</a></p>
+          <p class="copyright__item"><a href="#">Developed by wow studio</a></p>
         </div>
       </footer>
       <div class="callback-modal">
@@ -166,30 +168,25 @@
             <button type="button" class="callback-modal__close-button" aria-label="Закрыть окно">X</button>
             <p class="callback-modal__request">Закажите звонок</p>
             <p class="callback-modal__contact-free">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-            <p class="callback-modal__first-name">
-              <label class="visually-hidden" for="modal_first_name">Имя</label>
-              <input id="modal_first_name" type="text" name="first_name" placeholder="Имя" required="">
-            </p>
-            <p class="callback-modal__tel">
-              <label class="visually-hidden" for="modal_tel">Номер телефона</label>
-              <input class="callback-modal__tel-input" id="modal_tel" type="tel" name="tel" placeholder="Телефон" maxlength="13" required="">
-            </p>
-            <p class="callback-modal__question">
-              <label class="visually-hidden" for="modal_question">Опишите ваш вопрос</label>
-              <textarea id="modal_question" rows="5" name="question" placeholder="Ваш вопрос" required=""></textarea>
-            </p>
+            <label class="callback-modal__first-name" aria-label="Имя">
+              <input type="text" name="first_name" placeholder="Имя" required="">
+            </label>
+            <label class="callback-modal__tel" aria-label="Номер телефона">
+              <input class="callback-modal__tel-input" type="tel" name="tel" placeholder="Телефон" maxlength="13" required="">
+            </label>
+            <label class="callback-modal__question" aria-label="Опишите ваш вопрос">
+              <textarea rows="5" name="question" placeholder="Ваш вопрос" required=""></textarea>
+            </label>
             <button class="callback-modal__submit-button button" type="submit">Отправить</button>
-            <div class="callback-modal__personal-data">
-              <p class="callback-modal__checkbox-wrapper">
-                <input id="modal_personal_data" type="checkbox" name="personalData" checked="" required="">
-                <span class="callback-modal__checkbox"></span>
-              </p>
-              <label for="modal_personal_data">Я согласен на обработку персональных данных</label>
-            </div>
+            <label class="callback-modal__checkbox-wrapper">
+              <input type="checkbox" name="personalData" checked="" required="">
+              <span class="callback-modal__checkbox"></span>
+              <span class="callback-modal__checkbox-label">Я согласен на обработку персональных данных</span>
+            </label>
           </form>
         </section>
       </div>
-      <script src="https://unpkg.com/imask"></script>
+      <script src="js/r.js"></script>
       <script src="js/main.js"></script>
       <script src="js/svgxuse.js" defer=""></script>
     </body>

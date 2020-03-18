@@ -14,7 +14,7 @@
   width: 48%;
 }
 
-.company-request p {
+.company-request label {
   position: relative;
   margin: 0;
   font-size: 16px;
@@ -90,6 +90,9 @@
   width: 16px;
   height: 16px;
   align-self: flex-start;
+  width: calc((100% - 16%) / 2);
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .company-request__checkbox-wrapper input[type="checkbox"] {
@@ -121,12 +124,6 @@ input[type="checkbox"]:checked ~ .company-request__checkbox {
   background-size: 12px 12px;
   background-position: center;
   border: 1px solid $white-color;
-}
-
-.company-request__personal-data {
-  width: calc((100% - 16%) / 2);
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .company-request__submit-button {

@@ -1,3 +1,6 @@
+const IMask = require([`../js/imask`], function () {
+});
+
 const smoothScroll = (element) => {
   const elementPosition = element.getBoundingClientRect().top;
   window.scrollTo({
@@ -21,13 +24,14 @@ consultButton.addEventListener(`click`, function (evt) {
 });
 
 const maskOptions = {
-  mask: '{+7(}000)0000000'
+  mask: `{+7(}000)0000000`
 };
 
 const telInput = document.querySelector(`.company-request__tel`);
-const telInputMask = IMask(telInput, maskOptions);
-telInput.addEventListener("focus", function () {
-  telInput.value = "+7(";
+telInput.addEventListener(`focus`, function () {
+  const telMask = new IMask(telInput, maskOptions);
+  telMask.cursorPos = 3;
+  telInput.value = `+7(`;
 });
 
 const toggleClass = (element, myclass) => {
@@ -81,16 +85,15 @@ callbackButton.addEventListener(`click`, function () {
   closeButton.addEventListener(`click`, closeModal);
 
   const callbackTelInput = document.querySelector(`.callback-modal .callback-modal__tel-input`);
-  const callbackInputMask = IMask(callbackTelInput, maskOptions);
   callbackTelInput.addEventListener(`focus`, function () {
+    const callbackTelMask = new IMask(callbackTelInput, maskOptions);
+    callbackTelMask.cursorPos = 3;
     callbackTelInput.value = `+7(`;
   });
 });
 
 const toggleSiteMapButton = document.querySelector(`.main-footer__toggle-button-map`);
 const toggleContactsButton = document.querySelector(`.main-footer__toggle-button-contacts`);
-const toggleSideMapPseudo = document.querySelector(`.main-footer__toggle-button-map::after`);
-const toggleContactsPseudo = document.querySelector(`.main-footer__toggle-button-contacts::after`);
 const siteMapList = document.querySelector(`.site-map-list`);
 const contactsList = document.querySelector(`.office-contacts__wrapper`);
 const siteMapWrapper = document.querySelector(`.main-footer__site-map-wrapper`);
