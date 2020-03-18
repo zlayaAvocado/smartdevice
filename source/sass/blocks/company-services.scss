@@ -59,23 +59,23 @@
 
 .company-services__produce {
   @include services-background;
-  background: $blue-color-with-opacity, url("../img/boards-produce-background.png");
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, cover;
+  background-image: $blue-color-with-opacity, url("../img/boards-produce-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .company-services__assemble {
   @include services-background;
   background-image: $blue-color-with-opacity, url("../img/boards-assemble-background.png");
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .company-services__components {
   @include services-background;
   background-image: $blue-color-with-opacity, url("../img/boards-components-background.png");
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .company-services__produce::before {

@@ -107,14 +107,14 @@ const toggleAttribute = (element, attribute, newAtt, oldAtt) => {
   }
 };
 
-toggleSiteMapButton.addEventListener(`click`, function () {
+siteMapWrapper.addEventListener(`click`, function () {
   toggleClass(siteMapList, `site-map-list--closed`);
   toggleClass(siteMapWrapper, `main-footer__site-map-wrapper--open`);
   toggleAttribute(toggleSiteMapButton, `aria-label`, `Открыть разделы сайта`, `Закрыть разделы сайта`);
-});
+}, true);
 
-toggleContactsButton.addEventListener(`click`, function () {
+contactsWrapper.addEventListener(`click`, function () {
   toggleClass(contactsList, `office-contacts__wrapper--closed`);
   toggleClass(contactsWrapper, `main-footer__office-contacts--open`);
   toggleAttribute(toggleContactsButton, `aria-label`, `Открыть список контактов`, `Закрыть список контактов`);
-});
+}, true);

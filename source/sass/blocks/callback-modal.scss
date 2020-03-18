@@ -134,9 +134,11 @@
   font-size: 14px;
   line-height: 16px;
   opacity: 0.8;
-  width: 100%;
   align-self: flex-start;
   cursor: pointer;
+  width: 90%;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .callback-modal__checkbox-wrapper input[type="checkbox"] {
@@ -174,11 +176,6 @@ input[type="checkbox"]:checked ~ .callback-modal__checkbox {
   background-size: 12px 12px;
   background-position: center;
   border: 1px solid $white-color;
-}
-
-.callback-modal__checkbox-wrapper {
-  width: 90%;
-  display: inline-block;
 }
 
 .callback-modal__submit-button {

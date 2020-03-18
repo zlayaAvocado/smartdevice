@@ -87,8 +87,8 @@
   font-size: 14px;
   line-height: 16px;
   opacity: 0.8;
-  width: 16px;
-  height: 16px;
+  // width: 16px;
+  // height: 16px;
   align-self: flex-start;
   width: calc((100% - 16%) / 2);
   display: inline-block;
@@ -124,6 +124,13 @@ input[type="checkbox"]:checked ~ .company-request__checkbox {
   background-size: 12px 12px;
   background-position: center;
   border: 1px solid $white-color;
+}
+
+.company-request__checkbox-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 30px;
+  cursor: pointer;
 }
 
 .company-request__submit-button {

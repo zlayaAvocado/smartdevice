@@ -10,6 +10,16 @@
 
 .copyright a {
   @include a-clear;
+
+  &:hover,
+  &:focus {
+    color: $light-blue-color;
+  }
+
+  &:active {
+    color: $light-blue-color;
+    opacity: 0.7;
+  }
 }
 
 .copyright__item {
