@@ -105,8 +105,8 @@ siteMapWrapper.addEventListener("click", function () {
   toggleClass(siteMapWrapper, "main-footer__site-map-wrapper--open");
   toggleAttribute(toggleSiteMapButton, "aria-label", "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0440\u0430\u0437\u0434\u0435\u043B\u044B \u0441\u0430\u0439\u0442\u0430", "\u0417\u0430\u043A\u0440\u044B\u0442\u044C \u0440\u0430\u0437\u0434\u0435\u043B\u044B \u0441\u0430\u0439\u0442\u0430");
 }, true);
-toggleContactsButton.addEventListener("click", function () {
+contactsWrapper.addEventListener("click", function () {
   toggleClass(contactsList, "office-contacts__wrapper--closed");
   toggleClass(contactsWrapper, "main-footer__office-contacts--open");
   toggleAttribute(toggleContactsButton, "aria-label", "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u043E\u0432", "\u0417\u0430\u043A\u0440\u044B\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u043E\u0432");
-});
+}, true);

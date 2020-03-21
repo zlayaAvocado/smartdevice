@@ -6,8 +6,12 @@
 .main-footer__container {
   @include flex-row;
   max-width: 1420px;
+  min-width: 944px;
   margin: 0 auto;
-  padding: 3.5% 11% 2.8%;
+  padding: 65px 40px 45px;
+}
+
+.main-footer__top-wrapper {
   border-bottom: 1px solid $dark-grey-color;
 }
 

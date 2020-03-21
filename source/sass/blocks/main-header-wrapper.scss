@@ -10,9 +10,10 @@
   @include flex-row;
   margin: 0 auto;
   justify-content: flex-start;
-  width: 80%;
   max-width: 1440px;
-  padding: 190px 5% 250px;
+  min-width: 1024px;
+  width: 100%;
+  padding: 190px 100px 250px;
   background: url("../img/boards.png") no-repeat 97%,
     url("../img/big-polygon-ellipse.svg") no-repeat 93% -10px,
     url("../img/small-polygon-ellipse.svg") no-repeat 70% 250px;

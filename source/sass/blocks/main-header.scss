@@ -1,19 +1,18 @@
 .main-header-wrapper {
   @include flex-column;
-  align-items: center;
-  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .main-header {
   @include flex-row;
   align-items: center;
   min-height: 50px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  width: 78%;
-  max-width: 1440px;
-  padding-left: 5%;
-  padding-right: 5%;
+  max-width: 1410px;
+  min-width: 944px;
+  padding: 40px 0;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .main-header__logo--mobile {
@@ -23,7 +22,7 @@
 .main-header__logo-link {
   @include a-clear;
   color: $white-color;
-  margin-right: calc((100% - 30%) / 2);
+  margin-right: auto;
   cursor: pointer;
 
   &:hover,
@@ -71,7 +70,7 @@
   font-size: 16px;
   font-family: ("PT Mono", "Arial", monospace);
   line-height: 18px;
-  margin-right: 1%;
+  margin-right: 4%;
   display: inline-block;
   vertical-align: middle;
 
@@ -87,12 +86,12 @@
 }
 
 .main-header__email {
-  width: 10%;
+  width: auto;
   padding-left: 3%;
 }
 
 .main-header__phone {
-  width: 15%;
+  width: auto;
   padding-left: 3%;
 }
 
@@ -122,12 +121,21 @@
 
 @media (max-width: $tablet-width) {
   .main-header {
-    width: 94%;
     padding-top: 3%;
-    padding-left: 3%;
-    padding-right: 3%;
     align-items: flex-start;
     justify-content: space-between;
+    min-width: 728px;
+    max-width: 1023px;
+  }
+
+  .main-header-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .main-header-wrapper__company-intro-wrapper {
+    min-width: 728px;
+    padding: 75px 0px 160px 60px;
   }
 
   .main-header__logo-link {
@@ -163,6 +171,7 @@
   .main-header__email {
     width: 27px;
     height: 21px;
+    margin-right: 8%;
   }
 
   .main-header__phone span,

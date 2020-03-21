@@ -76,7 +76,7 @@
           <div class="main-content__container main-content__about-company-container">
             <h2>О компании</h2>
             <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-            <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+            <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог <span>(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
             <a href="#" class="about-company__about-button">Подробнее</a>
           </div>
         </section>
@@ -95,13 +95,13 @@
             <p class="company-request__question">Остались вопросы? Задайте их нам!</p>
             <p class="company-request__free-consultation">Мы проконсультируем вас бесплатно</p>
             <form method="post">
-              <label aria-label="Имя">
+              <label class="company-request__first-name-label" aria-label="Имя">
                 <input class="company-request__first-name" type="text" name="first_name" placeholder="Имя" required>
               </label>
-              <label aria-label="Номер телефона">
+              <label class="company-request__tel-label" aria-label="Номер телефона">
                 <input class="company-request__tel" type="tel" name="tel" placeholder="Телефон" maxlength="13" required>
               </label>
-              <label aria-label="Опишите ваш вопрос">
+              <label class="company-request__textarea-label" aria-label="Опишите ваш вопрос">
                 <textarea class="company-request__textarea" name="question" placeholder="Ваш вопрос" rows="5" required></textarea>
               </label>
               <button class="company-request__submit-button button" type="submit">Задать вопрос</button>
@@ -115,41 +115,43 @@
         </section>
       </main>
       <footer class="main-footer">
-        <div class="main-footer__container">
-          <div class="main-footer__wrapper">
-            <a href="#" class="main-footer__logo-link">
-              <svg class="main-footer__logo" aria-labelledby="logo-footer" width="216px" height="52px">
-                <title id="logo-footer">Логотип Smart Device</title>
-                <use xlink:href="img/sprite.svg#logo-footer"></use>
-              </svg>
-            </a>
-            <ul class="main-footer__socials socials-list">
-              <li class="socials-list__item"><a class="socials-list__facebook" href="#" aria-label="Facebook"></a></li>
-              <li class="socials-list__item"><a class="socials-list__ok" href="#" aria-label="Одноклассники"></a></li>
-              <li class="socials-list__item"><a class="socials-list__vk" href="#" aria-label="Вконтакте"></a></li>
-            </ul>
-          </div>
-          <div class="main-footer__site-map-wrapper">
-            <h3>Разделы сайта</h3>
-            <button type="button" class="main-footer__toggle-button-map" aria-label="Открыть разделы сайта"></button>
-            <ul class="main-footer__site-map site-map-list site-map-list--closed">
-              <li class="site-map-list__item"><a href="#">О компании</a></li>
-              <li class="site-map-list__item"><a href="#">Комплектующие</a></li>
-              <li class="site-map-list__item"><a href="#">Продукты</a></li>
-              <li class="site-map-list__item"><a href="#">Доставка</a></li>
-              <li class="site-map-list__item"><a href="#">Производство печатных плит</a></li>
-              <li class="site-map-list__item"><a href="#">Контакты</a></li>
-              <li class="site-map-list__item"><a href="#">Монтаж печатных плат</a></li>
-            </ul>
-          </div>
-          <div class="main-footer__office-contacts office-contacts">
-            <h3>Наш офис</h3>
-            <button type="button" class="main-footer__toggle-button-contacts" aria-label="Открыть список контактов"></button>
-            <div class="office-contacts__wrapper office-contacts__wrapper--closed" role="list">
-              <address class="office-contacts__item">г. Мытищи, Олимпийский проспект, д.10</address>
-              <a class="office-contacts__item" href="tel:+74955894050">+7 (495) 589-40-50</a>
-              <a class="office-contacts__item" href="tel:+79250038767">+7 (925) 003-87-67</a>
-              <a class="office-contacts__item" href="tel:+792692608079">+7 (926) 926-080-79</a>
+        <div class="main-footer__top-wrapper">
+          <div class="main-footer__container">
+            <div class="main-footer__wrapper">
+              <a href="#" class="main-footer__logo-link">
+                <svg class="main-footer__logo" aria-labelledby="logo-footer" width="216px" height="52px">
+                  <title id="logo-footer">Логотип Smart Device</title>
+                  <use xlink:href="img/sprite.svg#logo-footer"></use>
+                </svg>
+              </a>
+              <ul class="main-footer__socials socials-list">
+                <li class="socials-list__item"><a class="socials-list__facebook" href="#" aria-label="Facebook"></a></li>
+                <li class="socials-list__item"><a class="socials-list__ok" href="#" aria-label="Одноклассники"></a></li>
+                <li class="socials-list__item"><a class="socials-list__vk" href="#" aria-label="Вконтакте"></a></li>
+              </ul>
+            </div>
+            <div class="main-footer__site-map-wrapper">
+              <h3>Разделы сайта</h3>
+              <button type="button" class="main-footer__toggle-button-map" aria-label="Открыть разделы сайта"></button>
+              <ul class="main-footer__site-map site-map-list site-map-list--closed">
+                <li class="site-map-list__item"><a href="#">О компании</a></li>
+                <li class="site-map-list__item"><a href="#">Комплектующие</a></li>
+                <li class="site-map-list__item"><a href="#">Продукты</a></li>
+                <li class="site-map-list__item"><a href="#">Доставка</a></li>
+                <li class="site-map-list__item"><a href="#">Производство печатных плит</a></li>
+                <li class="site-map-list__item"><a href="#">Контакты</a></li>
+                <li class="site-map-list__item"><a href="#">Монтаж печатных плат</a></li>
+              </ul>
+            </div>
+            <div class="main-footer__office-contacts office-contacts">
+              <h3>Наш офис</h3>
+              <button type="button" class="main-footer__toggle-button-contacts" aria-label="Открыть список контактов"></button>
+              <div class="office-contacts__wrapper office-contacts__wrapper--closed" role="list">
+                <address class="office-contacts__item">г. Мытищи, Олимпийский проспект, д.10</address>
+                <a class="office-contacts__item" href="tel:+74955894050">+7 (495) 589-40-50</a>
+                <a class="office-contacts__item" href="tel:+79250038767">+7 (925) 003-87-67</a>
+                <a class="office-contacts__item" href="tel:+792692608079">+7 (926) 926-080-79</a>
+              </div>
             </div>
           </div>
         </div>
