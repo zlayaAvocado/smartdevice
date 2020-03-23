@@ -36,6 +36,7 @@ var toggleClass = function toggleClass(element, myclass) {
   element.classList.toggle(myclass);
 };
 
+var body = document.querySelector("body");
 var closeButton = document.querySelector(".callback-modal__close-button");
 var callbackModal = document.querySelector(".callback-modal");
 var overlay = document.querySelector(".overlay");
@@ -52,11 +53,13 @@ var onEscKey = function onEscKey(evt) {
 var openModal = function openModal() {
   toggleClass(callbackModal, "callback-modal--open");
   toggleClass(overlay, "callback-modal--open");
+  toggleClass(body, "main-body");
 };
 
 var closeModal = function closeModal() {
   toggleClass(callbackModal, "callback-modal--open");
   toggleClass(overlay, "callback-modal--open");
+  toggleClass(body, "main-body");
   document.removeEventListener("keydown", onEscKey);
 };
 

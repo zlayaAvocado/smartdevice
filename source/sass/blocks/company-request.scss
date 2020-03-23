@@ -26,9 +26,11 @@
   width: 94%;
 }
 
-.company-request__first-name-label,
-.company-request__tel-label {
-  width: calc((100% - 6%)/2);
+.company-request .company-request__first-name-label,
+.company-request .company-request__tel-label {
+  width: calc((100% - 6%) / 2);
+  height: 52px;
+  margin-bottom: 40px;
 }
 
 .company-request__textarea-label {
@@ -47,7 +49,7 @@
 
 .company-request .company-request__free-consultation {
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 55px;
   margin-right: 260px;
 }
 
@@ -56,7 +58,6 @@
   padding-top: 5%;
   padding-left: 6%;
   padding-bottom: 5%;
-  margin-bottom: 30px;
 }
 
 .company-request__first-name::placeholder {
@@ -68,21 +69,24 @@
   padding-top: 5%;
   padding-left: 6%;
   padding-bottom: 5%;
-  margin-bottom: 30px;
 }
 
 .company-request__tel::placeholder {
   color: $white-color;
 }
 
+.company-request .company-request__textarea-label {
+  height: 155px;
+  margin-bottom: 40px;
+}
+
 .company-request__textarea {
   @include input-formatting;
   font-family: ("PT Mono", "Arial", monospace);
-  padding-top: 3%;
+  padding-top: 2%;
   padding-left: 3%;
   padding-bottom: 4%;
   width: 97%;
-  margin-bottom: 50px;
 }
 
 .company-request__textarea::placeholder {
@@ -99,8 +103,6 @@
   font-size: 14px;
   line-height: 16px;
   opacity: 0.8;
-  // width: 16px;
-  // height: 16px;
   align-self: flex-start;
   width: calc((100% - 6%) / 2);
   display: inline-block;
@@ -151,7 +153,9 @@ input[type="checkbox"]:checked ~ .company-request__checkbox {
 
 @media (max-width: $tablet-width) {
   .company-request {
-    padding: 10% 11% 14%;
+    min-width: 598px;
+    max-width: 1023px;
+    padding: 80px 85px 105px;
     align-items: flex-start;
   }
 
@@ -162,22 +166,20 @@ input[type="checkbox"]:checked ~ .company-request__checkbox {
   .company-request .company-request__question {
     font-size: 32px;
     line-height: 45px;
-    margin-bottom: 3%;
+    margin-bottom: 20px;
   }
 
   .company-request .company-request__free-consultation {
-    margin-bottom: 9%;
+    margin-bottom: 55px;
+  }
+
+  .company-request .company-request__textarea-label {
+    margin-bottom: 50px;
   }
 
   .company-request__first-name,
   .company-request__tel {
     padding-top: 4%;
-  }
-
-  .company-request__question {
-    padding-top: 2%;
-    padding-bottom: 7%;
-    margin-bottom: 2%;
   }
 
   .company-request::before {
@@ -195,37 +197,49 @@ input[type="checkbox"]:checked ~ .company-request__checkbox {
 
 @media (max-width: $max-mobile-width) {
   .company-request {
-    padding: 3% 2% 23px;
+    width: 100%;
+    max-width: 767px;
+    min-width: 280px;
+    padding: 0;
+  }
+
+  .company-request form {
+    flex-direction: column;
   }
 
   .company-request .company-request__question {
     font-size: 28px;
     line-height: 39px;
+    margin-right: 0;
   }
 
-  .company-request .company-request__first-name,
-  .company-request .company-request__tel {
+  .company-request .company-request__free-consultation {
+    margin-right: 0;
+    margin-bottom: 35px;
+  }
+
+  .company-request .company-request__first-name-label,
+  .company-request .company-request__tel-label {
     width: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
   }
 
-  .company-request .company-request__tel {
-    margin-bottom: 6%;
+  .company-request .company-request__textarea-label {
+    height: 80px;
   }
 
-  .company-request__first-name,
-  .company-request__tel {
-    padding-left: 5%;
+  .company-request__textarea {
+    height: 5em;
   }
 
   .company-request__submit-button {
     width: 100%;
     padding: 5% 0;
-    margin-bottom: 10%;
-  }
-
-  .company-request__question {
-    height: 5em;
+    margin-bottom: 25px;
   }
 
   .company-request__checkbox-wrapper {

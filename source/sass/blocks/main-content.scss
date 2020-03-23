@@ -11,7 +11,6 @@
   min-width: 944px;
   margin: 0 auto;
   padding: 0 40px;
-
 }
 
 .main-content__advantages {
@@ -31,7 +30,7 @@
 
 .main-content__about-company-container {
   @include flex-column;
-  padding: 35px 40px 110px;
+  padding: 35px 40px 100px;
   align-items: flex-end;
   background-image: url("../img/year-found-background-small.png");
   background-size: 220px 317px;
@@ -43,7 +42,7 @@
 .main-content__company-services-container {
   @include flex-row;
   flex-wrap: wrap;
-  padding: 80px 40px 130px;
+  padding: 95px 40px 120px;
   width: auto;
   justify-content: space-between;
 }
@@ -57,7 +56,7 @@
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
-  padding: 90px 120px 110px;
+  padding: 90px 120px 115px;
   min-width: 784px;
 }
 
@@ -78,7 +77,8 @@
   .main-content__about-company-container {
     background-image: url("../img/year-found-background-big.png");
     background-size: 251px 361px;
-    background-position: -30px 0;
+    background-position: -10px 20px;
+    padding: 20px 0 85px;
   }
 
   .main-content__company-services-container {
@@ -88,9 +88,11 @@
   }
 
   .main-content__company-request-container {
-    width: 96%;
+    width: 100%;
+    min-width: 598px;
     padding: 0;
     background: 0;
+    align-items: flex-start;
   }
 }
 
@@ -100,28 +102,34 @@
   }
 
   .main-content__container {
-    max-width: $tablet-width;
-    padding-top: 280px;
-    padding-left: 3%;
-    padding-right: 3%;
+    max-width: $max-mobile-width;
+    min-width: 280px;
+    padding: 0 20px;
   }
 
   .main-content__advantages-container {
-    padding-top: 20px;
+    padding-top: 40px;
+    width: auto;
   }
 
   .main-content__company-services-container {
-    width: 94%;
-    padding-left: 3%;
-    padding-right: 3%;
     padding-top: 20px;
+    width: auto;
   }
 
   .main-content__about-company-container {
     background-size: 0;
   }
 
+  .main-content__company-request-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: auto;
+    flex-direction: column;
+  }
+
   .main-content__about-company .main-content__container {
     padding-top: 20px;
+    align-items: flex-start;
   }
 }

@@ -157,6 +157,8 @@
 
 @media (max-width: $max-mobile-width) {
   .company-intro {
+    max-width: 767px;
+    min-width: 280px;
     width: 100%;
     z-index: 1;
   }
@@ -183,9 +185,9 @@
   }
 
   .company-intro__consult-button {
-    width: 87%;
-    margin: 0 2%;
-    padding: 5% 4%;
+    width: auto;
+    margin: 0;
+    padding: 7% 10%;
   }
 
   .company-intro__consult-button span:first-of-type {

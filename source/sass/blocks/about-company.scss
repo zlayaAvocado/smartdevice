@@ -4,6 +4,7 @@
   color: $dark-grey-color;
   position: relative;
   font-family: ("Roboto Condensed", "Courier", sans-serif);
+  z-index: -1;
 }
 
 .about-company h2 {
@@ -20,7 +21,7 @@
   font-family: ("PT Mono", "Arial", monospace);
   font-size: 16px;
   line-height: 22px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   width: 85%;
 
   &:last-of-type {
@@ -58,26 +59,32 @@
 }
 
 @media (max-width: $tablet-width) {
-  .about-company {min-width: 728px;
-  max-width: 1023px;
-  padding: 0 20px;
+  .about-company {
     margin-left: 0;
+    z-index: 1;
   }
 
   .about-company h2 {
     font-size: 32px;
     line-height: 45px;
-    margin-bottom: 5%;
+    margin-bottom: 30px;
+    width: 74%;
   }
 
   .about-company p {
-    text-overflow: ellipsis;
-    margin-bottom: 4%;
+    margin-bottom: 20px;
+    width: 74%;
+  }
+
+  .about-company p:last-of-type {
+    position: relative;
   }
 
   .about-company p:last-of-type::before {
     content: "...";
     position: absolute;
+    bottom: 0;
+    right: 28%;
   }
 
   .about-company span {
@@ -92,7 +99,8 @@
   }
 
   .about-company__about-button {
-    padding: 3% 10%;
+    padding: 2% 7%;
+    margin-right: 49%;
   }
 }
 
@@ -100,9 +108,9 @@
   .about-company {
     padding-left: 0;
     padding-right: 0;
-    padding-top: 2%;
+    padding-top: 30px;
+    padding-bottom: 50px;
     width: 100%;
-    margin-bottom: -70px;
   }
 
   .about-company::before {
@@ -113,15 +121,20 @@
     font-size: 28px;
     line-height: 39px;
     margin-bottom: 8%;
+    width: 100%;
   }
 
   .about-company p {
-    margin-bottom: 15%;
+    margin-bottom: 20px;
+    width: 100%;
 
     &:last-of-type {
       margin-bottom: 7%;
-      max-height: 29%;
     }
+  }
+
+  .about-company p:last-of-type::before {
+    right: 3%;
   }
 
   .about-company__year-found {
@@ -130,6 +143,7 @@
 
   .about-company__about-button {
     padding: 5% 17%;
-    margin-bottom: 5%;
+    margin-bottom: 20px;
+    margin-right: 0;
   }
 }
