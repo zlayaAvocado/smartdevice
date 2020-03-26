@@ -1,6 +1,7 @@
 .company-intro {
   @include flex-column;
-  min-height: 300px;
+  width: 64%;
+  padding-left: 10px;
 }
 
 .company-intro h2 {
@@ -25,7 +26,6 @@
   font-size: 22px;
   line-height: 34px;
   color: $white-color;
-  width: 70%;
   margin-bottom: 5%;
   padding-left: 10%;
 }
@@ -64,10 +64,12 @@
   text-transform: uppercase;
   padding: 2% 5% 2%;
   cursor: pointer;
-  margin-left: 11%;
+  margin-left: 10%;
   display: inline-block;
   vertical-align: middle;
   align-self: flex-start;
+  white-space: nowrap;
+  margin-bottom: 100px;
 
   &:hover,
   &:focus {
@@ -96,8 +98,7 @@
   line-height: 16px;
   transform: rotate(-90deg);
   opacity: 0.5;
-  bottom: -130px;
-  left: -30px;
+  padding-bottom: 65px;
 
   &:hover,
   &:focus {
@@ -120,7 +121,7 @@
   .company-intro h2 {
     font-size: 60px;
     line-height: 70px;
-    margin-bottom: 30px;
+    margin-bottom: 27px;
   }
 
   .company-intro__offer {
@@ -131,12 +132,13 @@
     width: 60%;
     font-size: 18px;
     line-height: 28px;
-    padding-left: 9%;
-    margin-bottom: 7%;
+    padding-left: 50px;
+    margin-bottom: 57px;
   }
 
   .company-intro__description::before {
     width: 7%;
+    top: 15px;
   }
 
   .company-intro__consult-button {
@@ -161,6 +163,7 @@
     min-width: 280px;
     width: 100%;
     z-index: 1;
+    padding-left: 0;
   }
 
   .company-intro h2 {
@@ -177,7 +180,7 @@
     padding-left: 15%;
     font-size: 16px;
     line-height: 25px;
-    margin-bottom: 12%;
+    margin-bottom: 40px;
   }
 
   .company-intro__description::before {

@@ -1,10 +1,8 @@
 .about-company {
   @include flex-row;
-  background-color: $white-color;
   color: $dark-grey-color;
   position: relative;
   font-family: ("Roboto Condensed", "Courier", sans-serif);
-  z-index: -1;
 }
 
 .about-company h2 {
@@ -21,16 +19,17 @@
   font-family: ("PT Mono", "Arial", monospace);
   font-size: 16px;
   line-height: 22px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   width: 85%;
 
   &:last-of-type {
-    margin-bottom: 35px;
+    margin-bottom: 38px;
   }
 }
 
 .about-company__about-button {
   @include a-clear;
+  background-color: $white-color;
   color: $light-blue-color;
   border: 1px solid $light-blue-color;
   border-radius: 5px;

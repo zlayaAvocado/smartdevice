@@ -20,21 +20,16 @@
 .main-content__advantages-container {
   @include flex-row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.main-content__about-company {
-  background-color: $white-color;
+  width: auto;
 }
 
 .main-content__about-company-container {
   @include flex-column;
-  padding: 35px 40px 100px;
+  padding: 50px 40px 105px;
   align-items: flex-end;
   background-image: url("../img/year-found-background-small.png");
   background-size: 220px 317px;
-  background-position: 9px 40px;
+  background-position: 10px 50px;
   background-repeat: no-repeat;
   width: 100%;
 }
@@ -42,22 +37,17 @@
 .main-content__company-services-container {
   @include flex-row;
   flex-wrap: wrap;
-  padding: 95px 40px 120px;
+  padding: 90px 40px 105px;
   width: auto;
-  justify-content: space-between;
 }
 
 .main-content__company-request-container {
-  background: url("../img/paper-plane.png") no-repeat 102px 45%,
-    url("../img/big-polygon-ellipse.svg") no-repeat -34px -55px,
-    url("../img/small-polygon-ellipse.svg") no-repeat -20px 214px;
-  background-color: $light-blue-color;
   background-size: calc(100% - 65%), 44%, 25%;
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
-  padding: 90px 120px 115px;
-  min-width: 784px;
+  padding: 90px 40px 115px;
+  min-width: 944px;
 }
 
 @media (max-width: $tablet-width) {
@@ -123,7 +113,7 @@
 
   .main-content__company-request-container {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 35px;
     width: auto;
     flex-direction: column;
   }

@@ -42,7 +42,7 @@
   font-family: ("Roboto Condensed", "Courier", sans-serif);
   line-height: 16px;
   cursor: pointer;
-  padding: 0.9% 1.9%;
+  padding: 1% 2.2%;
 
   &:hover,
   &:focus {
@@ -65,7 +65,6 @@
   font-size: 16px;
   font-family: ("PT Mono", "Arial", monospace);
   line-height: 18px;
-  margin-right: 4%;
   display: inline-block;
   vertical-align: middle;
 
@@ -82,12 +81,14 @@
 
 .main-header__email {
   width: auto;
-  padding-left: 3%;
+  padding-left: 38px;
+  margin-right: 6.5%;
 }
 
 .main-header__phone {
   width: auto;
-  padding-left: 3%;
+  padding-left: 40px;
+  margin-right: 3%;
 }
 
 .main-header__email::before {

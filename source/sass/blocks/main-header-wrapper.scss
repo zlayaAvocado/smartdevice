@@ -15,8 +15,8 @@
   max-width: 1440px;
   min-width: 1024px;
   width: 100%;
-  padding: 190px 100px 250px;
-  background: url("../img/boards.png") no-repeat 97%,
+  padding: 185px 90px 95px;
+  background: url("../img/boards.png") no-repeat 97% 127px,
     url("../img/big-polygon-ellipse.svg") no-repeat 93% -10px,
     url("../img/small-polygon-ellipse.svg") no-repeat 70% 250px;
   background-size: 705px 515px, 636px 640px, 373px 377px;
@@ -32,7 +32,7 @@
   .main-header-wrapper__company-intro-wrapper {
     min-width: 728px;
     max-width: 1023px;
-    padding: 75px 0 160px 65px;
+    padding: 73px 0 62px 55px;
     background-size: 465px 340px, 501px 501px, 294px 294px;
     background-position: 487px 0, 405px -120px, 400px 85px;
   }
@@ -49,10 +49,7 @@
     max-width: $max-mobile-width;
     min-width: 280px;
     width: auto;
-    padding-left: 20px;
-    padding-top: 180px;
-    padding-bottom: 60px;
-    padding-right: 20px;
+    padding: 180px 20px 65px;
     background-size: 301px 220px, 479px 479px, 281px 281px;
     background-position: 106% 0, -110% -110px, 365% 80px;
   }

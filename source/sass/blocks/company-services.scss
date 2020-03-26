@@ -12,7 +12,7 @@
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
-  margin-bottom: 55px;
+  margin-bottom: 45px;
 }
 
 .company-services__item {
@@ -22,10 +22,10 @@
   font-size: 20px;
   line-height: 30px;
   width: 31%;
-  margin-right: 2%;
+  margin-right: 2.8%;
   height: 616px;
 
-  &:last-of-type {
+  &:nth-of-type(3n) {
     margin-right: 0;
   }
 }
@@ -37,6 +37,7 @@
   border: 2px solid rgba(27, 45, 55, 0.8);
   width: 31%;
   word-wrap: break-word;
+  margin-bottom: 20px;
 
   &:hover,
   &:focus {
@@ -104,7 +105,7 @@
 
 @media (max-width: $tablet-width) {
   .company-services {
-    padding: 50px 20px 20px;
+    padding: 50px 20px 80px;
   }
 
   .company-services p {
@@ -117,11 +118,17 @@
     width: 100%;
     height: auto;
     min-height: 250px;
+    margin-right: 0;
+    margin-bottom: 45px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   .company-services span {
     width: 23%;
-    padding: 40px;
+    padding: 35px 40px;
   }
 
   .company-services__item {
@@ -156,7 +163,7 @@
 @media (max-width: $max-mobile-width) {
   .company-services {
     width: 100%;
-    padding: 30px 0 40px;
+    padding: 30px 0 60px;
   }
 
   .company-services p {
@@ -179,6 +186,7 @@
     height: auto;
     min-height: 255px;
     margin-right: 0;
+    margin-bottom: 30px;
   }
 
   .company-services__produce {

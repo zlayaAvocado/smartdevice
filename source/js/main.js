@@ -1,5 +1,9 @@
 const IMask = require([`../js/imask`], function () {
 });
+const smoothscroll = require([`../js/smoothscroll`], function () {
+});
+
+smoothscroll();
 
 const smoothScroll = (element) => {
   const elementPosition = element.getBoundingClientRect().top;
@@ -110,14 +114,19 @@ const toggleAttribute = (element, attribute, newAtt, oldAtt) => {
   }
 };
 
+const OPEN_SITE_MAP = `Открыть разделы сайта`;
+const SLOSE_SITE_MAP = `Закрыть разделы сайта`;
+const OPEN_CONTACTS = `Открыть список контактов`;
+const CLOSE_CONTACTS = `Закрыть список контактов`;
+
 siteMapWrapper.addEventListener(`click`, function () {
   toggleClass(siteMapList, `site-map-list--closed`);
   toggleClass(siteMapWrapper, `main-footer__site-map-wrapper--open`);
-  toggleAttribute(toggleSiteMapButton, `aria-label`, `Открыть разделы сайта`, `Закрыть разделы сайта`);
+  toggleAttribute(toggleSiteMapButton, `aria-label`, OPEN_SITE_MAP, CLOSE_SITE_MAP);
 }, true);
 
 contactsWrapper.addEventListener(`click`, function () {
   toggleClass(contactsList, `office-contacts__wrapper--closed`);
   toggleClass(contactsWrapper, `main-footer__office-contacts--open`);
-  toggleAttribute(toggleContactsButton, `aria-label`, `Открыть список контактов`, `Закрыть список контактов`);
+  toggleAttribute(toggleContactsButton, `aria-label`, OPEN_CONTACTS, CLOSE_CONTACTS);
 }, true);

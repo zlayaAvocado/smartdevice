@@ -2,6 +2,7 @@
   <html lang="ru">
     <head>
       <meta charset="utf-8">
+      <meta name="description" content="Smart Device - поставка печатных плат, производство электронных комплектующих и предоставление мировых технологий с 1997 года">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="format-detection" content="telephone=no">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -9,17 +10,20 @@
       <link rel="stylesheet" type="text/css" href="css/style.min.css">
     </head>
     <body>
+      <div style="display: none;">
+        <include src="source/img/sprite.svg"></include>
+      </div>
       <div class="main-header-wrapper">
         <header class="main-header">
           <h1 class="visually-hidden">Smart Device - поставка печатных плат, производство электронных комплектующих и предоставление мировых технологий с 1997 года</h1>
           <a href="#" class="main-header__logo-link">
             <svg class="main-header__logo main-header__logo--tablet-desktop" aria-labelledby="logo-header-tablet-desktop" width="202px" height="52px">
               <title id="logo-header-tablet-desktop">Логотип Smart Device</title>
-              <use xlink:href="img/sprite.svg#logo-tablet-desktop"></use>
+              <use xlink:href="#logo-tablet-desktop"></use>
             </svg>
             <svg class="main-header__logo main-header__logo--mobile" aria-labelledby="logo-header-mobile" width="38px" height="38px">
               <title id="logo-header-mobile">Логотип Smart Device</title>
-              <use xlink:href="img/sprite.svg#logo-mobile"></use>
+              <use xlink:href="#logo-mobile"></use>
             </svg>
           </a>
           <a class="main-header__email" href="mailto:name@email.com"><span>info@sd.ru</span></a>
@@ -44,28 +48,28 @@
             <h2 class="visually-hidden">Преимущества компании</h2>
             <div class="advantages__item" role="listitem" aria-labelledby="item-title-1" aria-describedby="item-desc-1">
               <svg aria-hidden="true" role="img" width="29px" height="35px">
-                <use xlink:href="img/sprite.svg#stopwatch"></use>
+                <use xlink:href="#stopwatch"></use>
               </svg>
               <h3 class="advantages__item-title" id="item-title-1">Оперативные сроки</h3>
               <p class="advantages__item-desc" id="item-desc-1">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
             </div>
             <div class="advantages__item" role="listitem" aria-labelledby="item-title-2" aria-describedby="item-desc-2">
               <svg aria-hidden="true" role="img" width="35px" height="35px">
-                <use xlink:href="img/sprite.svg#hired"></use>
+                <use xlink:href="#hired"></use>
               </svg>
               <h3 class="advantages__item-title" id="item-title-2">Крупные поставщики</h3>
               <p class="advantages__item-desc" id="item-desc-2">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
             </div>
             <div class="advantages__item" role="listitem" aria-labelledby="item-title-3" aria-describedby="item-desc-3">
               <svg aria-hidden="true" role="img" width="36px" height="31px">
-                <use xlink:href="img/sprite.svg#detective"></use>
+                <use xlink:href="#detective"></use>
               </svg>
               <h3 class="advantages__item-title" id="item-title-3">Полная конфиденциальность</h3>
               <p class="advantages__item-desc" id="item-desc-3">По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
             </div>
             <div class="advantages__item" role="listitem" aria-labelledby="item-title-4" aria-describedby="item-desc-4">
               <svg aria-hidden="true" role="img" width="36px" height="31px">
-                <use xlink:href="img/sprite.svg#tag"></use>
+                <use xlink:href="#tag"></use>
               </svg>
               <h3 class="advantages__item-title" id="item-title-4">Персонализация стоимости</h3>
               <p class="advantages__item-desc" id="item-desc-4">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
@@ -99,7 +103,7 @@
                 <input class="company-request__first-name" type="text" name="first_name" placeholder="Имя" required>
               </label>
               <label class="company-request__tel-label" aria-label="Номер телефона">
-                <input class="company-request__tel" type="tel" name="tel" placeholder="Телефон" maxlength="13" required>
+                <input class="company-request__tel" type="tel" name="tel" placeholder="Телефон" pattern=".{13,13}" required title="full number is required">
               </label>
               <label class="company-request__textarea-label" aria-label="Опишите ваш вопрос">
                 <textarea class="company-request__textarea" name="question" placeholder="Ваш вопрос" rows="5" required></textarea>
@@ -121,7 +125,7 @@
               <a href="#" class="main-footer__logo-link">
                 <svg class="main-footer__logo" aria-labelledby="logo-footer" width="216px" height="52px">
                   <title id="logo-footer">Логотип Smart Device</title>
-                  <use xlink:href="img/sprite.svg#logo-footer"></use>
+                  <use xlink:href="#logo-footer"></use>
                 </svg>
               </a>
               <ul class="main-footer__socials socials-list">
@@ -158,8 +162,8 @@
         <div class="main-footer__container copyright">
           <p class="copyright__item">Все права защищены</p>
           <p class="copyright__item">1999-2018 SD Service Devices</p>
-          <p class="copyright__item"><a href="#">Условия конфиденциальности</a></p>
-          <p class="copyright__item"><a href="#">Developed by wow studio</a></p>
+          <a class="copyright__item" href="#">Условия конфиденциальности</a>
+          <a class="copyright__item" href="#">Developed by wow studio</a>
         </div>
       </footer>
       <div class="callback-modal">
@@ -174,7 +178,7 @@
               <input type="text" name="first_name" placeholder="Имя" required>
             </label>
             <label class="callback-modal__tel" aria-label="Номер телефона">
-              <input class="callback-modal__tel-input" type="tel" name="tel" placeholder="Телефон" maxlength="13" required>
+              <input class="callback-modal__tel-input" type="tel" name="tel" placeholder="Телефон" pattern=".{13,13}" required title="full number is required">
             </label>
             <label class="callback-modal__question" aria-label="Опишите ваш вопрос">
               <textarea rows="5" name="question" placeholder="Ваш вопрос" required></textarea>
@@ -190,6 +194,5 @@
       </div>
       <script src="js/r.js"></script>
       <script src="js/main.js"></script>
-      <script src="js/svgxuse.js" defer></script>
     </body>
   </html>

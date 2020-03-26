@@ -12,7 +12,7 @@
 }
 
 .main-footer__top-wrapper {
-  border-bottom: 1px solid $dark-grey-color;
+  border-bottom: 1px solid $grey-color;
 }
 
 .main-footer__logo-link {
@@ -73,7 +73,7 @@
     justify-content: space-between;
     margin-right: 0;
     padding: 20px;
-    border-bottom: 1px solid $dark-grey-color;
+    border-bottom: 1px solid $grey-color;
   }
 
   .main-footer__office-contacts,
@@ -108,7 +108,7 @@
 
   .main-footer__wrapper {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     max-width: 767px;
     min-width: 280px;
     width: 100%;
@@ -118,8 +118,9 @@
   .main-footer__site-map-wrapper {
     @include flex-row;
     flex-wrap: wrap;
+    width: auto;
     justify-content: space-between;
-    border-bottom: 1px solid $dark-grey-color;
+    border-bottom: 1px solid $grey-color;
     padding-bottom: 25px;
     max-width: 767px;
     min-width: 280px;
@@ -139,7 +140,6 @@
 
   .main-footer__logo-link {
     margin-bottom: 70px;
-    padding-left: 45px;
   }
 
   .main-footer__toggle-button-map,

@@ -4,26 +4,25 @@
     url("../img/polygon-180deg.svg") no-repeat 100% 400px;
   background-color: $white-color;
   color: $light-blue-color;
-  margin: 0 auto;
   padding: 110px 0 35px;
-  align-self: flex-end;
-  justify-content: center;
 }
 
 .advantages__item {
   width: 41%;
+  margin-right: auto;
   min-height: 180px;
   border: 1px solid $light-grey-color;
   border-left: 2px solid $light-blue-color;
   color: $light-blue-color;
   background-color: $white-color;
   cursor: pointer;
-  margin-bottom: 3%;
-  padding-top: 5%;
-  padding-left: 3%;
-  padding-right: 4%;
-  padding-bottom: 5%;
+  margin-bottom: 30px;
+  padding: 34px 4% 72px;
   position: relative;
+
+  &:nth-of-type(2n) {
+    margin-right: 0;
+  }
 
   &:hover,
   &:focus {
@@ -48,12 +47,12 @@
 }
 
 .advantages__item .advantages__item-title {
-  margin-bottom: 4%;
+  margin-bottom: 15px;
 }
 
 .advantages__item svg {
   position: relative;
-  top: -20px;
+  margin-bottom: 20px;
 }
 
 .advantages__item-desc {
@@ -72,11 +71,11 @@
 
   .advantages__item {
     width: 43%;
-    padding-top: 30px;
+    padding-top: 27px;
     padding-right: 1%;
     min-height: 100px;
     margin-bottom: 5%;
-    padding-bottom: 50px;
+    padding-bottom: 45px;
   }
 
   .advantages__item:nth-of-type(3) {
@@ -88,7 +87,7 @@
   }
 
   .advantages__item svg {
-    top: -5px;
+    margin-bottom: 5px;
   }
 
   .advantages::before {
@@ -108,11 +107,8 @@
 
   .advantages__item {
     width: 100%;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 25px;
-    margin-bottom: 15px;
-    padding-right: 5px;
+    margin-bottom: 25px;
+    padding: 20px 5px 15px 25px;
     min-height: 100px;
   }
 

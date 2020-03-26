@@ -2,6 +2,10 @@
 
 var IMask = require(["../js/imask"], function () {});
 
+var smoothscroll = require(["../js/smoothscroll"], function () {});
+
+smoothscroll();
+
 var smoothScroll = function smoothScroll(element) {
   var elementPosition = element.getBoundingClientRect().top;
   window.scrollTo({
@@ -103,13 +107,17 @@ var toggleAttribute = function toggleAttribute(element, attribute, newAtt, oldAt
   }
 };
 
+var OPEN_SITE_MAP = "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0440\u0430\u0437\u0434\u0435\u043B\u044B \u0441\u0430\u0439\u0442\u0430";
+var SLOSE_SITE_MAP = "\u0417\u0430\u043A\u0440\u044B\u0442\u044C \u0440\u0430\u0437\u0434\u0435\u043B\u044B \u0441\u0430\u0439\u0442\u0430";
+var OPEN_CONTACTS = "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u043E\u0432";
+var CLOSE_CONTACTS = "\u0417\u0430\u043A\u0440\u044B\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u043E\u0432";
 siteMapWrapper.addEventListener("click", function () {
   toggleClass(siteMapList, "site-map-list--closed");
   toggleClass(siteMapWrapper, "main-footer__site-map-wrapper--open");
-  toggleAttribute(toggleSiteMapButton, "aria-label", "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0440\u0430\u0437\u0434\u0435\u043B\u044B \u0441\u0430\u0439\u0442\u0430", "\u0417\u0430\u043A\u0440\u044B\u0442\u044C \u0440\u0430\u0437\u0434\u0435\u043B\u044B \u0441\u0430\u0439\u0442\u0430");
+  toggleAttribute(toggleSiteMapButton, "aria-label", OPEN_SITE_MAP, CLOSE_SITE_MAP);
 }, true);
 contactsWrapper.addEventListener("click", function () {
   toggleClass(contactsList, "office-contacts__wrapper--closed");
   toggleClass(contactsWrapper, "main-footer__office-contacts--open");
-  toggleAttribute(toggleContactsButton, "aria-label", "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u043E\u0432", "\u0417\u0430\u043A\u0440\u044B\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u043E\u0432");
+  toggleAttribute(toggleContactsButton, "aria-label", OPEN_CONTACTS, CLOSE_CONTACTS);
 }, true);

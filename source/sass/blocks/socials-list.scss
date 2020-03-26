@@ -86,6 +86,7 @@
 @media (max-width: $max-mobile-width) {
   .socials-list {
     width: 35%;
-    padding-left: 93px;
+    justify-content: center;
+    align-items: center;
   }
 }
