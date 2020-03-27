@@ -14,13 +14,13 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 21.5%;
+  width: 418px;
   min-height: 510px;
-  padding: 1% 2% 2% 2.5%;
+  padding: 15px 38px 31px 38px;
   font-size: 16px;
   line-height: 22px;
   z-index: 1;
-  margin-left: -12%;
+  margin-left: -209px;
   margin-top: -255px;
 }
 
@@ -97,7 +97,7 @@
   width: 93%;
   padding-top: 3%;
   padding-left: 6%;
-  padding-bottom: 4%;
+  padding-bottom: 3%;
 }
 
 .callback-modal__first-name input::placeholder {
@@ -109,7 +109,11 @@
   width: 93%;
   padding-top: 3%;
   padding-left: 6%;
-  padding-bottom: 4%;
+  padding-bottom: 3%;
+}
+
+.callback-modal__tel {
+  margin-bottom: 7%;
 }
 
 .callback-modal__tel input::placeholder {

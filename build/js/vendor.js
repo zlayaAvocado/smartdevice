@@ -1,6 +1,7 @@
 /* eslint-disable */
 /*stylelint-disable*/
 
+(function () {
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -4830,5 +4831,348 @@
 
 	Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+	window.mask = {
+		imask: IMask
+	};
+
+})))
+})();
 //# sourceMappingURL=imask.js.map
+
+/* eslint-disable */
+/*stylelint-disable*/
+
+(function () {
+    "use strict";
+
+    function o() {
+        var o = window,
+            t = document;
+        if (!("scrollBehavior" in t.documentElement.style && !0 !== o.__forceSmoothScrollPolyfill__)) {
+            var l, e = o.HTMLElement || o.Element,
+                r = 468,
+                i = {
+                    scroll: o.scroll || o.scrollTo,
+                    scrollBy: o.scrollBy,
+                    elementScroll: e.prototype.scroll || n,
+                    scrollIntoView: e.prototype.scrollIntoView
+                },
+                s = o.performance && o.performance.now ? o.performance.now.bind(o.performance) : Date.now,
+                c = (l = o.navigator.userAgent, new RegExp(["MSIE ", "Trident/", "Edge/"].join("|")).test(l) ? 1 : 0);
+            o.scroll = o.scrollTo = function() {
+                void 0 !== arguments[0] && (!0 !== f(arguments[0]) ? h.call(o, t.body, void 0 !== arguments[0].left ? ~~arguments[0].left : o.scrollX || o.pageXOffset, void 0 !== arguments[0].top ? ~~arguments[0].top : o.scrollY || o.pageYOffset) : i.scroll.call(o, void 0 !== arguments[0].left ? arguments[0].left : "object" != typeof arguments[0] ? arguments[0] : o.scrollX || o.pageXOffset, void 0 !== arguments[0].top ? arguments[0].top : void 0 !== arguments[1] ? arguments[1] : o.scrollY || o.pageYOffset))
+            }, o.scrollBy = function() {
+                void 0 !== arguments[0] && (f(arguments[0]) ? i.scrollBy.call(o, void 0 !== arguments[0].left ? arguments[0].left : "object" != typeof arguments[0] ? arguments[0] : 0, void 0 !== arguments[0].top ? arguments[0].top : void 0 !== arguments[1] ? arguments[1] : 0) : h.call(o, t.body, ~~arguments[0].left + (o.scrollX || o.pageXOffset), ~~arguments[0].top + (o.scrollY || o.pageYOffset)))
+            }, e.prototype.scroll = e.prototype.scrollTo = function() {
+                if (void 0 !== arguments[0])
+                    if (!0 !== f(arguments[0])) {
+                        var o = arguments[0].left,
+                            t = arguments[0].top;
+                        h.call(this, this, void 0 === o ? this.scrollLeft : ~~o, void 0 === t ? this.scrollTop : ~~t)
+                    } else {
+                        if ("number" == typeof arguments[0] && void 0 === arguments[1]) throw new SyntaxError("Value could not be converted");
+                        i.elementScroll.call(this, void 0 !== arguments[0].left ? ~~arguments[0].left : "object" != typeof arguments[0] ? ~~arguments[0] : this.scrollLeft, void 0 !== arguments[0].top ? ~~arguments[0].top : void 0 !== arguments[1] ? ~~arguments[1] : this.scrollTop)
+                    }
+            }, e.prototype.scrollBy = function() {
+                void 0 !== arguments[0] && (!0 !== f(arguments[0]) ? this.scroll({
+                    left: ~~arguments[0].left + this.scrollLeft,
+                    top: ~~arguments[0].top + this.scrollTop,
+                    behavior: arguments[0].behavior
+                }) : i.elementScroll.call(this, void 0 !== arguments[0].left ? ~~arguments[0].left + this.scrollLeft : ~~arguments[0] + this.scrollLeft, void 0 !== arguments[0].top ? ~~arguments[0].top + this.scrollTop : ~~arguments[1] + this.scrollTop))
+            }, e.prototype.scrollIntoView = function() {
+                if (!0 !== f(arguments[0])) {
+                    var l = function(o) {
+                            for (; o !== t.body && !1 === (e = p(l = o, "Y") && a(l, "Y"), r = p(l, "X") && a(l, "X"), e || r);) o = o.parentNode || o.host;
+                            var l, e, r;
+                            return o
+                        }(this),
+                        e = l.getBoundingClientRect(),
+                        r = this.getBoundingClientRect();
+                    l !== t.body ? (h.call(this, l, l.scrollLeft + r.left - e.left, l.scrollTop + r.top - e.top), "fixed" !== o.getComputedStyle(l).position && o.scrollBy({
+                        left: e.left,
+                        top: e.top,
+                        behavior: "smooth"
+                    })) : o.scrollBy({
+                        left: r.left,
+                        top: r.top,
+                        behavior: "smooth"
+                    })
+                } else i.scrollIntoView.call(this, void 0 === arguments[0] || arguments[0])
+            }
+        }
+
+        function n(o, t) {
+            this.scrollLeft = o, this.scrollTop = t
+        }
+
+        function f(o) {
+            if (null === o || "object" != typeof o || void 0 === o.behavior || "auto" === o.behavior || "instant" === o.behavior) return !0;
+            if ("object" == typeof o && "smooth" === o.behavior) return !1;
+            throw new TypeError("behavior member of ScrollOptions " + o.behavior + " is not a valid value for enumeration ScrollBehavior.")
+        }
+
+        function p(o, t) {
+            return "Y" === t ? o.clientHeight + c < o.scrollHeight : "X" === t ? o.clientWidth + c < o.scrollWidth : void 0
+        }
+
+        function a(t, l) {
+            var e = o.getComputedStyle(t, null)["overflow" + l];
+            return "auto" === e || "scroll" === e
+        }
+
+        function d(t) {
+            var l, e, i, c, n = (s() - t.startTime) / r;
+            c = n = n > 1 ? 1 : n, l = .5 * (1 - Math.cos(Math.PI * c)), e = t.startX + (t.x - t.startX) * l, i = t.startY + (t.y - t.startY) * l, t.method.call(t.scrollable, e, i), e === t.x && i === t.y || o.requestAnimationFrame(d.bind(o, t))
+        }
+
+        function h(l, e, r) {
+            var c, f, p, a, h = s();
+            l === t.body ? (c = o, f = o.scrollX || o.pageXOffset, p = o.scrollY || o.pageYOffset, a = i.scroll) : (c = l, f = l.scrollLeft, p = l.scrollTop, a = n), d({
+                scrollable: c,
+                method: a,
+                startTime: h,
+                startX: f,
+                startY: p,
+                x: e,
+                y: r
+            })
+        }
+    }
+    "object" == typeof exports && "undefined" != typeof module ? module.exports = {
+        polyfill: o
+    } : o()
+})();
+
+/* eslint-disable */
+
+/*!
+ * @copyright Copyright (c) 2017 IcoMoon.io
+ * @license   Licensed under MIT license
+ *            See https://github.com/Keyamoon/svgxuse
+ * @version   1.2.6
+ */
+/*jslint browser: true */
+/*global XDomainRequest, MutationObserver, window */
+
+(function () {
+    "use strict";
+    if (typeof window !== "undefined" && window.addEventListener) {
+        var cache = Object.create(null); // holds xhr objects to prevent multiple requests
+        var checkUseElems;
+        var tid; // timeout id
+        var debouncedCheck = function () {
+            clearTimeout(tid);
+            tid = setTimeout(checkUseElems, 100);
+        };
+        var unobserveChanges = function () {
+            return;
+        };
+        var observeChanges = function () {
+            var observer;
+            window.addEventListener("resize", debouncedCheck, false);
+            window.addEventListener("orientationchange", debouncedCheck, false);
+            if (window.MutationObserver) {
+                observer = new MutationObserver(debouncedCheck);
+                observer.observe(document.documentElement, {
+                    childList: true,
+                    subtree: true,
+                    attributes: true
+                });
+                unobserveChanges = function () {
+                    try {
+                        observer.disconnect();
+                        window.removeEventListener("resize", debouncedCheck, false);
+                        window.removeEventListener("orientationchange", debouncedCheck, false);
+                    } catch (ignore) {}
+                };
+            } else {
+                document.documentElement.addEventListener("DOMSubtreeModified", debouncedCheck, false);
+                unobserveChanges = function () {
+                    document.documentElement.removeEventListener("DOMSubtreeModified", debouncedCheck, false);
+                    window.removeEventListener("resize", debouncedCheck, false);
+                    window.removeEventListener("orientationchange", debouncedCheck, false);
+                };
+            }
+        };
+        var createRequest = function (url) {
+            // In IE 9, cross origin requests can only be sent using XDomainRequest.
+            // XDomainRequest would fail if CORS headers are not set.
+            // Therefore, XDomainRequest should only be used with cross origin requests.
+            function getOrigin(loc) {
+                var a;
+                if (loc.protocol !== undefined) {
+                    a = loc;
+                } else {
+                    a = document.createElement("a");
+                    a.href = loc;
+                }
+                return a.protocol.replace(/:/g, "") + a.host;
+            }
+            var Request;
+            var origin;
+            var origin2;
+            if (window.XMLHttpRequest) {
+                Request = new XMLHttpRequest();
+                origin = getOrigin(location);
+                origin2 = getOrigin(url);
+                if (Request.withCredentials === undefined && origin2 !== "" && origin2 !== origin) {
+                    Request = XDomainRequest || undefined;
+                } else {
+                    Request = XMLHttpRequest;
+                }
+            }
+            return Request;
+        };
+        var xlinkNS = "http://www.w3.org/1999/xlink";
+        checkUseElems = function () {
+            var base;
+            var bcr;
+            var fallback = ""; // optional fallback URL in case no base path to SVG file was given and no symbol definition was found.
+            var hash;
+            var href;
+            var i;
+            var inProgressCount = 0;
+            var isHidden;
+            var Request;
+            var url;
+            var uses;
+            var xhr;
+            function observeIfDone() {
+                // If done with making changes, start watching for chagnes in DOM again
+                inProgressCount -= 1;
+                if (inProgressCount === 0) { // if all xhrs were resolved
+                    unobserveChanges(); // make sure to remove old handlers
+                    observeChanges(); // watch for changes to DOM
+                }
+            }
+            function attrUpdateFunc(spec) {
+                return function () {
+                    if (cache[spec.base] !== true) {
+                        spec.useEl.setAttributeNS(xlinkNS, "xlink:href", "#" + spec.hash);
+                        if (spec.useEl.hasAttribute("href")) {
+                            spec.useEl.setAttribute("href", "#" + spec.hash);
+                        }
+                    }
+                };
+            }
+            function onloadFunc(xhr) {
+                return function () {
+                    var body = document.body;
+                    var x = document.createElement("x");
+                    var svg;
+                    xhr.onload = null;
+                    x.innerHTML = xhr.responseText;
+                    svg = x.getElementsByTagName("svg")[0];
+                    if (svg) {
+                        svg.setAttribute("aria-hidden", "true");
+                        svg.style.position = "absolute";
+                        svg.style.width = 0;
+                        svg.style.height = 0;
+                        svg.style.overflow = "hidden";
+                        body.insertBefore(svg, body.firstChild);
+                    }
+                    observeIfDone();
+                };
+            }
+            function onErrorTimeout(xhr) {
+                return function () {
+                    xhr.onerror = null;
+                    xhr.ontimeout = null;
+                    observeIfDone();
+                };
+            }
+            unobserveChanges(); // stop watching for changes to DOM
+            // find all use elements
+            uses = document.getElementsByTagName("use");
+            for (i = 0; i < uses.length; i += 1) {
+                try {
+                    bcr = uses[i].getBoundingClientRect();
+                } catch (ignore) {
+                    // failed to get bounding rectangle of the use element
+                    bcr = false;
+                }
+                href = uses[i].getAttribute("href")
+                        || uses[i].getAttributeNS(xlinkNS, "href")
+                        || uses[i].getAttribute("xlink:href");
+                if (href && href.split) {
+                    url = href.split("#");
+                } else {
+                    url = ["", ""];
+                }
+                base = url[0];
+                hash = url[1];
+                isHidden = bcr && bcr.left === 0 && bcr.right === 0 && bcr.top === 0 && bcr.bottom === 0;
+                if (bcr && bcr.width === 0 && bcr.height === 0 && !isHidden) {
+                    // the use element is empty
+                    // if there is a reference to an external SVG, try to fetch it
+                    // use the optional fallback URL if there is no reference to an external SVG
+                    if (fallback && !base.length && hash && !document.getElementById(hash)) {
+                        base = fallback;
+                    }
+                    if (uses[i].hasAttribute("href")) {
+                        uses[i].setAttributeNS(xlinkNS, "xlink:href", href);
+                    }
+                    if (base.length) {
+                        // schedule updating xlink:href
+                        xhr = cache[base];
+                        if (xhr !== true) {
+                            // true signifies that prepending the SVG was not required
+                            setTimeout(attrUpdateFunc({
+                                useEl: uses[i],
+                                base: base,
+                                hash: hash
+                            }), 0);
+                        }
+                        if (xhr === undefined) {
+                            Request = createRequest(base);
+                            if (Request !== undefined) {
+                                xhr = new Request();
+                                cache[base] = xhr;
+                                xhr.onload = onloadFunc(xhr);
+                                xhr.onerror = onErrorTimeout(xhr);
+                                xhr.ontimeout = onErrorTimeout(xhr);
+                                xhr.open("GET", base);
+                                xhr.send();
+                                inProgressCount += 1;
+                            }
+                        }
+                    }
+                } else {
+                    if (!isHidden) {
+                        if (cache[base] === undefined) {
+                            // remember this URL if the use element was not empty and no request was sent
+                            cache[base] = true;
+                        } else if (cache[base].onload) {
+                            // if it turns out that prepending the SVG is not necessary,
+                            // abort the in-progress xhr.
+                            cache[base].abort();
+                            delete cache[base].onload;
+                            cache[base] = true;
+                        }
+                    } else if (base.length && cache[base]) {
+                        setTimeout(attrUpdateFunc({
+                            useEl: uses[i],
+                            base: base,
+                            hash: hash
+                        }), 0);
+                    }
+                }
+            }
+            uses = "";
+            inProgressCount += 1;
+            observeIfDone();
+        };
+        var winLoad;
+        winLoad = function () {
+            window.removeEventListener("load", winLoad, false); // to prevent memory leaks
+            tid = setTimeout(checkUseElems, 0);
+        };
+        if (document.readyState !== "complete") {
+            // The load event fires when all resources have finished loading, which allows detecting whether SVG use elements are empty.
+            window.addEventListener("load", winLoad, false);
+        } else {
+            // No need to add a listener if the document is already loaded, initialize immediately.
+            winLoad();
+        }
+    }
+}());

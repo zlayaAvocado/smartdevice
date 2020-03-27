@@ -16,6 +16,7 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var babel = require("gulp-babel");
+var concat = require('gulp-concat');
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -86,7 +87,6 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**"
     ], {
       base: "source"
     })
@@ -97,6 +97,12 @@ gulp.task("clean", function () {
   return del("build");
 });
 
+gulp.task('scripts', function() {
+  return gulp.src(['source/js/imask.js', 'source/js/smoothscroll.js', 'source/js/svgxuse.js'])
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('build/js'));
+});
+
 gulp.task("jspoly", function () {
   return gulp.src("source/js/main.js")
     .pipe(babel({
@@ -105,5 +111,5 @@ gulp.task("jspoly", function () {
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("build", gulp.series("clean", "copy", "webp", "css", "sprite", "html", "jspoly"));
+gulp.task("build", gulp.series("clean", "copy", "webp", "css", "sprite", "html", "scripts", "jspoly"));
 gulp.task("start", gulp.series("build", "server"));
