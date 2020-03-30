@@ -2,7 +2,7 @@
   @include flex-column;
   position: relative;
   font-family: ("PT Mono", "Arial", monospace);
-  background: url("../img/paper-plane.png") no-repeat 25% center,
+  background: url("../img/paper-plane.png") no-repeat 25% 162px,
     url("../img/big-polygon-ellipse.svg") no-repeat 204px -55px,
     url("../img/small-polygon-ellipse.svg") no-repeat 168px 199px,
     $light-blue-color-with-opacity,
@@ -158,6 +158,19 @@ input[type="checkbox"]:checked ~ .company-request__checkbox {
 
 .company-request__submit-button {
   width: calc((100% - 6%) / 2);
+}
+
+@media (min-width: $min-desktop-width) and (max-width: $med-desktop-width) {
+  .company-request {
+    background: url("../img/paper-plane.png") no-repeat 5% center,
+      url("../img/big-polygon-ellipse.svg") no-repeat 18% 40%,
+      url("../img/small-polygon-ellipse.svg") no-repeat 5% 55%,
+      $light-blue-color-with-opacity,
+      url("../img/polygon.svg") no-repeat 113% 100px,
+      url("../img/polygon-180deg.svg") no-repeat 106% 192px;
+    background-size: 45%, 33%, 20%, 20%, 24%, 23%;
+    background-color: $light-blue-color;
+  }
 }
 
 @media (max-width: $tablet-width) {

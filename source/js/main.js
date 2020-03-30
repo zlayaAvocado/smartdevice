@@ -54,6 +54,8 @@
     toggleClass(callbackModal, `callback-modal--open`);
     toggleClass(overlay, `callback-modal--open`);
     toggleClass(body, `main-body`);
+    const firstName = document.querySelector(`.callback-modal .callback-modal__first-name input`);
+    firstName.focus();
   };
 
   const closeModal = () => {
